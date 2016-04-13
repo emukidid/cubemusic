@@ -1,10 +1,11 @@
-/* -----------------------------------------------------------
-      FrameBufferMagic.c - Framebuffer routines with GX
-	      - by emu_kidid & sepp256
-
-      Version 1.0 11/11/2009
-        - Initial Code
-   ----------------------------------------------------------- */
+/*  gfx.c - Graphics convenience functions with GX
+ *	      - by emu_kidid & sepp256
+ *
+ * Copyright (C) 2016 emu_kidid
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
+ */
 
 #include <stdio.h>
 #include <stdint.h>
@@ -14,7 +15,7 @@
 #include <gccore.h>
 #include <ogc/exi.h>
 #include <gctypes.h>
-#include "FrameBufferMagic.h"
+#include "gfx.h"
 #include "IPLFontWrite.h"
 
 #define GUI_MSGBOX_ALPHA 200
@@ -173,9 +174,9 @@ void _DrawBackdrop()
 	char ver[32];
 	memset(ver,0,16);
 	//DrawImage(TEX_BACKDROP, 0, 0, 640, 480, 0, 0.0f, 1.0f, 0.0f, 1.0f, 0);
-	WriteFont(10,10, "Gamevaders v0.1");
-	//sprintf(ver, "commit: %s rev: %s", GITREVISION, GITVERSION);
-	//WriteFontStyled(210,60, ver, 0.55f, false, defaultColor);
+	WriteFont(10,10, "CubeMusic v0.1");
+	sprintf(ver, "commit: %s rev: %s", GITREVISION, GITVERSION);
+	WriteFontStyled(210,60, ver, 0.55f, false, defaultColor);
 }
 
 // Call this when starting a screen

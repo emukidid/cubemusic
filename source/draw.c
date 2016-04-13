@@ -1,9 +1,17 @@
+/* draw.c -- Basic drawing routines
+ *
+ * Copyright (C) 2016 emu_kidid
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
+ */
+ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <gccore.h>
 #include "draw.h"
-#include "FrameBufferMagic.h"
+#include "gfx.h"
 #include "IPLFontWrite.h"
 
 void draw_init() {
@@ -27,5 +35,10 @@ void draw_splash() {
 }
 
 void draw_splash_fade(int fadepercent) {
-	WriteFont(10, 400 , "Splash fadeout");
+	sprintf(txtbuffer, "Splash fade %i", fadepercent);
+	WriteFont(10, 400 , txtbuffer);
+}
+
+void draw_menu() {
+	WriteFont(10, 400 , "Menu");
 }

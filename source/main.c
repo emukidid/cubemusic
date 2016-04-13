@@ -1,3 +1,11 @@
+/* main.c -- CubeMusic main entry point.
+ *
+ * Copyright (C) 2016 emu_kidid
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
+ */
+ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,11 +18,9 @@
 #include <ogc/lwp_watchdog.h>
 #include <ogc/machine/processor.h>
 
-#include "FrameBufferMagic.h"
+#include "gfx.h"
 #include "IPLFontWrite.h"
-#include "player.h"
 #include "logic.h"
-#include "enemy.h"
 #include "draw.h"
 
 #define DEFAULT_FIFO_SIZE    (256*1024)//(64*1024) minimum
@@ -81,7 +87,6 @@ int main(int argc, char **argv) {
 		return -1;
 	}
 
-	printf("\nHello World!\n");
 	u64 prevtime = gettime();
 	int framespersec = 0;
 	int framerate = 0;

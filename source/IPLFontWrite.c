@@ -1,10 +1,10 @@
-/* -----------------------------------------------------------
-      IPLFontWrite.c - Font blitter for IPL ROM fonts
-	      - by emu_kidid
-	   
-      Version 1.0 11/11/2009
-        - Initial Code
-   ----------------------------------------------------------- */
+/* IPLFontWrite.c -- Font blitter for IPL ROM fonts
+ *
+ * Copyright (C) 2016 emu_kidid
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
+ */
 
 #include <gccore.h>
 #include <malloc.h>

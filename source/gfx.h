@@ -1,13 +1,13 @@
-/* -----------------------------------------------------------
-      FrameBufferMagic.h - Framebuffer routines with GX
-	      - by emu_kidid & sepp256
-
-      Version 1.0 11/11/2009
-        - Initial Code
-   ----------------------------------------------------------- */
+/* gfx.h
+ *
+ * Copyright (C) 2016 emu_kidid
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
+ */
    
-#ifndef FRAMEBUFFERMAGIC_H
-#define FRAMEBUFFERMAGIC_H
+#ifndef __GFX_H
+#define __GFX_H
 
 #include <gccore.h>
 

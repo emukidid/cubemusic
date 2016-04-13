@@ -25,7 +25,7 @@ INCLUDES	:=  $(SOURCES)
 # options for code generation
 #---------------------------------------------------------------------------------
 
-CFLAGS		= -g -O2 -Wall $(MACHDEP) $(INCLUDE)
+CFLAGS		= -g -O2 -Wall $(MACHDEP) $(INCLUDE) -D'GITREVISION="$(shell git rev-parse --short HEAD)"' -D'GITVERSION="$(shell git rev-list HEAD | wc -l)"'
 CXXFLAGS	= $(CFLAGS)
 
 LDFLAGS		= -g $(MACHDEP) -Wl,-Map,$(notdir $@).map
@@ -96,6 +96,8 @@ export OUTPUT	:=	$(CURDIR)/$(TARGET)
 
 #---------------------------------------------------------------------------------
 $(BUILD):
+	@echo Current Directory $(CURDIR)
+	@echo GIT Revision $(shell git rev-parse --short HEAD)
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 
