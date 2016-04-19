@@ -15,6 +15,5 @@ void draw_frame_end();
 void draw_deinit();
 void draw_splash();
 void draw_splash_fade(int fadepercent);
-void draw_menu();
 
 #endif

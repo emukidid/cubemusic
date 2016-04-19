@@ -11,6 +11,7 @@
 #include <string.h>
 #include <gccore.h>
 #include "draw.h"
+#include "menu.h"
 #include "gfx.h"
 #include "IPLFontWrite.h"
 
@@ -31,14 +32,14 @@ void draw_deinit() {
 }
 
 void draw_splash() {
+#ifdef _UI_DEBUG
 	WriteFont(10, 400 , "Splash");
+#endif
 }
 
 void draw_splash_fade(int fadepercent) {
+#ifdef _UI_DEBUG
 	sprintf(txtbuffer, "Splash fade %i", fadepercent);
 	WriteFont(10, 400 , txtbuffer);
-}
-
-void draw_menu() {
-	WriteFont(10, 400 , "Menu");
+#endif
 }

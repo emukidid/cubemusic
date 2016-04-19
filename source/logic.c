@@ -20,6 +20,7 @@
 
 #include "logic.h"
 #include "draw.h"
+#include "menu.h"
 
 static int current_state;
 static int current_state_started;
@@ -59,28 +60,14 @@ void logic_update() {
 		{
 			if(!current_state_started) {
 				printf("In Menu\n");
+				menu_init();
 				current_state_started = 1;
 			}
-			draw_menu();
-		}
-		break;
-		case PLAYING:
-		{
-			if(!current_state_started) {
-				printf("Playing\n");
-				current_state_started = 1;
+			if(!menu_frame()) {
+				exit(1);
 			}
 		}
 		break;
-		case PAUSED:
-		{
-		
-		}
-		break;
-		case CREDITS:
-		{
-		
-		}
 		break;
 		default:
 			printf("Unknown state!!\r\n");

@@ -22,6 +22,7 @@
 #include "IPLFontWrite.h"
 #include "logic.h"
 #include "draw.h"
+#include "exi.h"
 
 #define DEFAULT_FIFO_SIZE    (256*1024)//(64*1024) minimum
 char txtbuffer[2048] __attribute__((aligned(32)));
@@ -100,13 +101,13 @@ int main(int argc, char **argv) {
 		
 		// Draw everything
 		draw_frame_begin();
-		// Update all game logic for a frame
+		// Update all logic for a frame
 		logic_update();
-
+#ifdef _UI_DEBUG
 		// Print FPS
 		sprintf(txtbuffer,"%i FPS %.1fMB", framerate, ((SYS_GetArenaHi()-SYS_GetArenaLo()) / (1024.0*1024.0)));
 		WriteFont(340, 10 , txtbuffer);
-
+#endif
 		// Update FPS
 		if(diff_msec(prevtime, gettime()) >=1000) {
 			framerate = framespersec;

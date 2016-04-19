@@ -17,10 +17,7 @@
 // What is being displayed currently?
 enum playing_state {
 	SPLASH=0,
-	MENU,
-	PLAYING,
-	PAUSED,
-	CREDITS
+	MENU
 };
 
 void logic_init();
