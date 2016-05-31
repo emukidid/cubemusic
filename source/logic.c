@@ -21,6 +21,7 @@
 #include "logic.h"
 #include "draw.h"
 #include "menu.h"
+#include "splash.h"
 
 static int current_state;
 static int current_state_started;
@@ -45,14 +46,14 @@ void logic_update() {
 
 			if(diff_msec(splashtime, gettime()) >=5000) {
 				// commence fadeout for 3 more seconds
-				draw_splash_fade((int)(((diff_msec(splashtime, gettime())-5000)/(float)3000)*100));
-				if(diff_msec(splashtime, gettime()) >=8000) {
+				splash_fade((int)(((diff_msec(splashtime, gettime())-5000)/(float)5000)*100));
+				if(diff_msec(splashtime, gettime()) >=10000) {
 					current_state = MENU;
 					current_state_started = 0;
 				}
 			}
 			else {
-				draw_splash();
+				splash_draw();
 			}
 		}
 		break;

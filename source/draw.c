@@ -30,16 +30,3 @@ void draw_frame_end() {
 void draw_deinit() {
 	// Stop anything that is resident
 }
-
-void draw_splash() {
-#ifdef _UI_DEBUG
-	WriteFont(10, 400 , "Splash");
-#endif
-}
-
-void draw_splash_fade(int fadepercent) {
-#ifdef _UI_DEBUG
-	sprintf(txtbuffer, "Splash fade %i", fadepercent);
-	WriteFont(10, 400 , txtbuffer);
-#endif
-}
