@@ -63,7 +63,7 @@ int menu_frame() {
 			// Ask user what they want to do, play from Disc, play from SD, decode from disc to SD
 			if(!menu_state_started) {
 #ifdef _UI_DEBUG
-				printf("Setup\r\n");
+				printf("Setup Menu\r\n");
 #endif
 				menu_state_started = 1;
 			}

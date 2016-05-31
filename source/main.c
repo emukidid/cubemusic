@@ -89,6 +89,8 @@ int main(int argc, char **argv) {
 	}
 
 	u64 prevtime = gettime();
+	u64 vsyncwaittime = gettime();
+	u32 idletime = 0;
 	int framespersec = 0;
 	int framerate = 0;
 	
@@ -105,16 +107,22 @@ int main(int argc, char **argv) {
 		logic_update();
 #ifdef _UI_DEBUG
 		// Print FPS
-		sprintf(txtbuffer,"%i FPS %.1fMB", framerate, ((SYS_GetArenaHi()-SYS_GetArenaLo()) / (1024.0*1024.0)));
-		WriteFont(340, 10 , txtbuffer);
+		sprintf(txtbuffer,"%i FPS %.1fMB - idle %.2f", 
+				framerate, ((SYS_GetArenaHi()-SYS_GetArenaLo()) / (1024.0*1024.0)),
+				((float)idletime/(float)diff_msec(prevtime, gettime())) * 100.0f );
+		WriteFont(280, 10 , txtbuffer);
 #endif
 		// Update FPS
 		if(diff_msec(prevtime, gettime()) >=1000) {
 			framerate = framespersec;
 			framespersec = 0;
+			idletime = 0;
 			prevtime = gettime();
 		}
-		draw_frame_end();
+		
+		vsyncwaittime = gettime();
+		draw_frame_end();	// Waits for vsync
+		idletime += diff_msec(vsyncwaittime, gettime());
 		framespersec++;
 	}
 
