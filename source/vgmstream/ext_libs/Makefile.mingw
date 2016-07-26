@@ -1,0 +1,21 @@
+export SHELL = /bin/sh
+#export DLLTOOL=i586-mingw32msvc-dlltool
+export DLLTOOL=i686-w64-mingw32-dlltool
+
+libvorbis.a: libvorbis.def
+	$(DLLTOOL) -d libvorbis.def -l libvorbis.a
+
+libmpg123-0.a: libmpg123-0.def
+	$(DLLTOOL) -d libmpg123-0.def -l libmpg123-0.a
+
+libg7221_decode.a: libg7221_decode.def
+	$(DLLTOOL) -d libg7221_decode.def -l libg7221_decode.a
+
+libg719_decode.a: libg719_decode.def
+	$(DLLTOOL) -d libg719_decode.def -l libg719_decode.a
+
+libat3plusdecoder.a: at3plusdecoder.def
+	$(DLLTOOL) -d at3plusdecoder.def -l libat3plusdecoder.a
+
+clean:
+	rm -f libvorbis.a libmpg123-0.a libg7221_decode.a libg719_decode.a libat3plusdecoder.a

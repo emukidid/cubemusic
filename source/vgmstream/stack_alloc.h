@@ -31,7 +31,7 @@
 
 #ifndef STACK_ALLOC_H
 #define STACK_ALLOC_H
-
+#define USE_ALLOCA
 #if (!defined (VAR_ARRAYS) && !defined (USE_ALLOCA))
 #error "Vgmstream requires one of VAR_ARRAYS or USE_ALLOCA be defined to select the temporary allocation mode."
 #endif

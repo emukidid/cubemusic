@@ -338,7 +338,7 @@ VGMSTREAM * (*init_vgmstream_fcns[])(STREAMFILE *streamFile) = {
 	init_vgmstream_bcstm,
 	init_vgmstream_3ds_idsp,
 	init_vgmstream_g1l,
-    init_vgmstream_hca,
+//    init_vgmstream_hca,
 #ifdef VGM_USE_FFMPEG
     init_vgmstream_ffmpeg,
 #endif

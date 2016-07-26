@@ -12,8 +12,8 @@ enum { PATH_LIMIT = 32768 };
  * If someone wants to do a standalone build, they can do it by simply
  * removing these defines (and the references to the libraries in the
  * Makefile) */
-#define VGM_USE_VORBIS
-#define VGM_USE_MPEG
+//#define VGM_USE_VORBIS
+//#define VGM_USE_MPEG
 /* disabled by default, defined for builds that support it */
 //#define VGM_USE_G7221
 //#define VGM_USE_G719
@@ -46,7 +46,7 @@ enum { PATH_LIMIT = 32768 };
 #include "maiatrac3plus.h"
 #endif
 
-#include "clHCA.h"
+#include "ext_includes/clHCA.h"
 
 #ifdef VGM_USE_FFMPEG
 #include <libavcodec/avcodec.h>
