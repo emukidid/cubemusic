@@ -34,13 +34,21 @@ enum MENU_STATES {
 	READING,
 	DECODING,
 	PLAYING,
-	CREDITS
+	CREDITS,
+	ERROR
 };
 
 static int menu_state = SETUP;
 static int menu_state_started;
+static int disc_initialised;
+static int tracks_read;
+static char *errorMsg;
 
 #define MAX_MENU_ENTRY 4
+#define MENU_PLAYDISC 0
+#define MENU_PLAYSD 1
+#define MENU_RIPTOSD 2
+#define MENU_CREDITS 3
 static char *menu_entry[] = {
 			"Play from Disc", 
 			"Play from SD", 
@@ -76,6 +84,19 @@ int menu_frame() {
 				menu_pos = (menu_pos+1 == MAX_MENU_ENTRY ? 0:menu_pos+1);
 			if(PAD_ButtonsDown(0) & PAD_BUTTON_UP)
 				menu_pos = (menu_pos == 0 ? MAX_MENU_ENTRY-1 : menu_pos-1);	
+			if(PAD_ButtonsDown(0) & PAD_BUTTON_A) {
+				switch(menu_pos) {
+					case MENU_PLAYDISC:
+						menu_state = WAIT_FOR_DISC;
+						break;
+					case MENU_PLAYSD:
+					case MENU_RIPTOSD:
+						break;
+					case MENU_CREDITS:
+						menu_state = CREDITS;
+						break;
+				}
+			}
 		break;
 		case WAIT_FOR_SD:
 			// Try to init SD, if none, ask user to insert & wait for a button
@@ -86,10 +107,27 @@ int menu_frame() {
 		break;
 		case WAIT_FOR_DISC:
 			// Try to read disc, if none, ask user to insert & wait for a button
+			if(!disc_initialised) {
 #ifdef _UI_DEBUG
-			printf("Wait for Disc\r\n");
+				printf("Resetting Disc Drive\r\n");
 #endif
-			WriteFont(20, 280 , "Waiting for Disc");
+				WriteFont(20, 280 , "Resetting Disc Drive ...");
+				disc_initialised = 1;
+			}
+			if(disc_initialised==1) {
+				int driveRet = DVD_Mount();
+				if(!driveRet) 
+					disc_initialised = 2;
+				else {
+					errorMsg = calloc(1, 512);
+					sprintf(errorMsg, "Drive failed to initialise (%i)", driveRet);
+					menu_state = ERROR;
+				}
+			}
+			if(disc_initialised==2) {
+				menu_state = READING;
+				disc_initialised = 0;
+			}
 		break;
 		case READING:
 			// Try to match the tracks to SD, if already dumped, play them
@@ -97,6 +135,10 @@ int menu_frame() {
 			printf("Reading\r\n");
 #endif
 			WriteFont(20, 280 , "Reading Tracks");
+			if(tracks_read) {
+				menu_state = PLAYING;
+				tracks_read = 0;
+			}
 		break;
 		case DECODING:
 			// Parse from disc, dump to SD
@@ -111,6 +153,18 @@ int menu_frame() {
 			printf("Playing\r\n");
 #endif
 			WriteFont(20, 280 , "Playing");
+		break;
+		case CREDITS:
+			// Credits scroller
+#ifdef _UI_DEBUG
+			printf("Credits\r\n");
+#endif
+			WriteFont(20, 280 , "Credits");
+		break;
+		case ERROR:
+			WriteFont(20, 280, errorMsg);
+			if(PAD_ButtonsDown(0) & (PAD_BUTTON_A|PAD_BUTTON_B))
+				menu_state = SETUP;
 		break;
 	}
 	return 1;

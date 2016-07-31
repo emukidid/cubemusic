@@ -11,6 +11,7 @@ include $(DEVKITPPC)/gamecube_rules
 endif
 
 CC := powerpc-eabi-gcc
+AR := powerpc-eabi-ar
 
 CODING_OBJS=coding/adx_decoder.o \
     coding/g721_decoder.o \

@@ -145,7 +145,7 @@ static STREAMFILE *open_stdio(STDIOSTREAMFILE *streamFile,const char * const fil
     if (!filename)
         return NULL;
     // if same name, duplicate the file pointer we already have open
-    if (!strcmp(streamFile->name,filename)) {
+    /*if (!strcmp(streamFile->name,filename)) {
         if (((newfd = dup(fileno(streamFile->infile))) >= 0) &&
             (newfile = fdopen( newfd, "rb" ))) 
         {
@@ -156,7 +156,7 @@ static STREAMFILE *open_stdio(STDIOSTREAMFILE *streamFile,const char * const fil
             // failure, close it and try the default path (which will probably fail a second time)
             fclose(newfile);
         }
-    }
+    }*/
     // a normal open, open a new file
     return open_stdio_streamfile_buffer(filename,buffersize);
 }

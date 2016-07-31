@@ -23,6 +23,7 @@
 #include "logic.h"
 #include "draw.h"
 #include "exi.h"
+#include "audio.h"
 
 #define DEFAULT_FIFO_SIZE    (256*1024)//(64*1024) minimum
 char txtbuffer[2048] __attribute__((aligned(32)));
@@ -80,6 +81,11 @@ void initialise_video(GXRModeObj *m) {
 }
 
 
+#include <sdcard/gcsd.h>
+#include <fat.h>
+
+const DISC_INTERFACE* carda = &__io_gcsda;
+
 int main(int argc, char **argv) {
 
 	void *fb;
@@ -98,8 +104,11 @@ int main(int argc, char **argv) {
 	logic_init();
 	draw_init();
 	audio_init();
+	fatMount ("sd", carda, 0, 16, 128);
+	audio_starttrack(NULL);
 	
 	while(1) {
+		audio_starttrack(NULL);
 		
 		// Draw everything
 		draw_frame_begin();
@@ -125,7 +134,6 @@ int main(int argc, char **argv) {
 		idletime += diff_msec(vsyncwaittime, gettime());
 		framespersec++;
 	}
-
 	return 0;
 }
 

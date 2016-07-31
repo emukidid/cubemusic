@@ -6,7 +6,7 @@
  * of the MIT license.  See the LICENSE file for details.
  */
 
-#IFNDEF ___AUDIO_H_
+#ifndef ___AUDIO_H_
 #define ___AUDIO_H_
 
 #include <stdio.h>
