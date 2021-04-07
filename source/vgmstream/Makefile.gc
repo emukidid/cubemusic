@@ -10,8 +10,8 @@ ifeq ($(PLATFORM),cube)
 include $(DEVKITPPC)/gamecube_rules
 endif
 
-CC := powerpc-eabi-gcc
-AR := powerpc-eabi-ar
+CC := $(DEVKITPPC)/bin/powerpc-eabi-gcc
+AR := $(DEVKITPPC)/bin/powerpc-eabi-ar
 
 CODING_OBJS=coding/adx_decoder.o \
     coding/g721_decoder.o \
@@ -325,6 +325,8 @@ OBJECTS= streamfile.o util.o $(CODING_OBJS) $(LAYOUT_OBJS) $(META_OBJS) $(EXT_LI
 
 libvgmstream.a: $(OBJECTS)
 	$(AR) crs libvgmstream.a $(OBJECTS)
+	mkdir lib
+	mv libvgmstream.a lib
 
 vgmstream-deps:
 	$(CC) $(CFLAGS) -M -o vgmstream-deps

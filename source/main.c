@@ -105,15 +105,14 @@ int main(int argc, char **argv) {
 	draw_init();
 	audio_init();
 	fatMount ("sd", carda, 0, 16, 128);
-	audio_starttrack(NULL);
 	
 	while(1) {
-		audio_starttrack(NULL);
-		
 		// Draw everything
 		draw_frame_begin();
 		// Update all logic for a frame
 		logic_update();
+		// Audio frame
+		audio_frame();
 #ifdef _UI_DEBUG
 		// Print FPS
 		sprintf(txtbuffer,"%i FPS %.1fMB - idle %.2f", 

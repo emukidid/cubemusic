@@ -40,8 +40,17 @@ enum MENU_STATES {
 
 static int menu_state = SETUP;
 static int menu_state_started;
+static int disc_initialising;
 static int disc_initialised;
-static int tracks_read;
+static dvdcmdblk dvd_block;
+static dvddiskid dvd_diskid;
+static int read_state;
+enum READ_STATES {
+	READ_ID,
+	READ_ID_STARTED,
+	READ_FST,
+	READ_TRACKS
+};
 static char *errorMsg;
 
 #define MAX_MENU_ENTRY 4
@@ -62,6 +71,14 @@ void menu_init() {
 	menu_state = SETUP;
 	menu_state_started = 0;
 	menu_pos = 0;
+}
+
+static void dvd_mount_cb(s32 result,dvdcmdblk *block) {
+	disc_initialised = 1;
+}
+
+static void dvd_diskid_cb(s32 result, dvdcmdblk *block) {
+	read_state = READ_FST;
 }
 
 int menu_frame() {
@@ -107,38 +124,47 @@ int menu_frame() {
 		break;
 		case WAIT_FOR_DISC:
 			// Try to read disc, if none, ask user to insert & wait for a button
-			if(!disc_initialised) {
+			WriteFont(20, 280 , "Resetting Disc Drive ...");
+			if(!disc_initialising) {
+				disc_initialising = 1;
 #ifdef _UI_DEBUG
 				printf("Resetting Disc Drive\r\n");
 #endif
-				WriteFont(20, 280 , "Resetting Disc Drive ...");
-				disc_initialised = 1;
+				DVD_MountAsync(&dvd_block, dvd_mount_cb);
 			}
 			if(disc_initialised==1) {
-				int driveRet = DVD_Mount();
-				if(!driveRet) 
-					disc_initialised = 2;
-				else {
-					errorMsg = calloc(1, 512);
-					sprintf(errorMsg, "Drive failed to initialise (%i)", driveRet);
-					menu_state = ERROR;
-				}
-			}
-			if(disc_initialised==2) {
+				disc_initialising = 0;
 				menu_state = READING;
-				disc_initialised = 0;
 			}
 		break;
 		case READING:
 			// Try to match the tracks to SD, if already dumped, play them
+			if(read_state == READ_ID) {
 #ifdef _UI_DEBUG
-			printf("Reading\r\n");
+				printf("Reading ID\r\n");
 #endif
-			WriteFont(20, 280 , "Reading Tracks");
-			if(tracks_read) {
+				read_state = READ_ID_STARTED;
+				DVD_ReadDiskID(&dvd_block, &dvd_diskid, dvd_diskid_cb);
+			}	
+			if(read_state == READ_FST) {
+				WriteFont(20, 280 , "Reading FST");
+				
+				int numEntries = 0;
+				const char **entries = getEntries((char*)&dvd_diskid.gamename[0], &numEntries);
+				printf("found %i entries\r\n", numEntries);
+				int i = 0;
+				for(i = 0; i < numEntries; i++) {
+					printf("found [%s]\r\n", entries[i]);
+				}
+				read_state = READ_TRACKS;
+			}
+			if(read_state == READ_TRACKS) {
+				
+			}
+			/*if(tracks_read) {
 				menu_state = PLAYING;
 				tracks_read = 0;
-			}
+			}*/
 		break;
 		case DECODING:
 			// Parse from disc, dump to SD

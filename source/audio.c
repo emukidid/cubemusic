@@ -78,17 +78,17 @@ void audio_stoptrack() {
 	}
 }
 
-int audio_starttrack(FILE *audiotrack) {
+int audio_starttrack(char *audiofile) {
     
 	if(vgmstream == NULL) {		
 		double loop_count = 2.0;
 		double fade_seconds = 10.0;
 		double fade_delay_seconds = 0.0;
 	
-		vgmstream = init_vgmstream("sd:/kraid.hps");
+		vgmstream = init_vgmstream(audiofile);
 
 		if (!vgmstream) {
-			printf("failed opening file\r\n");
+			printf("Failed to open file [%s]\r\n", audiofile);
 			return -1;
 		}
 	
@@ -106,8 +106,12 @@ int audio_starttrack(FILE *audiotrack) {
 		vgmfadesamples = fade_seconds * vgmstream->sample_rate;
 		vgmpos = 0;
     }
-	else {
-		/* decode */
+	
+	return 0;
+}
+
+void audio_frame() {
+	if(vgmstream != NULL) {
 		if (vgmpos < vgmlength) {
 			int toget=BUFSIZE;
 			if (vgmpos+BUFSIZE>vgmlength) toget=vgmlength-vgmpos;
@@ -116,7 +120,7 @@ int audio_starttrack(FILE *audiotrack) {
 			
 			// See if we have room for this yet
 			if (buffered + length > BUFFER_SIZE) {
-				return 0;
+				return;
 			}
 			
 			render_vgmstream(vgmbuffer,toget,vgmstream);
@@ -161,8 +165,6 @@ int audio_starttrack(FILE *audiotrack) {
 			audio_stoptrack();
 		}
 	}
-	
-	return 0;
 }
 
 int audio_playsfx(FILE *sfx) {

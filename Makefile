@@ -41,7 +41,7 @@ LIBS	:=	-logc -lm -lvgmstream -lm -laesnd -logc -lfat
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:= 
+LIBDIRS	:= $(CURDIR)/source/vgmstream
 
 #---------------------------------------------------------------------------------
 # no real need to edit anything past this point unless you need to add additional
@@ -103,6 +103,7 @@ export OUTPUT	:=	$(CURDIR)/$(TARGET)
 #---------------------------------------------------------------------------------
 $(BUILD):
 	@echo Current Directory $(CURDIR)
+	@echo $(LIBDIRS)
 	@echo GIT Revision $(shell git rev-parse --short HEAD)
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile

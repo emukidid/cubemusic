@@ -29,7 +29,7 @@ static int current_state_started;
 static u64 splashtime = 0;
 
 void logic_init() {
-	current_state = MENU;
+	current_state = SPLASH;
 	current_state_started = 0;
 }
 
@@ -64,7 +64,7 @@ void logic_update() {
 				menu_init();
 				current_state_started = 1;
 			}
-			splash_draw();
+
 			if(!menu_frame()) {
 				exit(1);
 			}
