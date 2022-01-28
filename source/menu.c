@@ -16,6 +16,7 @@
 #include <malloc.h>
 #include <stdarg.h>
 
+#include "dvd.h"
 #include "gfx.h"
 #include "IPLFontWrite.h"
 #include "draw.h"
@@ -46,9 +47,6 @@ enum MENU_STATES {
 
 static int menu_state = SETUP;
 static int menu_state_started;
-static int disc_initialising;
-static int disc_initialised;
-static dvdcmdblk dvd_block;
 static dvddiskid dvd_diskid;
 static int read_state;
 enum READ_STATES {
@@ -96,19 +94,6 @@ void menu_init() {
 	memset(&entries, 0, sizeof(AudioEntry) * 1024);
 }
 
-static void dvd_state_cb(s32 result,dvdcmdblk *block) {
-	if(!disc_initialised) {
-		// stuck in this state with libogc2, ditch libogc DVD stuff.
-		if(!(block->state==DVD_STATE_END || block->state==DVD_STATE_FATAL_ERROR || block->state==DVD_STATE_CANCELED))
-			disc_initialised = 1;
-		return;
-	}
-	if(read_state == READ_ID_STARTED) {
-		read_state = READ_FST;
-		return;
-	}
-}
-
 int menu_frame() {
 	// Whenever this is called, update the current menu display
 	switch(menu_state) {
@@ -153,20 +138,8 @@ int menu_frame() {
 		case WAIT_FOR_DISC:
 			// Try to read disc, if none, ask user to insert & wait for a button
 			WriteFont(20, 280 , "Resetting Disc Drive ...");
-			if(!disc_initialising) {
-				disc_initialising = 1;
-#ifdef _UI_DEBUG
-				printf("Resetting Disc Drive\r\n");
-#endif
-				//DVD_MountAsync(&dvd_block, dvd_state_cb);
-				DVD_Mount();
-				sleep(10);
-				disc_initialised = 1;
-			}
-			if(disc_initialised==1) {
-				disc_initialising = 0;
-				menu_state = READING;
-			}
+			dvd_reset();
+			menu_state = READING;
 		break;
 		case READING:
 			// Try to match the tracks to SD, if already dumped, play them
@@ -175,7 +148,8 @@ int menu_frame() {
 				printf("Reading ID\r\n");
 #endif
 				read_state = READ_ID_STARTED;
-				DVD_ReadDiskID(&dvd_block, &dvd_diskid, dvd_state_cb);
+				DVD_ReadID(&dvd_diskid);
+				read_state = READ_FST;
 			}	
 			if(read_state == READ_FST) {
 				WriteFont(20, 280 , "Reading FST");
@@ -184,7 +158,7 @@ int menu_frame() {
 				printf("found %i entries for gamename: [%s]\r\n", readTrackState.read_num_total, (char*)&dvd_diskid.gamename[0]);
 				// read the FST for this disc to resolve file offsets now
 				int i = 0;
-				char *FST = get_fst(&dvd_block);
+				char *FST = get_fst();
 				if(!FST) {
 					errorMsg = "Failed to read file system from disc.";
 					menu_state = ERROR;
@@ -236,7 +210,7 @@ int menu_frame() {
 					// Read & dump a chunk
 					u32 readsize = readTrackState.read_offset + READ_SIZE > entries[i].discOffset + entries[i].fileSize ? (entries[i].discOffset + entries[i].fileSize)-readTrackState.read_offset : READ_SIZE;
 					printf("Writing %i bytes from %08X to %s\r\n", readsize, entries[i].discOffset, entries[i].storagePath);
-					DVD_ReadPrio(&dvd_block, read_buffer, readsize, entries[i].discOffset, 1);
+					DVD_Read(read_buffer, entries[i].discOffset, readsize);
 					fwrite(read_buffer, 1, readsize, readTrackState.write_fp);
 					readTrackState.read_offset+=READ_SIZE;
 					readTrackState.dump_cur += readsize;

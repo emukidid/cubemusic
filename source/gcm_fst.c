@@ -7,25 +7,29 @@
 #include <math.h>
 #include <malloc.h>
 #include "gcm_fst.h"
+#include "dvd.h"
 
 #define FST_ENTRY_SIZE 12
 
 // Parse disc header & read FST into a buffer
-void* get_fst(dvdcmdblk *dvd_block) {
+void* get_fst() {
 	DiskHeader header;
 	char	*FST;
 	
 	// Grab disc header
 	memset(&header,0,sizeof(DiskHeader));
-	if(DVD_ReadPrio(dvd_block, &header, sizeof(DiskHeader), 0, 1) != sizeof(DiskHeader)) {
+	if(DVD_Read(&header, 0, sizeof(DiskHeader)) != sizeof(DiskHeader)) {
+		printf("Header size didn't read\r\n");
 		return NULL;
 	}
 	
 	// Alloc and read FST
 	FST=(char*)memalign(32,header.FSTSize); 
+	printf("FST size is %i\r\n", header.FSTSize);
 	if(!FST) return NULL;
 
-	if(DVD_ReadPrio(dvd_block, FST, header.FSTSize, header.FSTOffset, 1) != header.FSTSize) {
+	if(DVD_Read(FST, header.FSTOffset, header.FSTSize) != header.FSTSize) {
+		printf("FST size didn't match, need %i\r\n", header.FSTSize);
 		free(FST);
 		return NULL;
 	}

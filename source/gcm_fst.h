@@ -63,6 +63,6 @@ typedef struct {
 	const char *filename;
 } AudioEntry;
 
-void* get_fst(dvdcmdblk *dvd_block);
+void* get_fst();
 void get_fst_details(char *FST, const char *searchFileName, u32 *file_offset, u32 *file_size);
 #endif
