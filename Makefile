@@ -9,6 +9,9 @@ endif
 
 include $(DEVKITPPC)/gamecube_rules
 
+export	LIBOGC_INC	:=	$(DEVKITPRO)/libogc2/include
+export	LIBOGC_LIB	:=	$(DEVKITPRO)/libogc2/lib/cube
+
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
 # BUILD is the directory where object files & intermediate files will be placed

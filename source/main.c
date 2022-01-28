@@ -104,7 +104,9 @@ int main(int argc, char **argv) {
 	logic_init();
 	draw_init();
 	audio_init();
-	fatMount ("sd", carda, 0, 16, 128);
+	fatInitDefault();
+	
+	mkdir("cubemusic");
 	
 	while(1) {
 		// Draw everything

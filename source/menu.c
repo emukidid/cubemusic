@@ -19,12 +19,18 @@
 #include "gfx.h"
 #include "IPLFontWrite.h"
 #include "draw.h"
+#include "gcm_fst.h"
+#include "audio.h"
+#include "splash.h"
+
+extern const char** getEntries(char *gameId, int *count);
+
+static AudioEntry entries[1024];
  
  // Menu States
  // Wait for SD
  // Wait for Disc
  // Reading
- // Decoding
  // Playing
  
 enum MENU_STATES {
@@ -32,7 +38,7 @@ enum MENU_STATES {
 	WAIT_FOR_SD,
 	WAIT_FOR_DISC,
 	READING,
-	DECODING,
+	SELECT_TRACK,
 	PLAYING,
 	CREDITS,
 	ERROR
@@ -49,8 +55,20 @@ enum READ_STATES {
 	READ_ID,
 	READ_ID_STARTED,
 	READ_FST,
-	READ_TRACKS
+	DUMP_TRACKS
 };
+#define READ_SIZE (128*1024)
+static char read_buffer[READ_SIZE] __attribute((aligned(32)));
+typedef struct {
+	int read_num_cur;
+	int read_num_total;
+	u32  read_offset;
+	u32 dump_cur;
+	u32 dump_total;
+	FILE *write_fp;
+} ReadTrackState;
+static ReadTrackState readTrackState;
+
 static char *errorMsg;
 
 #define MAX_MENU_ENTRY 4
@@ -65,20 +83,30 @@ static char *menu_entry[] = {
 			"Credits"
 		};
 static int menu_pos;
+static int track_sel;
 
 
 void menu_init() {
 	menu_state = SETUP;
+	read_state = 0;
 	menu_state_started = 0;
 	menu_pos = 0;
+	track_sel = 0;
+	memset(&readTrackState, 0, sizeof(ReadTrackState));
+	memset(&entries, 0, sizeof(AudioEntry) * 1024);
 }
 
-static void dvd_mount_cb(s32 result,dvdcmdblk *block) {
-	disc_initialised = 1;
-}
-
-static void dvd_diskid_cb(s32 result, dvdcmdblk *block) {
-	read_state = READ_FST;
+static void dvd_state_cb(s32 result,dvdcmdblk *block) {
+	if(!disc_initialised) {
+		// stuck in this state with libogc2, ditch libogc DVD stuff.
+		if(!(block->state==DVD_STATE_END || block->state==DVD_STATE_FATAL_ERROR || block->state==DVD_STATE_CANCELED))
+			disc_initialised = 1;
+		return;
+	}
+	if(read_state == READ_ID_STARTED) {
+		read_state = READ_FST;
+		return;
+	}
 }
 
 int menu_frame() {
@@ -130,7 +158,10 @@ int menu_frame() {
 #ifdef _UI_DEBUG
 				printf("Resetting Disc Drive\r\n");
 #endif
-				DVD_MountAsync(&dvd_block, dvd_mount_cb);
+				//DVD_MountAsync(&dvd_block, dvd_state_cb);
+				DVD_Mount();
+				sleep(10);
+				disc_initialised = 1;
 			}
 			if(disc_initialised==1) {
 				disc_initialising = 0;
@@ -144,21 +175,83 @@ int menu_frame() {
 				printf("Reading ID\r\n");
 #endif
 				read_state = READ_ID_STARTED;
-				DVD_ReadDiskID(&dvd_block, &dvd_diskid, dvd_diskid_cb);
+				DVD_ReadDiskID(&dvd_block, &dvd_diskid, dvd_state_cb);
 			}	
 			if(read_state == READ_FST) {
 				WriteFont(20, 280 , "Reading FST");
 				
-				int numEntries = 0;
-				const char **entries = getEntries((char*)&dvd_diskid.gamename[0], &numEntries);
-				printf("found %i entries\r\n", numEntries);
+				const char **rawNameEntries = getEntries((char*)&dvd_diskid.gamename[0], &readTrackState.read_num_total);
+				printf("found %i entries for gamename: [%s]\r\n", readTrackState.read_num_total, (char*)&dvd_diskid.gamename[0]);
+				// read the FST for this disc to resolve file offsets now
 				int i = 0;
-				for(i = 0; i < numEntries; i++) {
-					printf("found [%s]\r\n", entries[i]);
+				char *FST = get_fst(&dvd_block);
+				if(!FST) {
+					errorMsg = "Failed to read file system from disc.";
+					menu_state = ERROR;
+					break;
 				}
-				read_state = READ_TRACKS;
+				memset(entries, 0, sizeof(AudioEntry) * 1024);
+				for(i = 0; i < readTrackState.read_num_total; i++) {
+					entries[i].filename = rawNameEntries[i];
+					get_fst_details(FST, rawNameEntries[i], &entries[i].discOffset, &entries[i].fileSize);
+					readTrackState.dump_total += entries[i].fileSize;
+					printf("found [%s] at offset %08X, with size %i\r\n", entries[i].filename, entries[i].discOffset, entries[i].fileSize);
+					char* filenameOutput = calloc(1, 1024);
+					sprintf(filenameOutput, "/cubemusic/%08X_%s", entries[i].discOffset, entries[i].filename);
+					strcpy(entries[i].storagePath, filenameOutput);
+					free(filenameOutput);
+				}
+				free(FST);
+				if(readTrackState.read_num_total > 0) {
+					read_state = DUMP_TRACKS;
+				}
+				else {
+					menu_state = SETUP;
+				}
 			}
-			if(read_state == READ_TRACKS) {
+			if(read_state == DUMP_TRACKS) {
+				int i = readTrackState.read_num_cur;
+				
+				// Prepare for the next write
+				if(readTrackState.write_fp == NULL) {
+					// TODO if exist, use it.
+					printf("Opening new file %i of %i [%s]\r\n", readTrackState.read_num_cur, readTrackState.read_num_total, entries[readTrackState.read_num_cur].filename);
+					readTrackState.write_fp = fopen(entries[readTrackState.read_num_cur].storagePath, "wb");
+					readTrackState.read_offset = entries[readTrackState.read_num_cur].discOffset;
+				}
+				
+				sprintf(txtbuffer, "Dumping %i of %i [%.2f/%.2f KB] [%.2f/%.2f MB] to SD",
+									i+1,
+									readTrackState.read_num_total,
+									(readTrackState.read_offset-entries[i].discOffset)/1024.0f,
+									entries[i].fileSize/1024.0f,
+									readTrackState.dump_cur/(1024.0f*1024.0f),
+									readTrackState.dump_total/(1024.0f*1024.0f));
+									
+				WriteFont(20, 280 , txtbuffer);
+				printf(txtbuffer);
+				
+				// TODO async this.
+				if(readTrackState.read_offset < entries[i].discOffset + entries[i].fileSize) {
+					// Read & dump a chunk
+					u32 readsize = readTrackState.read_offset + READ_SIZE > entries[i].discOffset + entries[i].fileSize ? (entries[i].discOffset + entries[i].fileSize)-readTrackState.read_offset : READ_SIZE;
+					printf("Writing %i bytes from %08X to %s\r\n", readsize, entries[i].discOffset, entries[i].storagePath);
+					DVD_ReadPrio(&dvd_block, read_buffer, readsize, entries[i].discOffset, 1);
+					fwrite(read_buffer, 1, readsize, readTrackState.write_fp);
+					readTrackState.read_offset+=READ_SIZE;
+					readTrackState.dump_cur += readsize;
+				}
+				else {
+					// We're done
+					fclose(readTrackState.write_fp);
+					readTrackState.write_fp = NULL;
+					readTrackState.read_num_cur++;
+					
+					// See if there's more to dump
+					if(readTrackState.read_num_cur >= readTrackState.read_num_total) {
+						menu_state = SELECT_TRACK;
+					}
+				}
 				
 			}
 			/*if(tracks_read) {
@@ -166,19 +259,32 @@ int menu_frame() {
 				tracks_read = 0;
 			}*/
 		break;
-		case DECODING:
-			// Parse from disc, dump to SD
-#ifdef _UI_DEBUG
-			printf("Decoding\r\n");
-#endif
-			WriteFont(20, 280 , "Decoding");
+		case SELECT_TRACK:
+			i = 0;
+			for(i = 0; i < readTrackState.read_num_total; i++) {
+				sprintf(txtbuffer, "%s%s", i==track_sel?"-> ":"", entries[i].filename);
+				WriteFont(20, 200+(i*40) , txtbuffer);
+			}
+			if(PAD_ButtonsDown(0) & PAD_BUTTON_DOWN)
+				track_sel = (track_sel+1 == readTrackState.read_num_total ? 0:track_sel+1);
+			if(PAD_ButtonsDown(0) & PAD_BUTTON_UP)
+				track_sel = (track_sel == 0 ? readTrackState.read_num_total-1 : track_sel-1);	
+			if(PAD_ButtonsDown(0) & PAD_BUTTON_A) {
+				menu_state = PLAYING;
+				audio_starttrack(entries[track_sel].storagePath);
+				printf("Opening [%s]\r\n", entries[track_sel].storagePath);
+			}
 		break;
 		case PLAYING:
 			// Show current track, allow user to stop/pause/next/prev/exit
 #ifdef _UI_DEBUG
-			printf("Playing\r\n");
+			//printf("Playing\r\n");
 #endif
 			WriteFont(20, 280 , "Playing");
+			if(PAD_ButtonsDown(0) & PAD_BUTTON_B) {
+				menu_state = SELECT_TRACK;
+				audio_stoptrack();
+			}
 		break;
 		case CREDITS:
 			// Credits scroller
