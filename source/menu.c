@@ -53,13 +53,14 @@ enum READ_STATES {
 	READ_ID,
 	READ_ID_STARTED,
 	READ_FST,
-	DUMP_TRACKS
+	DUMP_TRACK
 };
 #define READ_SIZE (128*1024)
 static char read_buffer[READ_SIZE] __attribute((aligned(32)));
 typedef struct {
 	int read_num_cur;
 	int read_num_total;
+	int read_num_found;
 	u32  read_offset;
 	u32 dump_cur;
 	u32 dump_total;
@@ -168,35 +169,42 @@ int menu_frame() {
 				for(i = 0; i < readTrackState.read_num_total; i++) {
 					entries[i].filename = rawNameEntries[i];
 					get_fst_details(FST, rawNameEntries[i], &entries[i].discOffset, &entries[i].fileSize);
-					readTrackState.dump_total += entries[i].fileSize;
-					printf("found [%s] at offset %08X, with size %i\r\n", entries[i].filename, entries[i].discOffset, entries[i].fileSize);
-					char* filenameOutput = calloc(1, 1024);
-					sprintf(filenameOutput, "/cubemusic/%08X_%s", entries[i].discOffset, entries[i].filename);
-					strcpy(entries[i].storagePath, filenameOutput);
-					free(filenameOutput);
+					if(entries[i].discOffset > 0 && entries[i].fileSize > 0) {
+						readTrackState.dump_total += entries[i].fileSize;
+						printf("found [%s] at offset %08X, with size %i\r\n", entries[i].filename, entries[i].discOffset, entries[i].fileSize);
+						char* filenameOutput = calloc(1, 1024);
+						char *relativename = strrchr(entries[i].filename, '/');
+						sprintf(filenameOutput, "/cubemusic/%08X_%s", entries[i].discOffset, relativename ? relativename+1 : entries[i].filename);
+						strcpy(entries[i].storagePath, filenameOutput);
+						free(filenameOutput);
+						readTrackState.read_num_found++;
+					}
+					else {
+						printf("Track not found: [%s]\r\n", entries[i].filename);
+					}
 				}
 				free(FST);
-				if(readTrackState.read_num_total > 0) {
-					read_state = DUMP_TRACKS;
+				if(readTrackState.read_num_found > 0) {
+					menu_state = SELECT_TRACK;
 				}
 				else {
+					// TODO error stating none were found.
 					menu_state = SETUP;
 				}
 			}
-			if(read_state == DUMP_TRACKS) {
+			if(read_state == DUMP_TRACK) {
 				int i = readTrackState.read_num_cur;
 				
 				// Prepare for the next write
 				if(readTrackState.write_fp == NULL) {
-					// TODO if exist, use it.
-					printf("Opening new file %i of %i [%s]\r\n", readTrackState.read_num_cur, readTrackState.read_num_total, entries[readTrackState.read_num_cur].filename);
+					printf("Opening new file %i of %i [%s]\r\n", readTrackState.read_num_cur, readTrackState.read_num_found, entries[readTrackState.read_num_cur].filename);
 					readTrackState.write_fp = fopen(entries[readTrackState.read_num_cur].storagePath, "wb");
 					readTrackState.read_offset = entries[readTrackState.read_num_cur].discOffset;
 				}
 				
 				sprintf(txtbuffer, "Dumping %i of %i [%.2f/%.2f KB] [%.2f/%.2f MB] to SD",
 									i+1,
-									readTrackState.read_num_total,
+									readTrackState.read_num_found,
 									(readTrackState.read_offset-entries[i].discOffset)/1024.0f,
 									entries[i].fileSize/1024.0f,
 									readTrackState.dump_cur/(1024.0f*1024.0f),
@@ -205,12 +213,11 @@ int menu_frame() {
 				WriteFont(20, 280 , txtbuffer);
 				printf(txtbuffer);
 				
-				// TODO async this.
 				if(readTrackState.read_offset < entries[i].discOffset + entries[i].fileSize) {
 					// Read & dump a chunk
 					u32 readsize = readTrackState.read_offset + READ_SIZE > entries[i].discOffset + entries[i].fileSize ? (entries[i].discOffset + entries[i].fileSize)-readTrackState.read_offset : READ_SIZE;
-					printf("Writing %i bytes from %08X to %s\r\n", readsize, entries[i].discOffset, entries[i].storagePath);
-					DVD_Read(read_buffer, entries[i].discOffset, readsize);
+					printf("Writing %i bytes from %08X to %s\r\n", readsize, readTrackState.read_offset, entries[i].storagePath);
+					DVD_Read(read_buffer, readTrackState.read_offset, readsize);
 					fwrite(read_buffer, 1, readsize, readTrackState.write_fp);
 					readTrackState.read_offset+=READ_SIZE;
 					readTrackState.dump_cur += readsize;
@@ -219,34 +226,37 @@ int menu_frame() {
 					// We're done
 					fclose(readTrackState.write_fp);
 					readTrackState.write_fp = NULL;
-					readTrackState.read_num_cur++;
-					
-					// See if there's more to dump
-					if(readTrackState.read_num_cur >= readTrackState.read_num_total) {
-						menu_state = SELECT_TRACK;
-					}
+					menu_state = PLAYING;
 				}
 				
 			}
-			/*if(tracks_read) {
-				menu_state = PLAYING;
-				tracks_read = 0;
-			}*/
 		break;
 		case SELECT_TRACK:
 			i = 0;
-			for(i = 0; i < readTrackState.read_num_total; i++) {
+			for(i = 0; i < readTrackState.read_num_found; i++) {
 				sprintf(txtbuffer, "%s%s", i==track_sel?"-> ":"", entries[i].filename);
 				WriteFont(20, 200+(i*40) , txtbuffer);
 			}
 			if(PAD_ButtonsDown(0) & PAD_BUTTON_DOWN)
-				track_sel = (track_sel+1 == readTrackState.read_num_total ? 0:track_sel+1);
-			if(PAD_ButtonsDown(0) & PAD_BUTTON_UP)
-				track_sel = (track_sel == 0 ? readTrackState.read_num_total-1 : track_sel-1);	
-			if(PAD_ButtonsDown(0) & PAD_BUTTON_A) {
-				menu_state = PLAYING;
-				audio_starttrack(entries[track_sel].storagePath);
-				printf("Opening [%s]\r\n", entries[track_sel].storagePath);
+				track_sel = (track_sel+1 == readTrackState.read_num_found ? 0:track_sel+1);
+			else if(PAD_ButtonsDown(0) & PAD_BUTTON_UP)
+				track_sel = (track_sel == 0 ? readTrackState.read_num_found-1 : track_sel-1);	
+			else if(PAD_ButtonsDown(0) & PAD_BUTTON_A) {
+				// If it exists, play it.
+				FILE *fp = fopen(entries[track_sel].storagePath, "rb");
+				if(fp) {
+					fclose(fp);
+					menu_state = PLAYING;
+				}
+				else {
+					// Otherwise, dump it.
+					menu_state = READING;
+					read_state = DUMP_TRACK;
+					readTrackState.read_num_cur = track_sel;
+				}
+			}
+			else if(PAD_ButtonsDown(0) & PAD_BUTTON_B) {
+				menu_init();
 			}
 		break;
 		case PLAYING:
@@ -255,6 +265,11 @@ int menu_frame() {
 			//printf("Playing\r\n");
 #endif
 			WriteFont(20, 280 , "Playing");
+			if(!audio_isplaying()) {
+				audio_starttrack(entries[track_sel].storagePath);
+				printf("Opening [%s]\r\n", entries[track_sel].storagePath);
+			}
+					
 			if(PAD_ButtonsDown(0) & PAD_BUTTON_B) {
 				menu_state = SELECT_TRACK;
 				audio_stoptrack();

@@ -178,3 +178,8 @@ void audio_stopsfx(int sfxvoice) {
 void audio_deinit() {
 	// Stop anything that is resident
 }
+
+int audio_isplaying() {
+	return vgmstream != NULL ? 1 : 0;
+}
+

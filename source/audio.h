@@ -22,6 +22,7 @@
 void audio_init();
 void audio_frame();
 int audio_starttrack(char *audiotrack);
+int audio_isplaying();
 void audio_stoptrack();
 int audio_playsfx(FILE *sfx);
 void audio_stopsfx(int sfxvoice);

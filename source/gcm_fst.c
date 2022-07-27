@@ -53,7 +53,8 @@ void get_fst_details(char *FST, const char *searchFileName, u32 *file_offset, u3
 			filename_offset=(unsigned int)FST[offset+1]*256*256+(unsigned int)FST[offset+2]*256+(unsigned int)FST[offset+3]; 
 			memset(filename,0,256);
 			strcpy(filename,&FST[string_table_offset+filename_offset]); 
-			if(!strcasecmp(filename,searchFileName)) 
+			char *relativename = strrchr(searchFileName, '/');
+			if(!strcasecmp(filename,relativename ? relativename+1 : searchFileName)) 
 			{
 				memcpy(file_offset,&FST[offset+4],4);
 				memcpy(file_size,&FST[offset+8],4);
