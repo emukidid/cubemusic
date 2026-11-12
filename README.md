@@ -77,3 +77,5 @@ The licence texts for these libraries come with devkitPro:
 
 
 CubeMusic doesn't include any game music or Nintendo code. It plays and backs up music from discs you own. `source/meta.c` contains only file names.
+
+This project has been developed with assistance from an LLM, and the code has been tested/reviewed by me (emu_kidid). This project sat dead for many years (I started it in 2016!) and wouldn't have seen the end of the tunnel without the assistance.
