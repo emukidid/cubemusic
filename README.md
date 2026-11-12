@@ -2,6 +2,8 @@
 
 A GameCube homebrew player for the music on your own original game discs. It reads the disc in the drive, finds the game's music, lets you play it and back the tracks up to an SD card to play later without the disc.
 
+<img width="320" height="240" alt="screenshot0" src="https://github.com/user-attachments/assets/1e7e6496-e4d2-4728-ac32-95e4f5d1514c" />
+
 ## Features
 
 - **Play from disc.** Tracks are found using a database of known music files per game from a database of VGM rips that were iterated over to produce a database of music files per game.
@@ -10,6 +12,11 @@ A GameCube homebrew player for the music on your own original game discs. It rea
 - **Saved tracks.** You can browse, play, rename, hide and delete backed-up tracks without the disc.
 - **Formats.** Decoding uses [vgmstream](https://github.com/vgmstream/vgmstream). Only the parsers listed in `vgm_formats.txt` are built in, including DSP, ADX, HPS, PDT, RSF and many others. Banks with several streams (subsongs) are listed per stream.
 - **Names and info.** Track names, hidden tracks and search results are kept in `/cubemusic/names/<game id>.json`, track lengths in `/cubemusic/cache/`, and settings in `/cubemusic/settings.json`.
+
+
+<img width="320" height="240" alt="screenshot1" src="https://github.com/user-attachments/assets/b4ce7d14-eeec-4fcb-beb7-1f384d64d852" />
+<img width="320" height="240" alt="screenshot2" src="https://github.com/user-attachments/assets/f5078500-f8cc-4f69-a9b6-fd1178a0f953" />
+
 
 ## Building
 
