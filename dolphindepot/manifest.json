@@ -1,0 +1,23 @@
+{
+  "name": "CubeMusic",
+  "author": "emu_kidid",
+  "description_short": "Explore, play and backup the music on your original GameCube discs!",
+  "description_long": "CubeMusic finds the music on the game disc in the drive and plays it, using vgmstream for DSP, ADX, HPS, PDT, RSF and many more formats. Tracks can be backed up to an SD card and played later without the disc. Games it doesn't know can be searched for music, and tracks can be renamed or hidden. Nicely named track names for some games come with it.",
+  "category": "media",
+  "platforms": ["gamecube"],
+  "peripherals": ["controller", "disc", "sd_gecko", "sd2sp2"],
+  "license": {
+    "spdx": "MIT",
+    "url": "https://github.com/emukidid/cubemusic/blob/master/LICENSE"
+  },
+  "source": {
+    "type": "github_release",
+    "repository": "emukidid/cubemusic",
+    "asset_pattern": "cubemusic-*.zip"
+  },
+  "treatments": [
+    { "treatment": "archive.extract", "arguments": ["cubemusic-*.zip", "."] },
+    { "treatment": "contents.move", "arguments": ["apps/cubemusic/", "apps/cubemusic/"] },
+    { "treatment": "contents.move", "arguments": ["cubemusic/", "cubemusic/"] }
+  ]
+}

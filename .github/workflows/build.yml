@@ -1,0 +1,87 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container: devkitpro/devkitppc:latest
+
+    steps:
+    - name: Install packages
+      run: |
+        sudo dkp-pacman-key --recv-keys C8A2759C315CFBC3429CC2E422B803BA8AA3D7CE --keyserver keyserver.ubuntu.com
+        sudo dkp-pacman-key --lsign-key C8A2759C315CFBC3429CC2E422B803BA8AA3D7CE
+        sudo sed -i '/^\[dkp-libs\]$/,$d' /opt/devkitpro/pacman/etc/pacman.conf
+        sudo echo -e '[extremscorner-devkitpro]\nServer = https://packages.extremscorner.org/devkitpro/linux/$arch' >> /opt/devkitpro/pacman/etc/pacman.conf
+        sudo dkp-pacman -Sy
+        sudo dkp-pacman -S --noconfirm --ask 4 gamecube-tools-git libogc2 libogc2-libdvm libogc2-libansnd ppc-jansson ppc-freetype
+
+    - name: Checkout
+      uses: actions/checkout@main
+      with:
+        fetch-depth: 0   # the Makefile counts commits for the version number
+
+    - name: Build
+      run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        make -j$(nproc) TARGET=cubemusic
+
+    - name: Gather files for the SD card
+      run: |
+        A=package/apps/cubemusic
+        L=$A/licenses
+        mkdir -p $L package/cubemusic/names
+        cp cubemusic.dol $A/default.dol
+        cp opening.bnr $A/opening.bnr
+        cp README.md $A/README.md
+        cp db/*.json package/cubemusic/names/
+        cp LICENSE $L/cubemusic-LICENSE.txt
+        cp vgmstream/COPYING $L/vgmstream-COPYING.txt
+        cp licenses/* $L/
+        # the libraries linked in: libogc2, libdvm (libfat), libansnd and the portlibs
+        for f in /opt/devkitpro/libogc2/*_license.txt; do [ -f "$f" ] && cp "$f" $L/; done
+        for d in /opt/devkitpro/libogc2/gamecube/share/licenses/libdvm \
+                 /opt/devkitpro/libogc2/gamecube/share/licenses/libansnd \
+                 /opt/devkitpro/portlibs/ppc/licenses/*; do
+          [ -d "$d" ] || continue
+          for f in "$d"/*; do cp "$f" "$L/$(basename "$d")-$(basename "$f")"; done
+        done
+        ls -R package
+
+    - name: Upload result
+      uses: actions/upload-artifact@main
+      with:
+        name: cubemusic
+        path: package/
+
+  # A tag push (v1.0, v1.1, ...) also publishes a GitHub release with the
+  # package zipped as cubemusic-<tag>.zip: what users download, and what the
+  # DolphinDepot manifest (dolphindepot/manifest.json) points at.
+  release:
+    name: Release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Get the package
+      uses: actions/download-artifact@main
+      with:
+        name: cubemusic
+        path: package
+
+    - name: Zip it
+      run: cd package && zip -r -9 "../cubemusic-${GITHUB_REF_NAME}.zip" .
+
+    - name: Publish the release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: cubemusic-${{ github.ref_name }}.zip
+        generate_release_notes: true

@@ -1,0 +1,6 @@
+vgmstream r2168 (d9875b1fff307e4759dfb85e49e3d5e6fb196f7c), src/ only. Upstream: https://github.com/vgmstream/vgmstream
+
+Local changes, each marked with a "cubemusic:" comment:
+  src/base/streamfile_stdio.c  USE_STDIO_FDUP off on GameCube (GEKKO): dup'd FILEs share one position in libfat
+  src/meta/pdt.c               a read buffer per channel (vgmstream_open_stream_bf(..., true))
+  src/meta/raw_rsf.c           a read buffer per channel (vgmstream_open_stream_bf(..., true))

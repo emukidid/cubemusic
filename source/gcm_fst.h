@@ -1,9 +1,9 @@
 #ifndef __GCM_FST_H
 #define __GCM_FST_H
 
-#define FST_ENTRY_SIZE 12
+#include <gccore.h>
 
-/* 	The Retail Game DVD Disk Header 
+/* 	The Retail Game DVD Disk Header
 	Info source: YAGCD
 	Size of Struct: 0x2440	*/
 typedef struct {
@@ -17,7 +17,7 @@ typedef struct {
 	u8	Version;
 	u8	AudioStreaming; //01 = Enable it. 00 = Don't
 	u8 	StreamBufSize;	//For the AudioEnable. (always 00?)
-	u8	unused_1[18];	
+	u8	unused_1[18];
 	u32 DVDMagicWord;	//0xC2339F3D
 	char GameName[64];	//String Name of Game, rarely > 32 chars
 	u8  unused_2[416];
@@ -56,13 +56,30 @@ typedef struct {
 	// *Multiple DVDs must use it, to properly reside all FSTs.
 } DiskHeader __attribute__((aligned(32)));
 
+/* One file on the disc, by its full path from the root ("Music/Chase/Chase01.asf"). */
 typedef struct {
-	u32  discOffset;
-	u32  fileSize;
-	char storagePath[1024];
-	const char *filename;
-} AudioEntry;
+	const char *path;
+	u32 offset;
+	u32 size;
+} DiscFile;
 
-void* get_fst();
-void get_fst_details(char *FST, const char *searchFileName, u32 *file_offset, u32 *file_size);
+/* Reads the disc header and file table and indexes every file by full path.
+ * Replaces any previous index. Returns the number of files, or -1 on a read error.
+ * game_name (64 bytes, may be NULL) receives the header's game name. */
+int fst_load(char *game_name);
+
+/* Every file on the disc, by index (0..fst_count()-1), sorted by path. */
+int fst_count(void);
+const DiscFile *fst_file(int index);
+
+/* Frees the index. */
+void fst_free(void);
+
+/* Finds a file by full path (case-insensitive, '/' or '\\' separators, a
+ * leading separator is ignored). If no file has that exact path, the path is
+ * matched as the end of a disc path on a folder boundary ("rui_samusL.dsp"
+ * finds "Audio/rui_samusL.dsp"); with several such matches the one nearest
+ * the root wins. NULL if nothing matches. */
+const DiscFile *fst_find(const char *path);
+
 #endif
