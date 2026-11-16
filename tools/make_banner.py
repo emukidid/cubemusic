@@ -6,9 +6,9 @@ Bold) over a semi-transparent disc on the app's night-sky gradient.
 
     python3 tools/make_banner.py [--preview-only]
 
-Writes opening.bnr and tools/preview_banner.png (plus an 8x enlargement,
-tools/preview_banner_8x.png, for looking at). Needs Python 3 with Pillow and
-NumPy."""
+Writes opening.bnr (the GameCube banner) and dist/icon.png (the 128x48 Wii
+Homebrew Channel icon, the same artwork), plus previews in tools/ (preview_banner*,
+preview_icon*) for looking at. Needs Python 3 with Pillow and NumPy."""
 import math
 import os
 import struct
@@ -33,7 +33,8 @@ C_ACCENT_HI = (170, 155, 255)
 SKY = [(6, 6, 18), (14, 12, 40), (30, 22, 78)]
 
 S = 8                      # supersampling
-W, H = 96 * S, 32 * S
+LW, LH = 96, 32            # logical size of the image being built (compose() sets it)
+W, H = LW * S, LH * S
 
 
 def lerp(a, b, t):
@@ -65,7 +66,7 @@ def stars(img, keep_out, count=8, seed=11):
     d = ImageDraw.Draw(layer)
     placed = []
     while len(placed) < count:
-        x, y = rng.uniform(1.5, 94.5), rng.uniform(1.5, 30.5)
+        x, y = rng.uniform(1.5, LW - 1.5), rng.uniform(1.5, LH - 1.5)
         if any((x - px) ** 2 + (y - py) ** 2 < 15 ** 2 for px, py in placed):
             continue   # keep them well spread out
         if keep_out[int(y), int(x)]:
@@ -137,7 +138,11 @@ def wordmark(height_px):
     return img.crop(img.getbbox())
 
 
-def banner_image():
+def compose(lw, lh):
+    """the full artwork (sky, stars, disc, wordmark) at a logical lw x lh,
+    returned at that pixel size -- 96x32 for the banner, 128x48 for the icon"""
+    global LW, LH, W, H
+    LW, LH, W, H = lw, lh, lw * S, lh * S
     img = sky()
 
     # where the letters will go (worked out first, so the stars can avoid them)
@@ -148,7 +153,7 @@ def banner_image():
     x, y = (W - wm.width) // 2, (H - wm.height) // 2
     mask = Image.new('L', (W, H), 0)
     mask.paste(wm.getchannel('A'), (x, y))
-    mask = mask.resize((96, 32), Image.BOX).filter(ImageFilter.MaxFilter(7))
+    mask = mask.resize((LW, LH), Image.BOX).filter(ImageFilter.MaxFilter(7))
     stars(img, np.array(mask) > 40)
 
     # the disc, centred, the full height with a pixel to spare, half see-through
@@ -166,7 +171,7 @@ def banner_image():
     halo.putalpha(Image.fromarray(a.clip(0, 255).astype(np.uint8)))
     img.alpha_composite(halo)
     img.alpha_composite(wm, (x, y))
-    return img.resize((96, 32), Image.LANCZOS)
+    return img.resize((LW, LH), Image.LANCZOS)
 
 
 def rgb5a3(img):
@@ -192,17 +197,26 @@ def field(s, n):
 
 
 def main():
-    img = banner_image()
-    img.save(os.path.join(HERE, 'preview_banner.png'))
-    img.resize((96 * 8, 32 * 8), Image.NEAREST).save(os.path.join(HERE, 'preview_banner_8x.png'))
-    print('wrote tools/preview_banner.png and tools/preview_banner_8x.png')
+    banner = compose(96, 32)
+    banner.save(os.path.join(HERE, 'preview_banner.png'))
+    banner.resize((96 * 8, 32 * 8), Image.NEAREST).save(os.path.join(HERE, 'preview_banner_8x.png'))
+
+    icon = compose(128, 48)   # the Homebrew Channel icon, shown on the Wii
+    icon.save(os.path.join(HERE, 'preview_icon.png'))
+    icon.resize((128 * 8, 48 * 8), Image.NEAREST).save(os.path.join(HERE, 'preview_icon_8x.png'))
+    print('wrote previews to tools/')
     if '--preview-only' in sys.argv:
         return
-    data = b'BNR1' + b'\0' * 0x1C + rgb5a3(img)
+
+    data = b'BNR1' + b'\0' * 0x1C + rgb5a3(banner)
     data += field(SHORT_NAME, 0x20) + field(SHORT_MAKER, 0x20) + field(LONG_NAME, 0x40) + field(LONG_MAKER, 0x40) + field(DESCRIPTION, 0x80)
     assert len(data) == 0x1960
     open(os.path.join(ROOT, 'opening.bnr'), 'wb').write(data)
     print('wrote opening.bnr')
+
+    os.makedirs(os.path.join(ROOT, 'dist'), exist_ok=True)
+    icon.save(os.path.join(ROOT, 'dist', 'icon.png'))
+    print('wrote dist/icon.png')
 
 
 if __name__ == '__main__':

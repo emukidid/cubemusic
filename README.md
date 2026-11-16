@@ -32,6 +32,12 @@ dkp-pacman -S gamecube-tools-git libogc2 libogc2-libdvm libogc2-libansnd ppc-jan
 make
 ```
 
+or, for the Wii
+
+```
+make -f Makefile.wii
+```
+
 vgmstream is statically linked into the DOL. The Makefile generates a cut-down copy of vgmstream's format table from `vgm_formats.txt`. To add a format, add its parser's name there.
 
 
@@ -40,6 +46,8 @@ vgmstream is statically linked into the DOL. The Makefile generates a cut-down c
 Download `cubemusic-<version>.zip` from the releases page and unzip it to the root of your SD card, or Install it via [DolphinDepot](https://dolphindepot.org). 
 
 Load via from Swiss, or any compatible loader.
+
+On the Wii, download `cubemusic-wii-<version>.zip` instead and unzip it to the SD card, launch via HBC so the drive can be accessed using AHBPROT support.
 
 
 ## Music database

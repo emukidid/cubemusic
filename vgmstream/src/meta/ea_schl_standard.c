@@ -43,7 +43,7 @@ VGMSTREAM* init_vgmstream_ea_schl(STREAMFILE* sf) {
      * (extensionless): SSX (PS2) (inside .big)
      * .r: The Sims 2: Pets (PSP) (not l/r, shorter "res")
      * .snd: Command & Conquer 3: Tiberum Sun (PC) videos */
-    if (!check_extensions(sf, "asf,lasf,str,chk,eam,exa,sng,aud,sx,xa,strm,stm,hab,xsf,gsf,,r,snd"))
+    if (!check_extensions(sf, "asf,lasf,str,chk,eam,exa,sng,aud,sx,xa,strm,stm,hab,xsf,gsf,,r,snd,fre,ger"))
         return NULL;
 
     /* check header */

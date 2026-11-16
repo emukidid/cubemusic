@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>CubeMusic</name>
+  <coder>emu_kidid</coder>
+  <version>1.0</version>
+  <release_date>20260101000000</release_date>
+  <short_description>Play and back up GameCube disc music</short_description>
+  <long_description>Plays the music on your own GameCube game discs, and backs the tracks up to an SD card to play later without the disc.
+
+Requirements:
+- A Wii with a disc drive capable of reading original discs and a GameCube controller
+- An SD card
+  </long_description>
+  <ahb_access />
+</app>

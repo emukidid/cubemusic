@@ -8,8 +8,10 @@
 #include <string.h>
 #include <malloc.h>
 #include <gccore.h>
+#ifdef HW_DOL
 #include <ogc/aram.h>
 #include <ogc/arqueue.h>
+#endif
 #include <ogc/lwp_watchdog.h>
 #include <ansndlib.h>
 #include "sound.h"
@@ -18,6 +20,8 @@
 
 #define VOICES 4
 
+/* where the DSP reads each sound from: an ARAM address on the GameCube, the
+ * physical address of a kept main-memory buffer on the Wii (see audio.c) */
 static u32 aram_at[SFX_COUNT];
 static u32 frames[SFX_COUNT];
 static volatile bool ready[SFX_COUNT];
@@ -36,18 +40,27 @@ static void synth(Sfx id) {
 	if (!buf)
 		return;
 	memset(buf, 0, bytes);
-	if (sfx_render(id, buf, n)) {
-		u32 at = AR_Alloc(bytes);
-		if (at) {
-			DCFlushRange(buf, bytes);
-			ARQRequest req;
-			ARQ_PostRequest(&req, 0x5346, ARQ_MRAMTOARAM, ARQ_PRIO_LO, at, MEM_VIRTUAL_TO_PHYSICAL(buf), bytes);
-			aram_at[id] = at;
-			frames[id] = n;
-			ready[id] = true;
-		}
+	if (!sfx_render(id, buf, n)) {
+		free(buf);
+		return;
 	}
-	free(buf);
+	DCFlushRange(buf, bytes);
+#ifdef HW_DOL
+	u32 at = AR_Alloc(bytes);
+	if (at) {
+		ARQRequest req;
+		ARQ_PostRequest(&req, 0x5346, ARQ_MRAMTOARAM, ARQ_PRIO_LO, at, MEM_VIRTUAL_TO_PHYSICAL(buf), bytes);
+		aram_at[id] = at;
+		frames[id] = n;
+		ready[id] = true;
+	}
+	free(buf);   /* the sound is in ARAM now */
+#else
+	/* the DSP plays straight from this buffer, so it's kept, not freed */
+	aram_at[id] = MEM_VIRTUAL_TO_PHYSICAL(buf);
+	frames[id] = n;
+	ready[id] = true;
+#endif
 }
 
 /* the opening's first, then the ones used most */

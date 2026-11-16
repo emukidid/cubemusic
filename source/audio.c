@@ -12,8 +12,10 @@
 #include <malloc.h>
 #include <math.h>
 #include <gccore.h>
+#ifdef HW_DOL
 #include <ogc/aram.h>
 #include <ogc/arqueue.h>
+#endif
 #include <ogc/mutex.h>
 #include <ansndlib.h>
 #include "audio.h"
@@ -27,9 +29,12 @@ enum { BUF_FREE, BUF_READY, BUF_GIVEN };
 
 AudioSettings audio_settings = { .loop_count = 2, .fade_seconds = 10.0f, .loop_forever = false, .volume = 1.0f };
 
+#ifdef HW_DOL
 static u32 aram_stack[64];      /* the music buffers and the menu sounds */
 static u32 aram[NBUF];
+#endif
 static u8 *mram[NBUF];
+static u32 play_ptr[NBUF];
 static volatile u32 buf_frames[NBUF];
 static volatile u8 buf_state[NBUF];
 static volatile int give_idx;     /* next buffer the callback hands over */
@@ -71,7 +76,7 @@ static void stream_cb(void *user, ansnd_pcm_data_buffer_t *db) {
 	int i = give_idx;
 	if (buf_state[i] != BUF_READY)
 		return;   /* nothing decoded yet; asked again next DSP frame */
-	db->frame_data_ptr = aram[i];
+	db->frame_data_ptr = play_ptr[i];
 	db->frame_count = buf_frames[i];
 	buf_state[i] = BUF_GIVEN;
 	frames_given += buf_frames[i];
@@ -148,8 +153,10 @@ static bool fill_one(void) {
 
 	u32 bytes = (frames * channels * 2 + 31) & ~31;
 	DCFlushRange(mram[i], bytes);
+#ifdef HW_DOL
 	ARQRequest req;
 	ARQ_PostRequest(&req, 0x4D55, ARQ_MRAMTOARAM, ARQ_PRIO_HI, aram[i], MEM_VIRTUAL_TO_PHYSICAL(mram[i]), bytes);
+#endif
 	buf_frames[i] = frames;
 	buf_state[i] = BUF_READY;
 	fill_idx = (i + 1) % NBUF;
@@ -166,7 +173,7 @@ static void launch_from(int i) {
 	voice_cfg.pitch = 1.0f;
 	voice_cfg.left_volume = audio_settings.volume;
 	voice_cfg.right_volume = audio_settings.volume;
-	voice_cfg.frame_data_ptr = aram[i];
+	voice_cfg.frame_data_ptr = play_ptr[i];
 	voice_cfg.frame_count = buf_frames[i];
 	voice_cfg.voice_callback = voice_cb;
 	voice_cfg.stream_callback = stream_cb;
@@ -287,12 +294,19 @@ static void *decode_main(void *arg) {
 /* ------------------------------------------------------------------- API */
 
 void audio_init(void) {
+#ifdef HW_DOL
 	AR_Init(aram_stack, 64);
 	ARQ_Init();
+#endif
 	ansnd_initialize();
 	for (int i = 0; i < NBUF; i++) {
-		aram[i] = AR_Alloc(BUF_BYTES);
 		mram[i] = memalign(32, BUF_BYTES);
+#ifdef HW_DOL
+		aram[i] = AR_Alloc(BUF_BYTES);
+		play_ptr[i] = aram[i];
+#else
+		play_ptr[i] = MEM_VIRTUAL_TO_PHYSICAL(mram[i]);
+#endif
 	}
 	voice = ansnd_allocate_voice();
 	if (voice < 0)

@@ -13,6 +13,8 @@
 /* Must be called once before anything else here (sets up the lock). */
 void dvd_init(void);
 
+bool dvd_available(void);
+
 /* Hard-resets the drive so it re-reads (and authenticates) the inserted disc. */
 void dvd_reset(void);
 

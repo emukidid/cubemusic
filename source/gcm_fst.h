@@ -75,6 +75,13 @@ const DiscFile *fst_file(int index);
 /* Frees the index. */
 void fst_free(void);
 
+/* Rips sometimes cut streams out of one big file by offset: "Data0_006c8000.dtk"
+ * is the part of Data0.<anything> starting at 0x6c8000. For each such name,
+ * adds that part as "<that file's path>/<name>", up to where the next listed
+ * part of the same file starts (or its end). Moves the files: call it once,
+ * straight after fst_load. Returns the number added. */
+int fst_add_slices(const char *const *names, int count);
+
 /* Finds a file by full path (case-insensitive, '/' or '\\' separators, a
  * leading separator is ignored). If no file has that exact path, the path is
  * matched as the end of a disc path on a folder boundary ("rui_samusL.dsp"

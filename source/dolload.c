@@ -100,7 +100,7 @@ bool dol_check(const char *path, char *err, size_t errlen) {
 
 /* ------------------------------------------------------------ launching */
 
-#ifdef GEKKO
+#ifdef HW_DOL
 #include <gccore.h>
 #include <ogc/irq.h>
 

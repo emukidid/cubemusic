@@ -336,7 +336,7 @@ VGMSTREAM* init_vgmstream_ngc_dsp_std(STREAMFILE* sf) {
      * .dat: The Sims: Bustin' Out (GC) (rarely, most are extensionless)
      * .rsm: Bully: Scholarship Edition (Wii) (Speech.bin)
      * .adpcm: ZooCube (GC) */
-    if (!check_extensions(sf, "dsp,adp,,wav,lwav,dat,ldat,rsm,adpcm"))
+    if (!check_extensions(sf, "dsp,adp,,wav,lwav,dat,ldat,rsm,adpcm,wgc,adb,d"))
         return NULL;
 
     channels = 1;

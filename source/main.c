@@ -26,7 +26,9 @@
 int main(int argc, char **argv) {
 	VIDEO_Init();
 	PAD_Init();
+#ifdef HW_DOL
 	*(volatile unsigned long *)0xcc00643c = 0x00000000;   /* allow the 32 MHz EXI bus */
+#endif
 
 	/* L held at start: ignore the component cable (480i) */
 	bool no_progressive = false;

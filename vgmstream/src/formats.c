@@ -48,6 +48,7 @@ static const char* extension_list[] = {
     "acm",
     "acx",
     "ad", //txth/reserved [Xenosaga Freaks (PS2)]
+    "adb", //[Legends of Wrestling II (GC)]
     "adc", //txth/reserved [Tomb Raider The Last Revelation (DC), Tomb Raider Chronicles (DC)]
     "adm",
     "adm2", //txth/reserved [Onmyou Taisenki: Byakko Enbu (PS2)]
@@ -170,6 +171,7 @@ static const char* extension_list[] = {
     "cxk", // ,acb+cpk/reserved [Dariusburst: Another Chronicle (AC)]
     "cxs",
 
+    "d", //[Tales of Symphonia (GC)]
     "d2", //txth/reserved [Dodonpachi Dai-Ou-Jou (PS2)]
     "da",
     //"dat", //common
@@ -213,6 +215,7 @@ static const char* extension_list[] = {
     "fish",
     //"flac", //common
     "flx",
+    "fre", //EA SCHl [Fight Night Round 2 (GC)]
     "fsb",
     "fsv",
     "fwav",
@@ -227,6 +230,7 @@ static const char* extension_list[] = {
     "ged",
     "gen",
     "genh",
+    "ger", //EA SCHl [Fight Night Round 2 (GC)]
     "gin",
     "gmd",  //txth/semi [High Voltage games: Charlie and the Chocolate Factory (GC), Zathura (GC)]
     "gms",
@@ -642,6 +646,7 @@ static const char* extension_list[] = {
     "tgq",
     "tgv",
     "thp",
+    "thp_pal", //[Metroid Prime (GC) PAL]
     "tmx",
     "tra",
     "trk",
@@ -718,6 +723,7 @@ static const char* extension_list[] = {
     "wbk",
     "wd",
     "wem",
+    "wgc", //[Star Wars Jedi Knight II: Jedi Outcast (GC)]
     "wiive", //txth/semi [Rubik World (Wii)]
     "wic", //txth/reserved [Road Rash (SAT)-videos]
     "wip", //txth/reserved [Colin McRae DiRT (PC)]

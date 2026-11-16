@@ -29,39 +29,62 @@ jobs:
     - name: Build
       run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        make -j$(nproc) TARGET=cubemusic
+        make -j$(nproc) TARGET=cubemusic            # GameCube: cubemusic.dol
+        make -f Makefile.wii -j$(nproc)             # Wii: cubemusic-wii.dol
 
     - name: Gather files for the SD card
       run: |
-        A=package/apps/cubemusic
-        L=$A/licenses
-        mkdir -p $L package/cubemusic/names
-        cp cubemusic.dol $A/default.dol
-        cp opening.bnr $A/opening.bnr
-        cp README.md $A/README.md
-        cp db/*.json package/cubemusic/names/
-        cp LICENSE $L/cubemusic-LICENSE.txt
-        cp vgmstream/COPYING $L/vgmstream-COPYING.txt
-        cp licenses/* $L/
+        # the licences every build ships (the same set for both consoles)
+        mkdir -p licenses_out
+        cp LICENSE licenses_out/cubemusic-LICENSE.txt
+        cp vgmstream/COPYING licenses_out/vgmstream-COPYING.txt
+        cp licenses/* licenses_out/
         # the libraries linked in: libogc2, libdvm (libfat), libansnd and the portlibs
-        for f in /opt/devkitpro/libogc2/*_license.txt; do [ -f "$f" ] && cp "$f" $L/; done
+        for f in /opt/devkitpro/libogc2/*_license.txt; do [ -f "$f" ] && cp "$f" licenses_out/; done
         for d in /opt/devkitpro/libogc2/gamecube/share/licenses/libdvm \
                  /opt/devkitpro/libogc2/gamecube/share/licenses/libansnd \
                  /opt/devkitpro/portlibs/ppc/licenses/*; do
           [ -d "$d" ] || continue
-          for f in "$d"/*; do cp "$f" "$L/$(basename "$d")-$(basename "$f")"; done
+          for f in "$d"/*; do cp "$f" "licenses_out/$(basename "$d")-$(basename "$f")"; done
         done
-        ls -R package
 
-    - name: Upload result
+        # GameCube package: apps/cubemusic, loaded from Swiss
+        A=package/apps/cubemusic
+        mkdir -p $A/licenses package/cubemusic/names
+        cp cubemusic.dol $A/default.dol
+        cp opening.bnr $A/opening.bnr
+        cp README.md $A/README.md
+        cp db/*.json package/cubemusic/names/
+        cp licenses_out/* $A/licenses/
+
+        # Wii package: apps/CubeMusic, launched from the Homebrew Channel
+        W=package-wii/apps/CubeMusic
+        mkdir -p $W/licenses package-wii/cubemusic/names
+        cp cubemusic-wii.dol $W/boot.dol
+        cp dist/meta.xml $W/meta.xml
+        cp dist/icon.png $W/icon.png
+        cp README.md $W/README.md
+        cp db/*.json package-wii/cubemusic/names/
+        cp licenses_out/* $W/licenses/
+
+        ls -R package package-wii
+
+    - name: Upload result (GameCube)
       uses: actions/upload-artifact@main
       with:
         name: cubemusic
         path: package/
 
-  # A tag push (v1.0, v1.1, ...) also publishes a GitHub release with the
-  # package zipped as cubemusic-<tag>.zip: what users download, and what the
-  # DolphinDepot manifest (dolphindepot/manifest.json) points at.
+    - name: Upload result (Wii)
+      uses: actions/upload-artifact@main
+      with:
+        name: cubemusic-wii
+        path: package-wii/
+
+  # A tag push (v1.0, v1.1, ...) also publishes a GitHub release with each
+  # package zipped: cubemusic-<tag>.zip (GameCube, what the DolphinDepot
+  # manifest points at) and cubemusic-wii-<tag>.zip (Wii, for the Homebrew
+  # Channel).
   release:
     name: Release
     needs: build
@@ -71,17 +94,27 @@ jobs:
       contents: write
 
     steps:
-    - name: Get the package
+    - name: Get the GameCube package
       uses: actions/download-artifact@main
       with:
         name: cubemusic
         path: package
 
-    - name: Zip it
-      run: cd package && zip -r -9 "../cubemusic-${GITHUB_REF_NAME}.zip" .
+    - name: Get the Wii package
+      uses: actions/download-artifact@main
+      with:
+        name: cubemusic-wii
+        path: package-wii
+
+    - name: Zip them
+      run: |
+        cd package && zip -r -9 "../cubemusic-${GITHUB_REF_NAME}.zip" . && cd ..
+        cd package-wii && zip -r -9 "../cubemusic-wii-${GITHUB_REF_NAME}.zip" . && cd ..
 
     - name: Publish the release
       uses: softprops/action-gh-release@v2
       with:
-        files: cubemusic-${{ github.ref_name }}.zip
+        files: |
+          cubemusic-${{ github.ref_name }}.zip
+          cubemusic-wii-${{ github.ref_name }}.zip
         generate_release_notes: true

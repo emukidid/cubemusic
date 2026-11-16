@@ -263,8 +263,7 @@ const char *GENE69_entries[43] = {
 
 // GLZE69: 007: From Russia With Love
 // from: 007 - From Russia With Love (2005-11-15)(EA Redwood Shores)(Electronic Arts)[GC].7z
-const char *GLZE69_entries[55] = {
-	"!extra.7z",
+const char *GLZE69_entries[54] = {
 	"border.mpf",
 	"border.mus",
 	"consulat.mpf",
@@ -981,8 +980,7 @@ const char *GAVE78_entries[15] = {
 
 // GBKE70: Backyard Baseball
 // from: Backyard Baseball (2003-03-31)(Humongous)(Atari)[GC].7z
-const char *GBKE70_entries[21] = {
-	"Credits.txt",
+const char *GBKE70_entries[20] = {
 	"FlyBy0.adp",
 	"FlyBy1.adp",
 	"FlyBy2.adp",
@@ -1410,48 +1408,7 @@ const char *GK4E01_entries[61] = {
 
 // GBME7F: Batman: Dark Tomorrow
 // from: Batman - Dark Tomorrow (2003-03-21)(Kemco)[GC].7z
-const char *GBME7F_entries[121] = {
-	"!notes.txt",
-	"Area00_00128~00129.txtp",
-	"Area00_00130~00131.txtp",
-	"Area00_00132~00133.txtp",
-	"Area00_00134~00135.txtp",
-	"Area01_00142~00143.txtp",
-	"Area01_00144~00145.txtp",
-	"Area02_00155~00156.txtp",
-	"Area04_00114~00115.txtp",
-	"Area04_00116~00117.txtp",
-	"Area06_00118~00119.txtp",
-	"Area06_00122~00123.txtp",
-	"Area09_00080~00081.txtp",
-	"Area09_00084~00085.txtp",
-	"Area0A_00138~00139.txtp",
-	"Area0C_00087~00088.txtp",
-	"Area0D_00077~00078.txtp",
-	"Area0D_00079~00080.txtp",
-	"Area0D_00081~00082.txtp",
-	"Area0E_00131~00132.txtp",
-	"Area0E_00133~00134.txtp",
-	"Area10_00104~00105.txtp",
-	"Area11_00085~00086.txtp",
-	"Area11_00087~00088.txtp",
-	"Area12_00094~00095.txtp",
-	"Area12_00096~00097.txtp",
-	"Area12_00098~00099.txtp",
-	"Area13_00092~00093.txtp",
-	"Area13_00094~00095.txtp",
-	"Area13_00096~00097.txtp",
-	"Area14_00104~00105.txtp",
-	"Area14_00106~00107.txtp",
-	"Area14_00108~00109.txtp",
-	"Area15_00111~00112.txtp",
-	"Area17_00142~00143.txtp",
-	"Area17_00146~00147.txtp",
-	"Area19_00113~00114.txtp",
-	"Area1A_00040~00041.txtp",
-	"Area1A_00042~00043.txtp",
-	"SdBG00.txtp",
-	"SdBG12.txtp",
+const char *GBME7F_entries[80] = {
 	"dsp/Area00_00128.dsp",
 	"dsp/Area00_00129.dsp",
 	"dsp/Area00_00130.dsp",
@@ -1536,90 +1493,7 @@ const char *GBME7F_entries[121] = {
 
 // GUZP41: Batman Rise of Sin Tzu
 // from: Batman - Rise of Sin Tzu (2003-11-11)(Ubisoft Montreal)(Ubisoft)[GC][unsorted].7z
-const char *GUZP41_entries[111] = {
-	"MAPS_0187.txtp",
-	"MAPS_0191.txtp",
-	"MAPS_0196.txtp",
-	"MAPS_0201.txtp",
-	"MAPS_0206.txtp",
-	"MAPS_0209.txtp",
-	"MAPS_0213.txtp",
-	"MAPS_0218.txtp",
-	"MAPS_0220.txtp",
-	"MAPS_0226.txtp",
-	"MAPS_0230.txtp",
-	"MAPS_0233.txtp",
-	"MAPS_0321.txtp",
-	"MAPS_0414.txtp",
-	"MAPS_0418.txtp",
-	"MAPS_0422.txtp",
-	"MAPS_0427.txtp",
-	"MAPS_0441.txtp",
-	"MAPS_0444.txtp",
-	"MAPS_0447.txtp",
-	"MAPS_0450.txtp",
-	"MAPS_0482.txtp",
-	"MAPS_0488.txtp",
-	"MAPS_0491.txtp",
-	"MAPS_0577.txtp",
-	"MAPS_0580.txtp",
-	"MAPS_0583.txtp",
-	"MAPS_0586.txtp",
-	"MAPS_0590.txtp",
-	"MAPS_0626.txtp",
-	"MAPS_0631.txtp",
-	"MAPS_0733.txtp",
-	"MAPS_0734.txtp",
-	"MAPS_0771.txtp",
-	"MAPS_0776.txtp",
-	"MAPS_0882.txtp",
-	"MAPS_0883.txtp",
-	"MAPS_0979.txtp",
-	"MAPS_0983.txtp",
-	"MAPS_1044.txtp",
-	"MAPS_1049.txtp",
-	"MAPS_1259.txtp",
-	"MAPS_1345.txtp",
-	"MAPS_1348.txtp",
-	"MAPS_1397.txtp",
-	"MAPS_1488.txtp",
-	"MAPS_1493.txtp",
-	"MAPS_1533.txtp",
-	"MAPS_1619.txtp",
-	"MAPS_1655.txtp",
-	"MAPS_1855.txtp",
-	"MAPS_1974.txtp",
-	"MAPS_2117.txtp",
-	"MAPS_2157.txtp",
-	"MAPS_2246.txtp",
-	"MAPS_2250.txtp",
-	"MAPS_2291.txtp",
-	"MAPS_2378.txtp",
-	"MAPS_2383.txtp",
-	"MAPS_2384.txtp",
-	"MAPS_2414.txtp",
-	"MAPS_2528.txtp",
-	"MAPS_2615.txtp",
-	"MAPS_2756.txtp",
-	"MAPS_2761.txtp",
-	"MAPS_2774.txtp",
-	"MAPS_2778.txtp",
-	"MAPS_2783.txtp",
-	"MAPS_2787.txtp",
-	"MAPS_2880.txtp",
-	"MAPS_2887.txtp",
-	"MAPS_2948.txtp",
-	"MAPS_2952.txtp",
-	"MAPS_3126.txtp",
-	"MAPS_3134.txtp",
-	"MAPS_3143.txtp",
-	"MAPS_3148.txtp",
-	"MAPS_3151.txtp",
-	"MAPS_3249.txtp",
-	"MAPS_3253.txtp",
-	"MAPS_3366.txtp",
-	"MAPS_3372.txtp",
-	"MAPS_4015.txtp",
+const char *GUZP41_entries[28] = {
 	"Video/BATWOMAN_00000000.audio.split.bik",
 	"Video/WBLogo_00000000.audio.split.bik",
 	"Video/cin01_00000000.audio.split.bik",
@@ -1652,228 +1526,7 @@ const char *GUZP41_entries[111] = {
 
 // GBVP41: Batman Vengeance
 // from: Batman - Vengeance (2001-11-17)(Ubisoft Montreal)(Ubisoft)[GC][unsorted].7z
-const char *GBVP41_entries[240] = {
-	"MAPS_0003.txtp",
-	"MAPS_0005.txtp",
-	"MAPS_0006.txtp",
-	"MAPS_0007.txtp",
-	"MAPS_0008.txtp",
-	"MAPS_0010.txtp",
-	"MAPS_0022.txtp",
-	"MAPS_0031.txtp",
-	"MAPS_0033.txtp",
-	"MAPS_0037.txtp",
-	"MAPS_0039.txtp",
-	"MAPS_0040.txtp",
-	"MAPS_0045.txtp",
-	"MAPS_0211.txtp",
-	"MAPS_0220.txtp",
-	"MAPS_0221.txtp",
-	"MAPS_0222.txtp",
-	"MAPS_0347.txtp",
-	"MAPS_0349.txtp",
-	"MAPS_0351.txtp",
-	"MAPS_0353.txtp",
-	"MAPS_0355.txtp",
-	"MAPS_0357.txtp",
-	"MAPS_0359.txtp",
-	"MAPS_0368.txtp",
-	"MAPS_0526.txtp",
-	"MAPS_0533.txtp",
-	"MAPS_0577.txtp",
-	"MAPS_0579.txtp",
-	"MAPS_0831.txtp",
-	"MAPS_0837.txtp",
-	"MAPS_0839.txtp",
-	"MAPS_0841.txtp",
-	"MAPS_0871.txtp",
-	"MAPS_0873.txtp",
-	"MAPS_0874.txtp",
-	"MAPS_0875.txtp",
-	"MAPS_0876.txtp",
-	"MAPS_0877.txtp",
-	"MAPS_0878.txtp",
-	"MAPS_0879.txtp",
-	"MAPS_0880.txtp",
-	"MAPS_0881.txtp",
-	"MAPS_0882.txtp",
-	"MAPS_0883.txtp",
-	"MAPS_0886.txtp",
-	"MAPS_0888.txtp",
-	"MAPS_0890.txtp",
-	"MAPS_0891.txtp",
-	"MAPS_1162.txtp",
-	"MAPS_1253.txtp",
-	"MAPS_1255.txtp",
-	"MAPS_1257.txtp",
-	"MAPS_1259.txtp",
-	"MAPS_1316.txtp",
-	"MAPS_1318.txtp",
-	"MAPS_1320.txtp",
-	"MAPS_1321.txtp",
-	"MAPS_1322.txtp",
-	"MAPS_1323.txtp",
-	"MAPS_1327.txtp",
-	"MAPS_1333.txtp",
-	"MAPS_1335.txtp",
-	"MAPS_1344.txtp",
-	"MAPS_1485.txtp",
-	"MAPS_1487.txtp",
-	"MAPS_1489.txtp",
-	"MAPS_1491.txtp",
-	"MAPS_1493.txtp",
-	"MAPS_1703.txtp",
-	"MAPS_1745.txtp",
-	"MAPS_1747.txtp",
-	"MAPS_1748.txtp",
-	"MAPS_1749.txtp",
-	"MAPS_1751.txtp",
-	"MAPS_2003.txtp",
-	"MAPS_2004.txtp",
-	"MAPS_2005.txtp",
-	"MAPS_2006.txtp",
-	"MAPS_2007.txtp",
-	"MAPS_2008.txtp",
-	"MAPS_2009.txtp",
-	"MAPS_2010.txtp",
-	"MAPS_2011.txtp",
-	"MAPS_2012.txtp",
-	"MAPS_2014.txtp",
-	"MAPS_2023.txtp",
-	"MAPS_2025.txtp",
-	"MAPS_2027.txtp",
-	"MAPS_2028.txtp",
-	"MAPS_2029.txtp",
-	"MAPS_2087.txtp",
-	"MAPS_2100.txtp",
-	"MAPS_2103.txtp",
-	"MAPS_2329.txtp",
-	"MAPS_2331.txtp",
-	"MAPS_2333.txtp",
-	"MAPS_2335.txtp",
-	"MAPS_2336.txtp",
-	"MAPS_2337.txtp",
-	"MAPS_2338.txtp",
-	"MAPS_2340.txtp",
-	"MAPS_2342.txtp",
-	"MAPS_2344.txtp",
-	"MAPS_2346.txtp",
-	"MAPS_2348.txtp",
-	"MAPS_2422.txtp",
-	"MAPS_2424.txtp",
-	"MAPS_2426.txtp",
-	"MAPS_2435.txtp",
-	"MAPS_2437.txtp",
-	"MAPS_2667.txtp",
-	"MAPS_2678.txtp",
-	"MAPS_2679.txtp",
-	"MAPS_2681.txtp",
-	"MAPS_2683.txtp",
-	"MAPS_2767.txtp",
-	"MAPS_2769.txtp",
-	"MAPS_2921.txtp",
-	"MAPS_2927.txtp",
-	"MAPS_2936.txtp",
-	"MAPS_2938.txtp",
-	"MAPS_2940.txtp",
-	"MAPS_3205.txtp",
-	"MAPS_3207.txtp",
-	"MAPS_3209.txtp",
-	"MAPS_3218.txtp",
-	"MAPS_3220.txtp",
-	"MAPS_3222.txtp",
-	"MAPS_3224.txtp",
-	"MAPS_3227.txtp",
-	"MAPS_3500.txtp",
-	"MAPS_3502.txtp",
-	"MAPS_3511.txtp",
-	"MAPS_3517.txtp",
-	"MAPS_3518.txtp",
-	"MAPS_3519.txtp",
-	"MAPS_3974.txtp",
-	"MAPS_3976.txtp",
-	"MAPS_3978.txtp",
-	"MAPS_3980.txtp",
-	"MAPS_3995.txtp",
-	"MAPS_3997.txtp",
-	"MAPS_3999.txtp",
-	"MAPS_4001.txtp",
-	"MAPS_4003.txtp",
-	"MAPS_4005.txtp",
-	"MAPS_4065.txtp",
-	"MAPS_4067.txtp",
-	"MAPS_4071.txtp",
-	"MAPS_4072.txtp",
-	"MAPS_4073.txtp",
-	"MAPS_4279.txtp",
-	"MAPS_4307.txtp",
-	"MAPS_4345.txtp",
-	"MAPS_4347.txtp",
-	"MAPS_4349.txtp",
-	"MAPS_4355.txtp",
-	"MAPS_4356.txtp",
-	"MAPS_4359.txtp",
-	"MAPS_4360.txtp",
-	"MAPS_4361.txtp",
-	"MAPS_4362.txtp",
-	"MAPS_4363.txtp",
-	"MAPS_4365.txtp",
-	"MAPS_4366.txtp",
-	"MAPS_4367.txtp",
-	"MAPS_4387.txtp",
-	"MAPS_4396.txtp",
-	"MAPS_4397.txtp",
-	"MAPS_4398.txtp",
-	"MAPS_4399.txtp",
-	"MAPS_4536.txtp",
-	"MAPS_4538.txtp",
-	"MAPS_4547.txtp",
-	"MAPS_4549.txtp",
-	"MAPS_4551.txtp",
-	"MAPS_4553.txtp",
-	"MAPS_5002.txtp",
-	"MAPS_5004.txtp",
-	"MAPS_5006.txtp",
-	"MAPS_5008.txtp",
-	"MAPS_5010.txtp",
-	"MAPS_5025.txtp",
-	"MAPS_5027.txtp",
-	"MAPS_5028.txtp",
-	"MAPS_5029.txtp",
-	"MAPS_5031.txtp",
-	"MAPS_5033.txtp",
-	"MAPS_5034.txtp",
-	"MAPS_5091.txtp",
-	"MAPS_5318.txtp",
-	"MAPS_5321.txtp",
-	"MAPS_5323.txtp",
-	"MAPS_5325.txtp",
-	"MAPS_5327.txtp",
-	"MAPS_5329.txtp",
-	"MAPS_5361.txtp",
-	"MAPS_5365.txtp",
-	"MAPS_5366.txtp",
-	"MAPS_5367.txtp",
-	"MAPS_5396.txtp",
-	"MAPS_5398.txtp",
-	"MAPS_5400.txtp",
-	"MAPS_5401.txtp",
-	"MAPS_5402.txtp",
-	"MAPS_5403.txtp",
-	"MAPS_5404.txtp",
-	"MAPS_5406.txtp",
-	"MAPS_5590.txtp",
-	"MAPS_5592.txtp",
-	"MAPS_5678.txtp",
-	"MAPS_5796.txtp",
-	"MAPS_5882.txtp",
-	"MAPS_5884.txtp",
-	"MAPS_5886.txtp",
-	"MAPS_6021.txtp",
-	"MAPS_6131.txtp",
-	"MAPS_6228.txtp",
-	"MAPS_6346.txtp",
-	"MAPS_6428.txtp",
+const char *GBVP41_entries[19] = {
 	"Sound/GAMESND.SP3",
 	"Sound/MAPS.SM3",
 	"Sound/STRM.SM3",
@@ -2035,88 +1688,87 @@ const char *GINX69_entries[133] = {
 
 // G8WP01: Battalion Wars
 // from: Battalion Wars [Totsugeki! Famicom Wars] (2005-09-19)(Kuju London)(Nintendo)[GC].7z
-const char *G8WP01_entries[81] = {
-	"Bonus_Amb_1_L.dsp",
-	"Bonus_Amb_1_R.dsp",
-	"Bonus_Amb_2_L.dsp",
-	"Bonus_Amb_2_R.dsp",
-	"Bonus_Amb_3_L.dsp",
-	"Bonus_Amb_3_R.dsp",
-	"Bonus_Amb_4_L.dsp",
-	"Bonus_Amb_4_R.dsp",
-	"Bonus_Intro_1_L.dsp",
-	"Bonus_Intro_1_R.dsp",
-	"Bonus_Intro_2_L.dsp",
-	"Bonus_Intro_2_R.dsp",
-	"Bonus_Intro_3_L.dsp",
-	"Bonus_Intro_3_R.dsp",
-	"Bonus_Intro_4_L.dsp",
-	"Bonus_Intro_4_R.dsp",
-	"C1_05_05_L.dsp",
-	"C1_05_05_R.dsp",
-	"C1_A_L.dsp",
-	"C1_A_R.dsp",
-	"C1_Amb_1_L.dsp",
-	"C1_Amb_1_R.dsp",
-	"C1_Amb_2_L.dsp",
-	"C1_Amb_2_R.dsp",
-	"C1_Amb_3_L.dsp",
-	"C1_Amb_3_R.dsp",
-	"C1_Amb_4_L.dsp",
-	"C1_Amb_4_R.dsp",
-	"C1_Amb_5_L.dsp",
-	"C1_Amb_5_R.dsp",
-	"C1_B_L.dsp",
-	"C1_B_R.dsp",
-	"C1_Intro_1_L.dsp",
-	"C1_Intro_1_R.dsp",
-	"C1_Intro_2_L.dsp",
-	"C1_Intro_2_R.dsp",
-	"C1_Intro_4_L.dsp",
-	"C1_Intro_4_R.dsp",
-	"C1_Outro1_L.dsp",
-	"C1_Outro1_R.dsp",
-	"C1_Outro_1_L.dsp",
-	"C1_Outro_1_Loop_L.dsp",
-	"C1_Outro_1_Loop_R.dsp",
-	"C1_Outro_1_R.dsp",
-	"C2_Amb_1_L.dsp",
-	"C2_Amb_1_R.dsp",
-	"C2_Amb_2_L.dsp",
-	"C2_Amb_2_R.dsp",
-	"C2_Amb_3_L.dsp",
-	"C2_Amb_3_R.dsp",
-	"C2_Intro_2_L.dsp",
-	"C2_Intro_2_R.dsp",
-	"C3_Amb_1_L.dsp",
-	"C3_Amb_1_R.dsp",
-	"C3_Amb_2_L.dsp",
-	"C3_Amb_2_R.dsp",
-	"C3_Amb_3_L.dsp",
-	"C3_Amb_3_R.dsp",
-	"C3_Amb_4_L.dsp",
-	"C3_Amb_4_R.dsp",
-	"C3_Intro1_L.dsp",
-	"C3_Intro1_R.dsp",
-	"C4_Amb_1_L.dsp",
-	"C4_Amb_1_R.dsp",
-	"C4_Amb_2_L.dsp",
-	"C4_Amb_2_R.dsp",
-	"C4_Amb_3_L.dsp",
-	"C4_Amb_3_R.dsp",
-	"C4_Amb_4_L.dsp",
-	"C4_Amb_4_R.dsp",
-	"Defeat_L.dsp",
-	"Defeat_R.dsp",
-	"EMiL.nfo",
-	"Map_Loop_L.dsp",
-	"Map_Loop_R.dsp",
-	"Title_Loop_L.dsp",
-	"Title_Loop_R.dsp",
-	"Victory_A_L.dsp",
-	"Victory_A_R.dsp",
-	"Victory_C_L.dsp",
-	"Victory_C_R.dsp",
+const char *G8WP01_entries[80] = {
+	"Data/Audio/Music/Ingame/Bonus_Amb_1_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_1_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_2_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_2_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_3_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_3_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_4_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Amb_4_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_1_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_1_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_2_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_2_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_3_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_3_R.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_4_L.adp",
+	"Data/Audio/Music/Ingame/Bonus_Intro_4_R.adp",
+	"Data/Audio/Music/Ingame/C1_05_05_L.adp",
+	"Data/Audio/Music/Ingame/C1_05_05_R.adp",
+	"Data/Audio/Music/Ingame/C1_A_L.adp",
+	"Data/Audio/Music/Ingame/C1_A_R.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_1_L.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_1_R.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_2_L.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_2_R.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_3_L.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_3_R.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_4_L.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_4_R.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_5_L.adp",
+	"Data/Audio/Music/Ingame/C1_Amb_5_R.adp",
+	"Data/Audio/Music/Ingame/C1_B_L.adp",
+	"Data/Audio/Music/Ingame/C1_B_R.adp",
+	"Data/Audio/Music/Ingame/C1_Intro_1_L.adp",
+	"Data/Audio/Music/Ingame/C1_Intro_1_R.adp",
+	"Data/Audio/Music/Ingame/C1_Intro_2_L.adp",
+	"Data/Audio/Music/Ingame/C1_Intro_2_R.adp",
+	"Data/Audio/Music/Ingame/C1_Intro_4_L.adp",
+	"Data/Audio/Music/Ingame/C1_Intro_4_R.adp",
+	"Data/Audio/Music/Ingame/C1_Outro1_L.adp",
+	"Data/Audio/Music/Ingame/C1_Outro1_R.adp",
+	"Data/Audio/Music/Ingame/C1_Outro_1_L.adp",
+	"Data/Audio/Music/Ingame/C1_Outro_1_Loop_L.adp",
+	"Data/Audio/Music/Ingame/C1_Outro_1_Loop_R.adp",
+	"Data/Audio/Music/Ingame/C1_Outro_1_R.adp",
+	"Data/Audio/Music/Ingame/C2_Amb_1_L.adp",
+	"Data/Audio/Music/Ingame/C2_Amb_1_R.adp",
+	"Data/Audio/Music/Ingame/C2_Amb_2_L.adp",
+	"Data/Audio/Music/Ingame/C2_Amb_2_R.adp",
+	"Data/Audio/Music/Ingame/C2_Amb_3_L.adp",
+	"Data/Audio/Music/Ingame/C2_Amb_3_R.adp",
+	"Data/Audio/Music/Ingame/C2_Intro_2_L.adp",
+	"Data/Audio/Music/Ingame/C2_Intro_2_R.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_1_L.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_1_R.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_2_L.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_2_R.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_3_L.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_3_R.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_4_L.adp",
+	"Data/Audio/Music/Ingame/C3_Amb_4_R.adp",
+	"Data/Audio/Music/Ingame/C3_Intro1_L.adp",
+	"Data/Audio/Music/Ingame/C3_Intro1_R.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_1_L.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_1_R.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_2_L.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_2_R.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_3_L.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_3_R.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_4_L.adp",
+	"Data/Audio/Music/Ingame/C4_Amb_4_R.adp",
+	"Data/Audio/Music/Ingame/Defeat_L.adp",
+	"Data/Audio/Music/Ingame/Defeat_R.adp",
+	"Data/Audio/Music/Ingame/Map_Loop_L.adp",
+	"Data/Audio/Music/Ingame/Map_Loop_R.adp",
+	"Data/Audio/Music/Ingame/Title_Loop_L.adp",
+	"Data/Audio/Music/Ingame/Title_Loop_R.adp",
+	"Data/Audio/Music/Ingame/Victory_A_L.adp",
+	"Data/Audio/Music/Ingame/Victory_A_R.adp",
+	"Data/Audio/Music/Ingame/Victory_C_L.adp",
+	"Data/Audio/Music/Ingame/Victory_C_R.adp",
 };
 
 // G8SJAF: バトルスタジアムD.O.N
@@ -2218,7 +1870,7 @@ const char *GBSE8P_entries[55] = {
 const char *GBTE70_entries[3] = {
 	"00462_L.dsp",
 	"00462_R.dsp",
-	"video/output0.DSP",
+	"output0.thp",
 };
 
 // GGEE41: Beyond Good & Evil
@@ -2343,8 +1995,7 @@ const char *GMRE70_entries[27] = {
 
 // DEZP8P: Billy Hatcher and the Giant Egg (Demo)
 // from: Billy Hatcher and the Giant Egg (Preview Demo) (2003-03-03)(Sonic Team)(Sega)[GC].7z
-const char *DEZP8P_entries[8] = {
-	"!info.txt",
+const char *DEZP8P_entries[7] = {
 	"animal_get.adx",
 	"eb_get.adx",
 	"emblem.adx",
@@ -2573,30 +2224,30 @@ const char *GBDP7D_entries[74] = {
 // GBLE52: Bloody Roar: Primal Fury
 // from: Bloody Roar - Primal Fury [Bloody Roar Extreme] (2002-03-18)(Eighting)(Hudson)[GC].7z
 const char *GBLE52_entries[24] = {
-	"m01.adp",
-	"m02.adp",
-	"m03.adp",
-	"m04.adp",
-	"m05.adp",
-	"m06.adp",
-	"m07.adp",
-	"m08.adp",
-	"m09.adp",
-	"m10.adp",
-	"m11.adp",
-	"m12.adp",
-	"m13.adp",
-	"m14.adp",
-	"m15.adp",
-	"m16.adp",
-	"m17.adp",
-	"m18.adp",
-	"m19.adp",
-	"m20.adp",
-	"m21.adp",
-	"m22.adp",
-	"m23.adp",
-	"m24.adp",
+	"audio/bgm/m01.trk",
+	"audio/bgm/m02.trk",
+	"audio/bgm/m03.trk",
+	"audio/bgm/m04.trk",
+	"audio/bgm/m05.trk",
+	"audio/bgm/m06.trk",
+	"audio/bgm/m07.trk",
+	"audio/bgm/m08.trk",
+	"audio/bgm/m09.trk",
+	"audio/bgm/m10.trk",
+	"audio/bgm/m11.trk",
+	"audio/bgm/m12.trk",
+	"audio/bgm/m13.trk",
+	"audio/bgm/m14.trk",
+	"audio/bgm/m15.trk",
+	"audio/bgm/m16.trk",
+	"audio/bgm/m17.trk",
+	"audio/bgm/m18.trk",
+	"audio/bgm/m19.trk",
+	"audio/bgm/m20.trk",
+	"audio/bgm/m21.trk",
+	"audio/bgm/m22.trk",
+	"audio/bgm/m23.trk",
+	"audio/bgm/m24.trk",
 };
 
 // GWOE5G: Blowout
@@ -2958,23 +2609,6 @@ const char *G3SE41_entries[36] = {
 	"bgm_17.spt",
 };
 
-// GZMP7D: Butt-Ugly Martians Zoom or Doom
-// from: Butt-Ugly Martians - Zoom or Doom! (2003-05-10)(Runecraft)(Vivendi Universal)[GC].7z
-const char *GZMP7D_entries[12] = {
-	"01.genh",
-	"02.genh",
-	"03.genh",
-	"04.genh",
-	"05.genh",
-	"06.genh",
-	"07.genh",
-	"08.genh",
-	"09.genh",
-	"10.genh",
-	"11.genh",
-	"12.genh",
-};
-
 // GG5E52: Cabela's Big Game Hunter 2005
 // from: Cabela's Big Game Hunter - 2005 Adventures (2004-12-09)(Magic Wand)(Activision Value)[GC].7z
 const char *GG5E52_entries[8] = {
@@ -3045,9 +2679,7 @@ const char *GEOE08_entries[50] = {
 
 // GKTJA4: キャプテン翼～黄金世代の挑戦～
 // from: Captain Tsubasa - Ougon Sedai no Chousen (2002-09-12)(Konami)[GC].7z
-const char *GKTJA4_entries[72] = {
-	"!extra.7z",
-	".dsp.txth",
+const char *GKTJA4_entries[70] = {
 	"str__00_L.dsp",
 	"str__00_R.dsp",
 	"str__01_L.dsp",
@@ -3723,41 +3355,7 @@ const char *GC9P6S_entries[49] = {
 
 // GC2E9G: Conflict: Desert Storm II: Back to Baghdad
 // from: Conflict - Desert Storm II - Back to Baghdad [Conflict - Desert Storm II] (2004-01-07)(Pivotal)(Gotham)[GC].7z
-const char *GC2E9G_entries[74] = {
-	"!extra.7z",
-	"STREAM__000_.txtp",
-	"STREAM__001_002.txtp",
-	"STREAM__002_002.txtp",
-	"STREAM__003_001.txtp",
-	"STREAM__003_002.txtp",
-	"STREAM__003_003.txtp",
-	"STREAM__003_004.txtp",
-	"STREAM__003_005.txtp",
-	"STREAM__004_001.txtp",
-	"STREAM__004_002.txtp",
-	"STREAM__004_003.txtp",
-	"STREAM__004_004.txtp",
-	"STREAM__004_005.txtp",
-	"STREAM__005_001.txtp",
-	"STREAM__005_002.txtp",
-	"STREAM__005_003.txtp",
-	"STREAM__005_004.txtp",
-	"STREAM__005_005.txtp",
-	"STREAM__006_001.txtp",
-	"STREAM__006_002.txtp",
-	"STREAM__006_003.txtp",
-	"STREAM__006_004.txtp",
-	"STREAM__006_005.txtp",
-	"STREAM__007_001.txtp",
-	"STREAM__007_002.txtp",
-	"STREAM__007_003.txtp",
-	"STREAM__007_004.txtp",
-	"STREAM__007_005.txtp",
-	"STREAM__008_001.txtp",
-	"STREAM__008_002.txtp",
-	"STREAM__008_003.txtp",
-	"STREAM__008_004.txtp",
-	"STREAM__008_005.txtp",
+const char *GC2E9G_entries[40] = {
 	"movie/AmodeNTS_00000000.audio.split.bik",
 	"movie/B01NTS_00000000.audio.split.bik",
 	"movie/B02NTS_00000000.audio.split.bik",
@@ -3802,32 +3400,7 @@ const char *GC2E9G_entries[74] = {
 
 // GCFE9G: Conflict: Desert Storm
 // from: Conflict - Desert Storm [Conflict Delta - Wangan Sensou 1991] (2003-04-17)(Pivotal)(SCi)[GC].7z
-const char *GCFE9G_entries[33] = {
-	"!extra.7z",
-	"STREAM__000.txtp",
-	"STREAM__001.txtp",
-	"STREAM__002_002.txtp",
-	"STREAM__003_002.txtp",
-	"STREAM__004_001.txtp",
-	"STREAM__004_002.txtp",
-	"STREAM__004_003.txtp",
-	"STREAM__004_004.txtp",
-	"STREAM__004_005.txtp",
-	"STREAM__053_001.txtp",
-	"STREAM__053_002.txtp",
-	"STREAM__053_003.txtp",
-	"STREAM__053_004.txtp",
-	"STREAM__053_005.txtp",
-	"STREAM__096_001.txtp",
-	"STREAM__096_002.txtp",
-	"STREAM__096_003.txtp",
-	"STREAM__096_004.txtp",
-	"STREAM__096_005.txtp",
-	"STREAM__145_001.txtp",
-	"STREAM__145_002.txtp",
-	"STREAM__145_003.txtp",
-	"STREAM__145_004.txtp",
-	"STREAM__145_005.txtp",
+const char *GCFE9G_entries[8] = {
 	"stream/STREAM__000.psf",
 	"stream/STREAM__001.psf",
 	"stream/STREAM__002.psf",
@@ -4026,31 +3599,31 @@ const char *GK6JA4_entries[37] = {
 // GCVEEB: Cubivore: Survival of the Fittest
 // from: Cubivore - Survival of the Fittest [Doubutsu Banchou] (2002-02-21)(Saru Brunei)(Nintendo)[GC].7z
 const char *GCVEEB_entries[25] = {
-	"mahoujin2_32k.dsp",
-	"sk_deka_32k.dsp",
-	"sk_green_32k.dsp",
-	"sk_kitaeba_32k.dsp",
-	"sk_namadoor_32k.dsp",
-	"sk_niku_32k.dsp",
-	"sk_ooboss_32k.dsp",
-	"sk_tyuboss_32k.dsp",
-	"tm_boss_fight_32k_lp.dsp",
-	"tm_dead_32k_lp.dsp",
-	"tm_e_a_32k_lp.dsp",
-	"tm_e_b_32k_lp.dsp",
-	"tm_e_c_32k_lp.dsp",
-	"tm_e_d_32k_lp.dsp",
-	"tm_e_e_32k_lp.dsp",
-	"tm_ending_32k_lp.dsp",
-	"tm_fumei_32k_lp.dsp",
-	"tm_get_nama2_32k_lp.dsp",
-	"tm_mesu_32k_lp.dsp",
-	"tm_name_entry_32k_lp.dsp",
-	"tm_nemunemu_32k_lp.dsp",
-	"tm_ooboss_fight_32k_lp.dsp",
-	"tm_shuffle_32k_lp.dsp",
-	"tm_stage_change_32k_lp.dsp",
-	"tm_title_32k_lp.dsp",
+	"streaming/mahoujin2_32k.stm",
+	"streaming/sk_deka_32k.stm",
+	"streaming/sk_green_32k.stm",
+	"streaming/sk_kitaeba_32k.stm",
+	"streaming/sk_namadoor_32k.stm",
+	"streaming/sk_niku_32k.stm",
+	"streaming/sk_ooboss_32k.stm",
+	"streaming/sk_tyuboss_32k.stm",
+	"streaming/tm_boss_fight_32k_lp.stm",
+	"streaming/tm_dead_32k_lp.stm",
+	"streaming/tm_e_a_32k_lp.stm",
+	"streaming/tm_e_b_32k_lp.stm",
+	"streaming/tm_e_c_32k_lp.stm",
+	"streaming/tm_e_d_32k_lp.stm",
+	"streaming/tm_e_e_32k_lp.stm",
+	"streaming/tm_ending_32k_lp.stm",
+	"streaming/tm_fumei_32k_lp.stm",
+	"streaming/tm_get_nama2_32k_lp.stm",
+	"streaming/tm_mesu_32k_lp.stm",
+	"streaming/tm_name_entry_32k_lp.stm",
+	"streaming/tm_nemunemu_32k_lp.stm",
+	"streaming/tm_ooboss_fight_32k_lp.stm",
+	"streaming/tm_shuffle_32k_lp.stm",
+	"streaming/tm_stage_change_32k_lp.stm",
+	"streaming/tm_title_32k_lp.stm",
 };
 
 // GCAE5H: Cubix: Robots for Everyone Showdown
@@ -4098,41 +3671,6 @@ const char *GCAE5H_entries[42] = {
 	"robot_victory.wav.str",
 	"victory_loop.wav.sth",
 	"victory_loop.wav.str",
-};
-
-// G3JEAF: Curious George
-// from: Curious George (2006-02-01)(Monkey Bar)(Namco)[GC].7z
-const char *G3JEAF_entries[30] = {
-	"031E3E43649D4509.GENH",
-	"16E267E482161366.GENH",
-	"250AF6C92A11F943.GENH",
-	"2A2132450085D4D8.GENH",
-	"2D2517C31625594B.GENH",
-	"400EFAEF534C841C.GENH",
-	"402C644BD7E25250.GENH",
-	"4A603EEFC962AEE7.GENH",
-	"4A95D1455F239AA9.GENH",
-	"54D63D1FB461922E.GENH",
-	"67C8E757CE212EB5.GENH",
-	"6B798E00E4B4CF96.GENH",
-	"704B88E51163BD94.GENH",
-	"76E75AD201EAEB09.GENH",
-	"7C839694A16B7918.GENH",
-	"8401DFFCDC95D57D.GENH",
-	"845BECACEC403F2F.GENH",
-	"8DAAE63144648338.GENH",
-	"916DFB1E96D2C684.GENH",
-	"99630C19376FF58C.GENH",
-	"9CABA08377693ED8.GENH",
-	"9CE0408323FD92EA.GENH",
-	"A1BA2F6D14268D9F.GENH",
-	"AA209A8E517AB628.GENH",
-	"BE714C562EF2A707.GENH",
-	"CCB75A99C30E1E1D.GENH",
-	"DD52BC50A775FA83.GENH",
-	"E2F6324F321AD161.GENH",
-	"EAE8B7F3753C5B81.GENH",
-	"EDA1D07CA162C0F0.GENH",
 };
 
 // GXCE01: Custom Robo
@@ -4814,89 +4352,7 @@ const char *GPKE41_entries[41] = {
 
 // GTZE41: Tarzan Untamed
 // from: Disney's Tarzan - Untamed (Disney's Tarzan - Freeride) (2001-11-17)(Ubisoft Montreal)(Ubisoft)[GC][unsorted].7z
-const char *GTZE41_entries[106] = {
-	"MAPS_0001.txtp",
-	"MAPS_0003.txtp",
-	"MAPS_0011.txtp",
-	"MAPS_0013.txtp",
-	"MAPS_0015.txtp",
-	"MAPS_0069.txtp",
-	"MAPS_0072.txtp",
-	"MAPS_0075.txtp",
-	"MAPS_0078.txtp",
-	"MAPS_0081.txtp",
-	"MAPS_0083.txtp",
-	"MAPS_0085.txtp",
-	"MAPS_0087.txtp",
-	"MAPS_0090.txtp",
-	"MAPS_0093.txtp",
-	"MAPS_0345.txtp",
-	"MAPS_0347.txtp",
-	"MAPS_0349.txtp",
-	"MAPS_0351.txtp",
-	"MAPS_0456.txtp",
-	"MAPS_0459.txtp",
-	"MAPS_0461.txtp",
-	"MAPS_0463.txtp",
-	"MAPS_0466.txtp",
-	"MAPS_0612.txtp",
-	"MAPS_0615.txtp",
-	"MAPS_0617.txtp",
-	"MAPS_0619.txtp",
-	"MAPS_0699.txtp",
-	"MAPS_0702.txtp",
-	"MAPS_0704.txtp",
-	"MAPS_0706.txtp",
-	"MAPS_0816.txtp",
-	"MAPS_0819.txtp",
-	"MAPS_0822.txtp",
-	"MAPS_0825.txtp",
-	"MAPS_0828.txtp",
-	"MAPS_0830.txtp",
-	"MAPS_0832.txtp",
-	"MAPS_0835.txtp",
-	"MAPS_1098.txtp",
-	"MAPS_1101.txtp",
-	"MAPS_1103.txtp",
-	"MAPS_1105.txtp",
-	"MAPS_1107.txtp",
-	"MAPS_1265.txtp",
-	"MAPS_1534.txtp",
-	"MAPS_1537.txtp",
-	"MAPS_1539.txtp",
-	"MAPS_1541.txtp",
-	"MAPS_1543.txtp",
-	"MAPS_1745.txtp",
-	"MAPS_1752.txtp",
-	"MAPS_1854.txtp",
-	"MAPS_1857.txtp",
-	"MAPS_1860.txtp",
-	"MAPS_1863.txtp",
-	"MAPS_1866.txtp",
-	"MAPS_1869.txtp",
-	"MAPS_1872.txtp",
-	"MAPS_1875.txtp",
-	"MAPS_1877.txtp",
-	"MAPS_1879.txtp",
-	"MAPS_1883.txtp",
-	"MAPS_2140.txtp",
-	"MAPS_2143.txtp",
-	"MAPS_2145.txtp",
-	"MAPS_2147.txtp",
-	"MAPS_2149.txtp",
-	"MAPS_2294.txtp",
-	"MAPS_2553.txtp",
-	"MAPS_2556.txtp",
-	"MAPS_2558.txtp",
-	"MAPS_2560.txtp",
-	"MAPS_2562.txtp",
-	"MAPS_2564.txtp",
-	"MAPS_2751.txtp",
-	"MAPS_2757.txtp",
-	"MAPS_English_024.txtp",
-	"MAPS_English_026.txtp",
-	"MAPS_English_028.txtp",
-	"MAPS_English_030.txtp",
+const char *GTZE41_entries[24] = {
 	"Sound/English/MAPS.LM3",
 	"Sound/English/STRM.LM3",
 	"Sound/GAMESND.SP3",
@@ -4925,60 +4381,7 @@ const char *GTZE41_entries[106] = {
 
 // GDDE41: Disney's Donald Duck: Goin' Quackers
 // from: Donald Duck - Goin' Quackers (Donald Duck - Quack Attack) (2002-03-25)(Ubisoft Montreal)(Ubisoft)[GC][unsorted].7z
-const char *GDDE41_entries[60] = {
-	"MAPS_0001.txtp",
-	"MAPS_0063.txtp",
-	"MAPS_0082.txtp",
-	"MAPS_0101.txtp",
-	"MAPS_0133.txtp",
-	"MAPS_0138.txtp",
-	"MAPS_0150.txtp",
-	"MAPS_0155.txtp",
-	"MAPS_0156.txtp",
-	"MAPS_0158.txtp",
-	"MAPS_0205.txtp",
-	"MAPS_0217.txtp",
-	"MAPS_0286.txtp",
-	"MAPS_0292.txtp",
-	"MAPS_0347.txtp",
-	"MAPS_0406.txtp",
-	"MAPS_0411.txtp",
-	"MAPS_0419.txtp",
-	"MAPS_0421.txtp",
-	"MAPS_0469.txtp",
-	"MAPS_0475.txtp",
-	"MAPS_0484.txtp",
-	"MAPS_0540.txtp",
-	"MAPS_0545.txtp",
-	"MAPS_0556.txtp",
-	"MAPS_0611.txtp",
-	"MAPS_0616.txtp",
-	"MAPS_0667.txtp",
-	"MAPS_0723.txtp",
-	"MAPS_0741.txtp",
-	"MAPS_0759.txtp",
-	"MAPS_0806.txtp",
-	"MAPS_0813.txtp",
-	"MAPS_0823.txtp",
-	"MAPS_0883.txtp",
-	"MAPS_0891.txtp",
-	"MAPS_0950.txtp",
-	"MAPS_0957.txtp",
-	"MAPS_1015.txtp",
-	"MAPS_1125.txtp",
-	"MAPS_1143.txtp",
-	"MAPS_1161.txtp",
-	"MAPS_1201.txtp",
-	"MAPS_1211.txtp",
-	"MAPS_1222.txtp",
-	"MAPS_1297.txtp",
-	"MAPS_1309.txtp",
-	"MAPS_1376.txtp",
-	"MAPS_1383.txtp",
-	"MAPS_1497.txtp",
-	"MAPS_1515.txtp",
-	"MAPS_1533.txtp",
-	"MAPS_1584.txtp",
+const char *GDDE41_entries[7] = {
 	"sound/GAMESND.SP3",
 	"sound/MAPS.SM3",
 	"sound/STRM.SM3",
@@ -5927,29 +5330,9 @@ const char *GWSEA4_entries[54] = {
 	"espniws26R.dsp",
 };
 
-// GMLEA4: ESPN MLS Extra Time 2002
-// from: ESPN MLS ExtraTime 2002 (2002-03-25)(KCE Hawaii)(Konami)[GC].7z
-const char *GMLEA4_entries[14] = {
-	"00043.genh",
-	"00044.genh",
-	"00045.genh",
-	"00046.genh",
-	"00047.genh",
-	"00048.genh",
-	"00049.genh",
-	"00050.genh",
-	"00051.genh",
-	"00052.genh",
-	"00053.genh",
-	"00054.genh",
-	"00055.genh",
-	"00056.genh",
-};
-
 // GEDE01: Eternal Darkness: Sanity's Requiem
 // from: Eternal Darkness - Sanity's Requiem [Eternal Darkness - Manukareta 13-nin] (2002-06-23)(Silicon Knights)(Nintendo)[GC].7z
-const char *GEDE01_entries[54] = {
-	"EMiL.nfo",
+const char *GEDE01_entries[53] = {
 	"alex01.adp",
 	"alex02.adp",
 	"alex03.adp",
@@ -6632,7 +6015,7 @@ const char *GNEF78_entries[23] = {
 
 // GFEE01: Fire Emblem: Path of Radiance
 // from: Fire Emblem - Path of Radiance [Fire Emblem - Souen no Kiseki] (2005-04-20)(Intelligent Systems)(Nintendo)[GC].7z
-const char *GFEE01_entries[82] = {
+const char *GFEE01_entries[81] = {
 	"01 - Ike's Resolution.dsp",
 	"02 - Like Father, Like Son.dsp",
 	"03 - The First Fight.dsp",
@@ -6697,24 +6080,23 @@ const char *GFEE01_entries[82] = {
 	"62 - Eternal Glory.dsp",
 	"63 - Life Returns.dsp",
 	"64 - Fire Emblem Theme.dsp",
-	"gcfe_bgm_btl_ashnard_32k_lp.dsp",
-	"gcfe_bgm_evt_advance_32k.dsp",
-	"gcfe_bgm_evt_comical1_32k.dsp",
-	"gcfe_bgm_evt_heron2_32k.dsp",
-	"gcfe_bgm_evt_ike3_2_32k.dsp",
-	"gcfe_bgm_evt_mist2_32k.dsp",
-	"gcfe_bgm_evt_tibarn2_32k.dsp",
-	"gcfe_bgm_evt_win_32k.dsp",
-	"gcfe_bgm_evt_win_bad_32k.dsp",
-	"gcfe_bgm_evt_win_good2_32k.dsp",
-	"gcfe_bgm_fase_cp01_32k.dsp",
-	"gcfe_bgm_fase_cp02_32k.dsp",
-	"gcfe_bgm_fase_friend_32k.dsp",
-	"gcfe_bgm_fase_help_32k.dsp",
-	"gcfe_bgm_fase_pl01_32k.dsp",
-	"gcfe_bgm_fase_pl02_32k.dsp",
-	"gcfe_bgm_gameover2_32k.dsp",
-	"info.txt",
+	"Sound/gcfe_bgm_btl_ashnard_32k_lp.stm",
+	"Sound/gcfe_bgm_evt_advance_32k.stm",
+	"Sound/gcfe_bgm_evt_comical1_32k.stm",
+	"Sound/gcfe_bgm_evt_heron2_32k.stm",
+	"Sound/gcfe_bgm_evt_ike3_2_32k.stm",
+	"Sound/gcfe_bgm_evt_mist2_32k.stm",
+	"Sound/gcfe_bgm_evt_tibarn2_32k.stm",
+	"Sound/gcfe_bgm_evt_win_32k.stm",
+	"Sound/gcfe_bgm_evt_win_bad_32k.stm",
+	"Sound/gcfe_bgm_evt_win_good2_32k.stm",
+	"Sound/gcfe_bgm_fase_cp01_32k.stm",
+	"Sound/gcfe_bgm_fase_cp02_32k.stm",
+	"Sound/gcfe_bgm_fase_friend_32k.stm",
+	"Sound/gcfe_bgm_fase_help_32k.stm",
+	"Sound/gcfe_bgm_fase_pl01_32k.stm",
+	"Sound/gcfe_bgm_fase_pl02_32k.stm",
+	"Sound/gcfe_bgm_gameover2_32k.stm",
 };
 
 // GFFE5D: Freaky Flyers
@@ -7161,9 +6543,9 @@ const char *GGFJ01_entries[118] = {
 	"met_rouya2.hps",
 	"mihari.hps",
 	"mokugeki.hps",
-	"mov/ending.DSP",
-	"mov/opening.DSP",
-	"mov/staff.DSP",
+	"gift/mov/ending.thp",
+	"gift/mov/opening.thp",
+	"gift/mov/staff.thp",
 	"odokashi1.hps",
 	"odokashi2.hps",
 	"saiotona.hps",
@@ -7458,8 +6840,7 @@ const char *GUME52_entries[120] = {
 
 // GHLZ69: Harry Potter and the Sorcerer's Stone
 // from: Harry Potter & The Sorcerer's Stone [Harry Potter to Kenja no Ishi] (2003-12-09)(Warthog)(Electronic Arts)[GC].7z
-const char *GHLZ69_entries[178] = {
-	"!WART3.00.bms",
+const char *GHLZ69_entries[177] = {
 	"(mov) PS_trail.thp",
 	"(mov) SplashWB.thp",
 	"(mov) frontend.thp",
@@ -7673,11 +7054,10 @@ const char *GAZE69_entries[27] = {
 
 // G4GEE9: Harvest Moon: Another Wonderful Life
 // from: Harvest Moon - Another Wonderful Life [Bokujou Monogatari - Wonderful Life for Girls] (2004-07-08)(Tose)(Marvelous)[GC].7z
-const char *G4GEE9_entries[21] = {
+const char *G4GEE9_entries[20] = {
 	"ART.adp",
 	"BAR01.adp",
 	"BAR02.adp",
-	"EMiL.nfo",
 	"HAKA.adp",
 	"KORO.adp",
 	"LIVE_01_.idsp",
@@ -7842,7 +7222,7 @@ const char *GHYE6S_entries[138] = {
 
 // GH6P7N: Hello Kitty: Roller Rescue
 // from: Hello Kitty - Roller Rescue [Hello Kitty - Mission Rescue] (2005-08-16)(Xpec)(Namco)[GC].7z
-const char *GH6P7N_entries[622] = {
+const char *GH6P7N_entries[616] = {
 	"B100000.spd",
 	"B100000.spt",
 	"B100001.spd",
@@ -8308,12 +7688,6 @@ const char *GH6P7N_entries[622] = {
 	"XSE11120.spt",
 	"XSE12202.spd",
 	"XSE12202.spt",
-	"rank.txt",
-	"selchar.txt",
-	"sellan.txt",
-	"selnpc.txt",
-	"selstage.txt",
-	"title.txt",
 	"xse00001.spd",
 	"xse00001.spt",
 	"xse00002.spd",
@@ -9420,35 +8794,7 @@ const char *GIKE70_entries[12] = {
 
 // GHUF7D: The Incredible Hulk Ultimate Destruction
 // from: Incredible Hulk, The - Ultimate Destruction (2005-08-23)(Radical)(Vivendi Universal)[GC].7z
-const char *GHUF7D_entries[143] = {
-	"(mov) 1A_anim.bika",
-	"(mov) 1B_anim.bika",
-	"(mov) 2B_anim.bika",
-	"(mov) 2C_anim.bika",
-	"(mov) 4A_anim.bika",
-	"(mov) 4D_anim.bika",
-	"(mov) 5A_anim.bika",
-	"(mov) 5C_anim.bika",
-	"(mov) 6A_anim.bika",
-	"(mov) 7C_anim.bika",
-	"(mov) 8A_anim.bika",
-	"(mov) 8C_anim.bika",
-	"(mov) 8E_anim.bika",
-	"(mov) attract.bika",
-	"(mov) dintro.bika",
-	"(mov) dolby.bika",
-	"(mov) marvel.bika",
-	"(mov) mog1.bika",
-	"(mov) mog2.bika",
-	"(mov) mog3.bika",
-	"(mov) mog4.bika",
-	"(mov) mog5.bika",
-	"(mov) mog6.bika",
-	"(mov) mog7.bika",
-	"(mov) mog8.bika",
-	"(mov) radical.bika",
-	"(mov) sierra.bika",
-	"(mov) transformation.bika",
+const char *GHUF7D_entries[115] = {
 	"bill_brownfe.rsd",
 	"c0m1 ~ h2_c0_m1_96_bpm_full.rsd",
 	"c0m2 ~ c0m2_end.rsd",
@@ -10740,7 +10086,7 @@ const char *DGAJB2_entries[37] = {
 
 // GK7E08: Killer7
 // from: Killer7 (2005-06-09)(Capcom Production Studio 4, Grasshopper Manufacture)(Capcom)[GC].7z
-const char *GK7E08_entries[150] = {
+const char *GK7E08_entries[149] = {
 	"1STstaffroll.hps",
 	"2NDstaffroll.hps",
 	"Boss_AKANE.hps",
@@ -10778,7 +10124,6 @@ const char *GK7E08_entries[150] = {
 	"CurtiesC.hps",
 	"CurtiesD.hps",
 	"CurtiesE.hps",
-	"EMiL.nfo",
 	"End_01.hps",
 	"End_02.hps",
 	"End_04.hps",
@@ -11003,7 +10348,7 @@ const char *GKHEA4_entries[103] = {
 
 // GKYE01: Kirby Air Ride
 // from: Kirby Air Ride [Kirby no Air Ride] (2003-07-11)(HAL Laboratory)(Nintendo)[GC].7z
-const char *GKYE01_entries[65] = {
+const char *GKYE01_entries[64] = {
 	"2d_desert.hps",
 	"2d_desert_ura.hps",
 	"2d_kazan.hps",
@@ -11038,7 +10383,6 @@ const char *GKYE01_entries[65] = {
 	"3d_space_ura.hps",
 	"3d_valley.hps",
 	"3d_valley_ura.hps",
-	"EMiL.nfo",
 	"StadiumIntro.hps",
 	"city.hps",
 	"city_isogi.hps",
@@ -11126,10 +10470,9 @@ const char *GGKJB2_entries[48] = {
 
 // GKQJ01: くるりんスカッシュ!
 // from: Kururin Squash! (2004-10-14)(Eighting)(Nintendo)[GC].7z
-const char *GKQJ01_entries[27] = {
+const char *GKQJ01_entries[26] = {
 	"Bonus.hps",
 	"Boss_1.hps",
-	"EMiL.nfo",
 	"Ending.hps",
 	"Goal.hps",
 	"Interval.hps",
@@ -11640,7 +10983,7 @@ const char *GLWE51_entries[49] = {
 
 // GL5X4F: LEGO Star Wars: The Video Game
 // from: LEGO Star Wars (2005-10-25)(Traveller's Tales)(Eidos)[GC].7z
-const char *GL5X4F_entries[681] = {
+const char *GL5X4F_entries[680] = {
 	"_CutScenes/GameCube/Ep1_AnakinPodExplode.gcm",
 	"_CutScenes/GameCube/Ep1_AnisFlightIntro.gcm",
 	"_CutScenes/GameCube/Ep1_AnisFlightOutro.gcm",
@@ -12321,7 +11664,6 @@ const char *GL5X4F_entries[681] = {
 	"audio.ca3",
 	"audio.cfg",
 	"audio.fpk",
-	"audio.txt",
 };
 
 // GL7E64: LEGO Star Wars II: The Original Trilogy
@@ -12639,8 +11981,7 @@ const char *GLME01_entries[2] = {
 
 // GGZP52: Madagascar
 // from: Madagascar (2005-05-23)(Toys for Bob)(Activision)[GC].7z
-const char *GGZP52_entries[23] = {
-	"!readme.txt",
+const char *GGZP52_entries[22] = {
 	"ComingMU.RWS",
 	"Credits.bik",
 	"DWLOGO.bik",
@@ -14887,7 +14228,7 @@ const char *GM8E01_entries[132] = {
 	"Ruins-soto-BL.dsp",
 	"Ruins-soto-BR.dsp",
 	"Trial Edition/biohazard.adp",
-	"Trial Edition/frontend_1.rsf",
+	"Audio/frontend_1.rsf",
 	"Trial Edition/ice-world.adp",
 	"Trial Edition/intro-cinemaEb.adp",
 	"Trial Edition/intro-escape.adp",
@@ -15086,14 +14427,14 @@ const char *G2ME01_entries[95] = {
 	"67 - Multiplayer - Hunters (Speed Up).dsp",
 	"68 - Multiplayer - Dark Echoes.dsp",
 	"69 - Mission Over.dsp",
-	"Background_Outro.dsp",
+	"Video/Background_Outro.thp",
 	"Ending-part2-1_SFX.dsp",
 	"Ending-part2-3_SFX.dsp",
 	"Ending-part3-3-SFX1.dsp",
 	"Ending-part3-3-SFX2.dsp",
-	"Outro_to_Background.dsp",
-	"Win_Movie_begin.dsp",
-	"Win_Movie_end.dsp",
+	"Video/Outro_to_Background.thp",
+	"Video/Win_Movie_begin.thp",
+	"Video/Win_Movie_end.thp",
 	"lum_x_vox_00.dsp",
 	"lum_x_vox_01.dsp",
 	"lum_x_vox_02.dsp",
@@ -15316,9 +14657,8 @@ const char *GI2J18_entries[88] = {
 
 // GMQP70: Monopoly Party
 // from: Monopoly Party! [Monopoly - Mezase!! Daifugou Jinsei!!] (2002-11-20)(Runecraft)(Infogrames)[GC].7z
-const char *GMQP70_entries[12] = {
+const char *GMQP70_entries[10] = {
 	"DANCE.mpdsp",
-	"EMiL.nfo",
 	"FUNKSTER.mpdsp",
 	"GROOVY.mpdsp",
 	"JETPOWER.mpdsp",
@@ -15328,7 +14668,6 @@ const char *GMQP70_entries[12] = {
 	"SKYLINE.mpdsp",
 	"SPOOKY.mpdsp",
 	"WOOYEAH.mpdsp",
-	"info.txt",
 };
 
 // GMJP41: Monster Jam: Maximum Destruction
@@ -15616,8 +14955,7 @@ const char *GNMEAF_entries[166] = {
 
 // G5NEAF: Namco Museum 50th Anniversary
 // from: Namco Museum 50th Anniversary (2005-08-30)(Digital Eclipse)(Namco)[GC].7z
-const char *G5NEAF_entries[6] = {
-	"!Notes.txt",
+const char *G5NEAF_entries[5] = {
 	"ComeOnEileen.adp",
 	"Joystick.adp",
 	"SheDrivesMeCrazy.adp",
@@ -16341,62 +15679,7 @@ const char *GOTJB2_entries[40] = {
 
 // GH5P52: Over The Hedge
 // from: Over the Hedge (2006-05-09)(Edge of Reality)(Activision)[GC].7z
-const char *GH5P52_entries[121] = {
-	"(mov) movies_1.bika",
-	"(mov) movies_10.bika",
-	"(mov) movies_11.bika",
-	"(mov) movies_15.bika",
-	"(mov) movies_19.bika",
-	"(mov) movies_2.bika",
-	"(mov) movies_20.bika",
-	"(mov) movies_21.bika",
-	"(mov) movies_22.bika",
-	"(mov) movies_23.bika",
-	"(mov) movies_24.bika",
-	"(mov) movies_25.bika",
-	"(mov) movies_26.bika",
-	"(mov) movies_27.bika",
-	"(mov) movies_29.bika",
-	"(mov) movies_30.bika",
-	"(mov) movies_31.bika",
-	"(mov) movies_32.bika",
-	"(mov) movies_33.bika",
-	"(mov) movies_35.bika",
-	"(mov) movies_4.bika",
-	"(mov) movies_40.bika",
-	"(mov) movies_41.bika",
-	"(mov) movies_42.bika",
-	"(mov) movies_43.bika",
-	"(mov) movies_46.bika",
-	"(mov) movies_48.bika",
-	"(mov) movies_49.bika",
-	"(mov) movies_51.bika",
-	"(mov) movies_52.bika",
-	"(mov) movies_53.bika",
-	"(mov) movies_54.bika",
-	"(mov) movies_56.bika",
-	"(mov) movies_59.bika",
-	"(mov) movies_6.bika",
-	"(mov) movies_60.bika",
-	"(mov) movies_61.bika",
-	"(mov) movies_62.bika",
-	"(mov) movies_63.bika",
-	"(mov) movies_65.bika",
-	"(mov) movies_66.bika",
-	"(mov) movies_70.bika",
-	"(mov) movies_71.bika",
-	"(mov) movies_72.bika",
-	"(mov) movies_73.bika",
-	"(mov) movies_75.bika",
-	"(mov) movies_77.bika",
-	"(mov) movies_79.bika",
-	"(mov) movies_8.bika",
-	"(mov) movies_80.bika",
-	"(mov) movies_81.bika",
-	"(mov) movies_85.bika",
-	"(mov) movies_86.bika",
-	"(mov) movies_87.bika",
-	"(mov) movies_9.bika",
+const char *GH5P52_entries[66] = {
 	"audiostr_01.dsp",
 	"audiostr_02.dsp",
 	"audiostr_03.dsp",
@@ -16874,153 +16157,153 @@ const char *G89EAF_entries[19] = {
 // G8MP01: Paper Mario: The Thousand-Year Door
 // from: Paper Mario - The Thousand-Year Door [Paper Mario RPG] (2004-07-22)(Intelligent Systems)(Nintendo)[GC].7z
 const char *G8MP01_entries[147] = {
-	"btl_3dh1_32k.dsp",
-	"btl_bpc1_32k.dsp",
-	"btl_cap1_32k.dsp",
-	"btl_cbs1_32k.dsp",
-	"btl_die1_32k.dsp",
-	"btl_gmm1_32k.dsp",
-	"btl_gnb1_32k.dsp",
-	"btl_gns1_32k.dsp",
-	"btl_kbs1_32k.dsp",
-	"btl_kpa3_32k.dsp",
-	"btl_krt1_32k.dsp",
-	"btl_mag1_32k.dsp",
-	"btl_rpl1_32k.dsp",
-	"btl_win1_32k.dsp",
-	"btl_win2_32k.dsp",
-	"btl_win3_32k.dsp",
-	"btl_wit1_32k.dsp",
-	"btl_wom1_32k.dsp",
-	"btl_wth3_32k.dsp",
-	"btl_zak1_32k.dsp",
-	"btl_zak3_32k.dsp",
-	"evt_3dh1_32k.dsp",
-	"evt_3rd1_32k.dsp",
-	"evt_air1_32k.dsp",
-	"evt_ccr1_32k.dsp",
-	"evt_cld1_32k.dsp",
-	"evt_cok1_32k.dsp",
-	"evt_dot1_32k.dsp",
-	"evt_ed1_32k.dsp",
-	"evt_ed2_32k.dsp",
-	"evt_ed3_32k.dsp",
-	"evt_ed4_32k.dsp",
-	"evt_ed5_32k.dsp",
-	"evt_egg1_32k.dsp",
-	"evt_elmos_app1_32k.dsp",
-	"evt_fkh1_32k.dsp",
-	"evt_gnb1_32k.dsp",
-	"evt_gnb3_32k.dsp",
-	"evt_gnb4_32k.dsp",
-	"evt_gns1_32k.dsp",
-	"evt_gns2_32k.dsp",
-	"evt_gstship1_32k.dsp",
-	"evt_huge_gun1_32k.dsp",
-	"evt_kik1_32k.dsp",
-	"evt_kik2_32k.dsp",
-	"evt_kik3_32k.dsp",
-	"evt_kik4_32k.dsp",
-	"evt_kou1_32k.dsp",
-	"evt_kpa1_32k.dsp",
-	"evt_kts1_32k.dsp",
-	"evt_lec1_32k.dsp",
-	"evt_mag1_32k.dsp",
-	"evt_mri1_32k.dsp",
-	"evt_mri2_32k.dsp",
-	"evt_nsk1_32k.dsp",
-	"evt_org1_32k.dsp",
-	"evt_peh1_32k.dsp",
-	"evt_prm1_32k.dsp",
-	"evt_pun1_32k.dsp",
-	"evt_pvt1_32k.dsp",
-	"evt_pwn1_32k.dsp",
-	"evt_qiz1_32k.dsp",
-	"evt_qiz2_32k.dsp",
-	"evt_rit1_32k.dsp",
-	"evt_rui1_32k.dsp",
-	"evt_stc1_32k.dsp",
-	"evt_vce1_32k.dsp",
-	"evt_wit1_32k.dsp",
-	"evt_wit2_32k.dsp",
-	"evt_wlt1_32k.dsp",
-	"ff_adm1_32k.dsp",
-	"ff_bok1_32k.dsp",
-	"ff_crs1_32k.dsp",
-	"ff_disc_set1_32k.dsp",
-	"ff_get2_32k.dsp",
-	"ff_get3_32k.dsp",
-	"ff_get4_32k.dsp",
-	"ff_get6_32k.dsp",
-	"ff_get8_32k.dsp",
-	"ff_kpa1_32k.dsp",
-	"ff_kpa2_32k.dsp",
-	"ff_mail_chakusin1_32k.dsp",
-	"ff_mail_chakusin2_32k.dsp",
-	"ff_mail_chakusin3_32k.dsp",
-	"ff_pow1_32k.dsp",
-	"ff_r_apr2_32k.dsp",
-	"ff_scs1_32k.dsp",
-	"ff_slp1_32k.dsp",
-	"ff_spr1_32k.dsp",
-	"ff_spr2_32k.dsp",
-	"ff_spr3_32k.dsp",
-	"ff_stg1_32k.dsp",
-	"ff_stt1_32k.dsp",
-	"ff_tou1_32k.dsp",
-	"ff_tou2_32k.dsp",
-	"ff_tou3_32k.dsp",
-	"ff_w_apr1_32k.dsp",
-	"stg_bmm1_32k.dsp",
-	"stg_dim1_32k.dsp",
-	"stg_dor1_32k.dsp",
-	"stg_duk1_32k.dsp",
-	"stg_eki1_32k.dsp",
-	"stg_fsg1_32k.dsp",
-	"stg_gnb1_32k.dsp",
-	"stg_gor1_32k.dsp",
-	"stg_gor2_32k.dsp",
-	"stg_gra1_32k.dsp",
-	"stg_gtm1_32k.dsp",
-	"stg_hom1_32k.dsp",
-	"stg_kpa1_32k.dsp",
-	"stg_kpa3_32k.dsp",
-	"stg_ldn1_32k.dsp",
-	"stg_ldn2_32k.dsp",
-	"stg_ldn3_32k.dsp",
-	"stg_mjn1_32k.dsp",
-	"stg_nok1_32k.dsp",
-	"stg_okk1_32k.dsp",
-	"stg_pik1_32k.dsp",
-	"stg_rsh_a1_32k.dsp",
-	"stg_rsh_b1_32k.dsp",
-	"stg_rsh_c1_32k.dsp",
-	"stg_snd1_32k.dsp",
-	"stg_stn1_32k.dsp",
-	"stg_tgm1_32k.dsp",
-	"stg_tik1_32k.dsp",
-	"stg_tik2_32k.dsp",
-	"stg_tik3_32k.dsp",
-	"stg_tkd1_32k.dsp",
-	"stg_tkd2_32k.dsp",
-	"stg_tog1_32k.dsp",
-	"stg_ugt1_32k.dsp",
-	"stg_urg11_32k.dsp",
-	"stgk_fld1_32k.dsp",
-	"stgk_fld1_up1_32k.dsp",
-	"stgk_fld1_up2_32k.dsp",
-	"stgk_fld2_32k.dsp",
-	"stgk_fld2_up1_32k.dsp",
-	"stgk_fld3_32k.dsp",
-	"stgk_fld3_up1_32k.dsp",
-	"sys_demo1_32k.dsp",
-	"sys_demo2_32k.dsp",
-	"sys_dig1_32k.dsp",
-	"sys_mmc1_32k.dsp",
-	"sys_opn1_32k.dsp",
-	"sys_stf1_32k.dsp",
+	"sound/stream/btl_3dh1_32k.stm",
+	"sound/stream/btl_bpc1_32k.stm",
+	"sound/stream/btl_cap1_32k.stm",
+	"sound/stream/btl_cbs1_32k.stm",
+	"sound/stream/btl_die1_32k.stm",
+	"sound/stream/btl_gmm1_32k.stm",
+	"sound/stream/btl_gnb1_32k.stm",
+	"sound/stream/btl_gns1_32k.stm",
+	"sound/stream/btl_kbs1_32k.stm",
+	"sound/stream/btl_kpa3_32k.stm",
+	"sound/stream/btl_krt1_32k.stm",
+	"sound/stream/btl_mag1_32k.stm",
+	"sound/stream/btl_rpl1_32k.stm",
+	"sound/stream/btl_win1_32k.stm",
+	"sound/stream/btl_win2_32k.stm",
+	"sound/stream/btl_win3_32k.stm",
+	"sound/stream/btl_wit1_32k.stm",
+	"sound/stream/btl_wom1_32k.stm",
+	"sound/stream/btl_wth3_32k.stm",
+	"sound/stream/btl_zak1_32k.stm",
+	"sound/stream/btl_zak3_32k.stm",
+	"sound/stream/evt_3dh1_32k.stm",
+	"sound/stream/evt_3rd1_32k.stm",
+	"sound/stream/evt_air1_32k.stm",
+	"sound/stream/evt_ccr1_32k.stm",
+	"sound/stream/evt_cld1_32k.stm",
+	"sound/stream/evt_cok1_32k.stm",
+	"sound/stream/evt_dot1_32k.stm",
+	"sound/stream/evt_ed1_32k.stm",
+	"sound/stream/evt_ed2_32k.stm",
+	"sound/stream/evt_ed3_32k.stm",
+	"sound/stream/evt_ed4_32k.stm",
+	"sound/stream/evt_ed5_32k.stm",
+	"sound/stream/evt_egg1_32k.stm",
+	"sound/stream/evt_elmos_app1_32k.stm",
+	"sound/stream/evt_fkh1_32k.stm",
+	"sound/stream/evt_gnb1_32k.stm",
+	"sound/stream/evt_gnb3_32k.stm",
+	"sound/stream/evt_gnb4_32k.stm",
+	"sound/stream/evt_gns1_32k.stm",
+	"sound/stream/evt_gns2_32k.stm",
+	"sound/stream/evt_gstship1_32k.stm",
+	"sound/stream/evt_huge_gun1_32k.stm",
+	"sound/stream/evt_kik1_32k.stm",
+	"sound/stream/evt_kik2_32k.stm",
+	"sound/stream/evt_kik3_32k.stm",
+	"sound/stream/evt_kik4_32k.stm",
+	"sound/stream/evt_kou1_32k.stm",
+	"sound/stream/evt_kpa1_32k.stm",
+	"sound/stream/evt_kts1_32k.stm",
+	"sound/stream/evt_lec1_32k.stm",
+	"sound/stream/evt_mag1_32k.stm",
+	"sound/stream/evt_mri1_32k.stm",
+	"sound/stream/evt_mri2_32k.stm",
+	"sound/stream/evt_nsk1_32k.stm",
+	"sound/stream/evt_org1_32k.stm",
+	"sound/stream/evt_peh1_32k.stm",
+	"sound/stream/evt_prm1_32k.stm",
+	"sound/stream/evt_pun1_32k.stm",
+	"sound/stream/evt_pvt1_32k.stm",
+	"sound/stream/evt_pwn1_32k.stm",
+	"sound/stream/evt_qiz1_32k.stm",
+	"sound/stream/evt_qiz2_32k.stm",
+	"sound/stream/evt_rit1_32k.stm",
+	"sound/stream/evt_rui1_32k.stm",
+	"sound/stream/evt_stc1_32k.stm",
+	"sound/stream/evt_vce1_32k.stm",
+	"sound/stream/evt_wit1_32k.stm",
+	"sound/stream/evt_wit2_32k.stm",
+	"sound/stream/evt_wlt1_32k.stm",
+	"sound/stream/ff_adm1_32k.stm",
+	"sound/stream/ff_bok1_32k.stm",
+	"sound/stream/ff_crs1_32k.stm",
+	"sound/stream/ff_disc_set1_32k.stm",
+	"sound/stream/ff_get2_32k.stm",
+	"sound/stream/ff_get3_32k.stm",
+	"sound/stream/ff_get4_32k.stm",
+	"sound/stream/ff_get6_32k.stm",
+	"sound/stream/ff_get8_32k.stm",
+	"sound/stream/ff_kpa1_32k.stm",
+	"sound/stream/ff_kpa2_32k.stm",
+	"sound/stream/ff_mail_chakusin1_32k.stm",
+	"sound/stream/ff_mail_chakusin2_32k.stm",
+	"sound/stream/ff_mail_chakusin3_32k.stm",
+	"sound/stream/ff_pow1_32k.stm",
+	"sound/stream/ff_r_apr2_32k.stm",
+	"sound/stream/ff_scs1_32k.stm",
+	"sound/stream/ff_slp1_32k.stm",
+	"sound/stream/ff_spr1_32k.stm",
+	"sound/stream/ff_spr2_32k.stm",
+	"sound/stream/ff_spr3_32k.stm",
+	"sound/stream/ff_stg1_32k.stm",
+	"sound/stream/ff_stt1_32k.stm",
+	"sound/stream/ff_tou1_32k.stm",
+	"sound/stream/ff_tou2_32k.stm",
+	"sound/stream/ff_tou3_32k.stm",
+	"sound/stream/ff_w_apr1_32k.stm",
+	"sound/stream/stg_bmm1_32k.stm",
+	"sound/stream/stg_dim1_32k.stm",
+	"sound/stream/stg_dor1_32k.stm",
+	"sound/stream/stg_duk1_32k.stm",
+	"sound/stream/stg_eki1_32k.stm",
+	"sound/stream/stg_fsg1_32k.stm",
+	"sound/stream/stg_gnb1_32k.stm",
+	"sound/stream/stg_gor1_32k.stm",
+	"sound/stream/stg_gor2_32k.stm",
+	"sound/stream/stg_gra1_32k.stm",
+	"sound/stream/stg_gtm1_32k.stm",
+	"sound/stream/stg_hom1_32k.stm",
+	"sound/stream/stg_kpa1_32k.stm",
+	"sound/stream/stg_kpa3_32k.stm",
+	"sound/stream/stg_ldn1_32k.stm",
+	"sound/stream/stg_ldn2_32k.stm",
+	"sound/stream/stg_ldn3_32k.stm",
+	"sound/stream/stg_mjn1_32k.stm",
+	"sound/stream/stg_nok1_32k.stm",
+	"sound/stream/stg_okk1_32k.stm",
+	"sound/stream/stg_pik1_32k.stm",
+	"sound/stream/stg_rsh_a1_32k.stm",
+	"sound/stream/stg_rsh_b1_32k.stm",
+	"sound/stream/stg_rsh_c1_32k.stm",
+	"sound/stream/stg_snd1_32k.stm",
+	"sound/stream/stg_stn1_32k.stm",
+	"sound/stream/stg_tgm1_32k.stm",
+	"sound/stream/stg_tik1_32k.stm",
+	"sound/stream/stg_tik2_32k.stm",
+	"sound/stream/stg_tik3_32k.stm",
+	"sound/stream/stg_tkd1_32k.stm",
+	"sound/stream/stg_tkd2_32k.stm",
+	"sound/stream/stg_tog1_32k.stm",
+	"sound/stream/stg_ugt1_32k.stm",
+	"sound/stream/stg_urg11_32k.stm",
+	"sound/stream/stgk_fld1_32k.stm",
+	"sound/stream/stgk_fld1_up1_32k.stm",
+	"sound/stream/stgk_fld1_up2_32k.stm",
+	"sound/stream/stgk_fld2_32k.stm",
+	"sound/stream/stgk_fld2_up1_32k.stm",
+	"sound/stream/stgk_fld3_32k.stm",
+	"sound/stream/stgk_fld3_up1_32k.stm",
+	"sound/stream/sys_demo1_32k.stm",
+	"sound/stream/sys_demo2_32k.stm",
+	"sound/stream/sys_dig1_32k.stm",
+	"sound/stream/sys_mmc1_32k.stm",
+	"sound/stream/sys_opn1_32k.stm",
+	"sound/stream/sys_stf1_32k.stm",
 	"sys_tit1_32k (JP).dsp",
-	"sys_tit1_32k.dsp",
+	"sound/stream/sys_tit1_32k.stm",
 };
 
 // GPOE8P: Phantasy Star Online Episode I & II
@@ -17139,7 +16422,7 @@ const char *GPOE8P_entries[109] = {
 
 // GPSE8P: Phantasy Star Online Episode III: C.A.R.D. Revolution
 // from: Phantasy Star Online Episode III - C.A.R.D. Revolution (2003-11-27)(Sonic Team)(Sega)[GC].7z
-const char *GPSE8P_entries[83] = {
+const char *GPSE8P_entries[82] = {
 	"ANU_ORTA_VENIYA.adx",
 	"Buggie_Running_Beeps_01.adx",
 	"CARNAVAL.adx",
@@ -17180,7 +16463,6 @@ const char *GPSE8P_entries[83] = {
 	"gensou.adx",
 	"halloween.adx",
 	"hone.adx",
-	"info.txt",
 	"kaigan.adx",
 	"kanketsu.adx",
 	"kansen.adx",
@@ -17632,7 +16914,7 @@ const char *GPQP6L_entries[57] = {
 
 // GPTE41: Prince of Persia: The Sands of Time
 // from: Prince of Persia - The Sands of Time (2003-11-18)(Ubisoft Montreal)(Ubisoft)[GC].7z
-const char *GPTE41_entries[24] = {
+const char *GPTE41_entries[10] = {
 	"sound (POP1)/GameSnd.SP3",
 	"sound (POP1)/POP1MUS1.SB3",
 	"sound (POP1)/POP1MUS2.SB3",
@@ -17643,20 +16925,6 @@ const char *GPTE41_entries[24] = {
 	"sound/english/voingstm.sb3",
 	"sound/gamesnd.sp3",
 	"sound/stream.ss3",
-	"video/CINE_901.INT.bika",
-	"video/CINE_902.INT.bika",
-	"video/CINE_903.INT.bika",
-	"video/CINE_904.INT.bika",
-	"video/CINE_905.INT.bika",
-	"video/INTRO.INT.bika",
-	"video/INTROLOGO.INT.bika",
-	"video/UBISOFT.INT.bika",
-	"video/cine_010.int.bika",
-	"video/cine_110.int.bika",
-	"video/cine_730.int.bika",
-	"video/cine_750.int.bika",
-	"video/cine_820.int.bika",
-	"video/cine_830.int.bika",
 };
 
 // GKMP41: Prince of Persia: The Two Thrones
@@ -17686,46 +16954,7 @@ const char *GKMP41_entries[20] = {
 
 // G2OE41: Prince of Persia: Warrior Within
 // from: Prince of Persia - Warrior Within (2004-11-30)(Ubisoft Montreal)(Ubisoft)[GC].7z
-const char *G2OE41_entries[44] = {
-	"Video/CINE0001.BIK.bika",
-	"Video/CINE0002.BIK.bika",
-	"Video/CINE0003.BIK.bika",
-	"Video/CINE0004.BIK.bika",
-	"Video/CINE0005.BIK.bika",
-	"Video/CINE0100.BIK.bika",
-	"Video/CINE0101.BIK.bika",
-	"Video/CINE0102.BIK.bika",
-	"Video/CINE0400.BIK.bika",
-	"Video/CINE0550.BIK.bika",
-	"Video/CINE0650.BIK.bika",
-	"Video/CINE0651.BIK.bika",
-	"Video/CINE0652.BIK.bika",
-	"Video/CINE0653.BIK.bika",
-	"Video/CINE0654.BIK.bika",
-	"Video/CINE1150.BIK.bika",
-	"Video/CINE1250.BIK.bika",
-	"Video/CINE2350.BIK.bika",
-	"Video/CINE4000.BIK.bika",
-	"Video/CINE4001.BIK.bika",
-	"Video/CINE7100.BIK.bika",
-	"Video/CINE7101.BIK.bika",
-	"Video/CREDITS.BIK.bika",
-	"Video/GO_BOSS.bik.bika",
-	"Video/GO_CLAW.bik.bika",
-	"Video/GO_GEN.bik.bika",
-	"Video/GO_SLASH.bik.bika",
-	"Video/GO_TRAP.bik.bika",
-	"Video/LOGORP.BIK.bika",
-	"Video/UBIMTL.BIK.bika",
-	"Video/UBISOFT.BIK.bika",
-	"Video/VIDEO01.BIK.bika",
-	"Video/VIDEO02.BIK.bika",
-	"Video/VIDEO03.BIK.bika",
-	"Video/VIDEO04.BIK.bika",
-	"Video/VIDEO05.BIK.bika",
-	"Video/VIDEO06.BIK.bika",
-	"Video/VIDEO07.BIK.bika",
-	"Video/VIDEO08.BIK.bika",
+const char *G2OE41_entries[5] = {
 	"sound/english/locstrm.sb3",
 	"sound/english/stream.ls3",
 	"sound/gamesnd.sp3",
@@ -17751,7 +16980,7 @@ const char *GRLE41_entries[11] = {
 
 // GPUE8P: Puyo Pop Fever
 // from: Puyo Pop Fever [Puyo Puyo Fever] (2004-02-27)(MileStone)(Sega)[GC].7z
-const char *GPUE8P_entries[25] = {
+const char *GPUE8P_entries[24] = {
 	"00.adx",
 	"01.adx",
 	"02.adx",
@@ -17775,7 +17004,6 @@ const char *GPUE8P_entries[25] = {
 	"20.adx",
 	"21.adx",
 	"22.adx",
-	"EMiL.nfo",
 	"dm.adx",
 };
 
@@ -18125,272 +17353,7 @@ const char *GRHE41_entries[155] = {
 
 // GRYE41: Rayman Arena
 // from: Rayman Arena (2002-07-24)(Ubi Pictures, Ubisoft Milan)(Ubisoft)[GC][unsorted].7z
-const char *GRYE41_entries[458] = {
-	"0.hxd_060.txtp",
-	"0.hxd_070.txtp",
-	"0.hxd_072.txtp",
-	"0.hxd_078.txtp",
-	"0.hxd_080.txtp",
-	"0.hxd_081.txtp",
-	"0.hxd_084.txtp",
-	"0.hxd_085.txtp",
-	"0.hxd_087.txtp",
-	"1.hxd_040.txtp",
-	"1.hxd_055.txtp",
-	"1.hxd_059.txtp",
-	"1.hxd_068.txtp",
-	"1.hxd_070.txtp",
-	"1.hxd_073.txtp",
-	"1.hxd_076.txtp",
-	"1.hxd_078.txtp",
-	"1.hxd_079.txtp",
-	"1Shadow_007.txtp",
-	"1Shadow_024.txtp",
-	"1Shadow_043.txtp",
-	"1Shadow_174.txtp",
-	"1Shadow_185.txtp",
-	"1Shadow_187.txtp",
-	"1Shadow_188.txtp",
-	"1Shadow_201.txtp",
-	"1Shadow_205.txtp",
-	"1Shadow_213.txtp",
-	"1Shadow_231.txtp",
-	"1Shadow_233.txtp",
-	"1Shadow_235.txtp",
-	"1Shrine_023.txtp",
-	"1Shrine_037.txtp",
-	"1Shrine_054.txtp",
-	"1Shrine_073.txtp",
-	"1Shrine_204.txtp",
-	"1Shrine_213.txtp",
-	"1Shrine_214.txtp",
-	"1Shrine_215.txtp",
-	"1Shrine_224.txtp",
-	"1Shrine_228.txtp",
-	"1Shrine_233.txtp",
-	"1Shrine_235.txtp",
-	"1Shrine_239.txtp",
-	"1Sunset_001.txtp",
-	"1Sunset_017.txtp",
-	"1Sunset_044.txtp",
-	"1Sunset_061.txtp",
-	"1Sunset_080.txtp",
-	"1Sunset_211.txtp",
-	"1Sunset_221.txtp",
-	"1Sunset_222.txtp",
-	"1Sunset_223.txtp",
-	"1Sunset_233.txtp",
-	"1Sunset_238.txtp",
-	"1Sunset_244.txtp",
-	"1Sunset_246.txtp",
-	"2.hxd_035.txtp",
-	"2.hxd_049.txtp",
-	"2.hxd_050.txtp",
-	"2.hxd_063.txtp",
-	"2.hxd_067.txtp",
-	"2.hxd_072.txtp",
-	"2.hxd_073.txtp",
-	"2.hxd_076.txtp",
-	"2.hxd_077.txtp",
-	"2Haunted_013.txtp",
-	"2Haunted_031.txtp",
-	"2Haunted_044.txtp",
-	"2Haunted_073.txtp",
-	"2Haunted_080.txtp",
-	"2Haunted_211.txtp",
-	"2Haunted_220.txtp",
-	"2Haunted_223.txtp",
-	"2Haunted_224.txtp",
-	"2Haunted_233.txtp",
-	"2Haunted_234.txtp",
-	"2Haunted_239.txtp",
-	"2Haunted_245.txtp",
-	"2Haunted_247.txtp",
-	"2Palm_009.txtp",
-	"2Palm_028.txtp",
-	"2Palm_044.txtp",
-	"2Palm_068.txtp",
-	"2Palm_080.txtp",
-	"2Palm_211.txtp",
-	"2Palm_221.txtp",
-	"2Palm_222.txtp",
-	"2Palm_223.txtp",
-	"2Palm_233.txtp",
-	"2Palm_238.txtp",
-	"2Palm_244.txtp",
-	"2Palm_246.txtp",
-	"2Timber_014.txtp",
-	"2Timber_024.txtp",
-	"2Timber_042.txtp",
-	"2Timber_075.txtp",
-	"2Timber_078.txtp",
-	"2Timber_209.txtp",
-	"2Timber_218.txtp",
-	"2Timber_221.txtp",
-	"2Timber_222.txtp",
-	"2Timber_231.txtp",
-	"2Timber_232.txtp",
-	"2Timber_237.txtp",
-	"2Timber_243.txtp",
-	"2Timber_245.txtp",
-	"3.hxd_056.txtp",
-	"3.hxd_057.txtp",
-	"3.hxd_058.txtp",
-	"3.hxd_061.txtp",
-	"3.hxd_063.txtp",
-	"3.hxd_064.txtp",
-	"3.hxd_069.txtp",
-	"3.hxd_071.txtp",
-	"3.hxd_072.txtp",
-	"3.hxd_073.txtp",
-	"3Coconut_005.txtp",
-	"3Coconut_031.txtp",
-	"3Coconut_044.txtp",
-	"3Coconut_061.txtp",
-	"3Coconut_080.txtp",
-	"3Coconut_211.txtp",
-	"3Coconut_221.txtp",
-	"3Coconut_222.txtp",
-	"3Coconut_223.txtp",
-	"3Coconut_233.txtp",
-	"3Coconut_238.txtp",
-	"3Coconut_244.txtp",
-	"3Coconut_246.txtp",
-	"3Ly_007.txtp",
-	"3Ly_040.txtp",
-	"3Ly_043.txtp",
-	"3Ly_174.txtp",
-	"3Ly_183.txtp",
-	"3Ly_184.txtp",
-	"3Ly_185.txtp",
-	"3Ly_194.txtp",
-	"3Ly_198.txtp",
-	"3Ly_203.txtp",
-	"3Ly_205.txtp",
-	"3Ly_217.txtp",
-	"3Ly_218.txtp",
-	"3Spell_021.txtp",
-	"3Spell_026.txtp",
-	"3Spell_042.txtp",
-	"3Spell_054.txtp",
-	"3Spell_078.txtp",
-	"3Spell_209.txtp",
-	"3Spell_218.txtp",
-	"3Spell_219.txtp",
-	"3Spell_220.txtp",
-	"3Spell_229.txtp",
-	"3Spell_233.txtp",
-	"3Spell_238.txtp",
-	"3Spell_240.txtp",
-	"4.hxd_078.txtp",
-	"4.hxd_087.txtp",
-	"4.hxd_089.txtp",
-	"4.hxd_093.txtp",
-	"4.hxd_094.txtp",
-	"4.hxd_097.txtp",
-	"4.hxd_099.txtp",
-	"4.hxd_101.txtp",
-	"4.hxd_103.txtp",
-	"4.hxd_104.txtp",
-	"4Forgot_007.txtp",
-	"4Forgot_040.txtp",
-	"4Forgot_043.txtp",
-	"4Forgot_174.txtp",
-	"4Forgot_183.txtp",
-	"4Forgot_184.txtp",
-	"4Forgot_185.txtp",
-	"4Forgot_186.txtp",
-	"4Forgot_195.txtp",
-	"4Forgot_199.txtp",
-	"4Forgot_204.txtp",
-	"4Forgot_206.txtp",
-	"4Forgot_240.txtp",
-	"4Gem_007.txtp",
-	"4Gem_040.txtp",
-	"4Gem_043.txtp",
-	"4Gem_057.txtp",
-	"4Gem_131.txtp",
-	"4Gem_207.txtp",
-	"4Gem_216.txtp",
-	"4Gem_217.txtp",
-	"4Gem_218.txtp",
-	"4Gem_227.txtp",
-	"4Gem_231.txtp",
-	"4Gem_236.txtp",
-	"4Gem_238.txtp",
-	"4Ghastly_001.txtp",
-	"4Ghastly_031.txtp",
-	"4Ghastly_044.txtp",
-	"4Ghastly_056.txtp",
-	"4Ghastly_080.txtp",
-	"4Ghastly_211.txtp",
-	"4Ghastly_220.txtp",
-	"4Ghastly_221.txtp",
-	"4Ghastly_222.txtp",
-	"4Ghastly_231.txtp",
-	"4Ghastly_235.txtp",
-	"4Ghastly_240.txtp",
-	"4Ghastly_242.txtp",
-	"5.hxd_056.txtp",
-	"5.hxd_057.txtp",
-	"5.hxd_059.txtp",
-	"5.hxd_064.txtp",
-	"5.hxd_065.txtp",
-	"6.hxd_056.txtp",
-	"7.hxd_087.txtp",
-	"BDamien_007.txtp",
-	"BDamien_040.txtp",
-	"BDamien_042.txtp",
-	"BDamien_047.txtp",
-	"BDamien_054.txtp",
-	"BDamien_062.txtp",
-	"BDamien_193.txtp",
-	"BDamien_202.txtp",
-	"BDamien_203.txtp",
-	"BDamien_204.txtp",
-	"BDamien_213.txtp",
-	"BDamien_217.txtp",
-	"BDamien_222.txtp",
-	"BDamien_224.txtp",
-	"BGravity01_007.txtp",
-	"BGravity01_040.txtp",
-	"BGravity01_041.txtp",
-	"BGravity01_070.txtp",
-	"BGravity01_080.txtp",
-	"BGravity01_211.txtp",
-	"BGravity01_220.txtp",
-	"BGravity01_221.txtp",
-	"BGravity01_222.txtp",
-	"BGravity01_231.txtp",
-	"BGravity01_235.txtp",
-	"BGravity01_240.txtp",
-	"BGravity01_242.txtp",
-	"BSpooky_016.txtp",
-	"BSpooky_036.txtp",
-	"BSpooky_043.txtp",
-	"BSpooky_077.txtp",
-	"BSpooky_080.txtp",
-	"BSpooky_211.txtp",
-	"BSpooky_221.txtp",
-	"BSpooky_222.txtp",
-	"BSpooky_223.txtp",
-	"BSpooky_233.txtp",
-	"BSpooky_238.txtp",
-	"BSpooky_244.txtp",
-	"BSpooky_246.txtp",
-	"Credits.txt",
-	"Pacbonus_007.txtp",
-	"Pacbonus_040.txtp",
-	"Pacbonus_047.txtp",
-	"Pacbonus_093.txtp",
-	"Pacbonus_225.txtp",
-	"Pacbonus_235.txtp",
-	"Pacbonus_236.txtp",
-	"Pacbonus_237.txtp",
-	"Pacbonus_246.txtp",
-	"Pacbonus_250.txtp",
-	"Pacbonus_255.txtp",
-	"Pacbonus_257.txtp",
+const char *GRYE41_entries[190] = {
 	"Sound-FISHbin/0.bnh",
 	"Sound-FISHbin/0.hxd",
 	"Sound-FISHbin/1.bnh",
@@ -18569,9 +17532,6 @@ const char *GRYE41_entries[458] = {
 	"Sound-TRIBebin/scrol.bnh",
 	"Sound-TRIBebin/scrol.hxd",
 	"Sound-TRIBebin/tribe.hst",
-	"podium_110.txtp",
-	"podium_113.txtp",
-	"podium_114.txtp",
 	"videos/LogoUbi_audio_only.h4m",
 	"videos/Outro_audio_only.h4m",
 	"videos/demo_audio_only.h4m",
@@ -18656,7 +17616,7 @@ const char *GRFF78_entries[63] = {
 
 // GR3E5D: Red Card 2003
 // from: RedCard 20-03 [RedCard] (2002-06-24)(Point of View)(Midway)[GC].7z
-const char *GR3E5D_entries[39] = {
+const char *GR3E5D_entries[30] = {
 	"adp/m_284_m06intro_left.adp",
 	"adp/m_284_m06intro_right.adp",
 	"adp/m_284_m09bgm2_left.adp",
@@ -18687,128 +17647,119 @@ const char *GR3E5D_entries[39] = {
 	"adp/m_284_m19goal3_right.adp",
 	"adp/m_284_m20bgm2_left.adp",
 	"adp/m_284_m20bgm2_right.adp",
-	"m_284_m06intro.txtp",
-	"m_284_m09bgm2~m10bgm2.txtp",
-	"m_284_m13bgm3a~m13bgm3b.txtp",
-	"m_284_m14goala~m14goalb.txtp",
-	"m_284_m15pausa~m15pausb.txtp",
-	"m_284_m16pausa~m16pausb.txtp",
-	"m_284_m17goal2.txtp",
-	"m_284_m19goal3~m18goal3.txtp",
-	"m_284_m20bgm2~m10bgm2.txtp",
 };
 
 // GCDE08: Resident Evil Code: Veronica X
 // from: Resident Evil - CODE - Veronica X [Biohazard - CODE - Veronica Kanzenban] (2003-08-07)(Nextech, Flagship, Capcom Production Studio 4)(Capcom)[GC].7z
 const char *GCDE08_entries[111] = {
-	"bgm1_main00.adx",
-	"bgm1_main01.adx",
-	"bgm1_main02.adx",
-	"bgm1_main03.adx",
-	"bgm1_main04.adx",
-	"bgm1_main05.adx",
-	"bgm1_main06.adx",
-	"bgm1_main08.adx",
-	"bgm1_main10.adx",
-	"bgm1_main11.adx",
-	"bgm1_main12.adx",
-	"bgm1_main17.adx",
-	"bgm1_main22.adx",
-	"bgm1_main23.adx",
-	"bgm1_main24.adx",
-	"bgm1_main26.adx",
-	"bgm1_main27.adx",
-	"bgm1_main28.adx",
-	"bgm1_main32.adx",
-	"bgm1_main33.adx",
-	"bgm1_main34.adx",
-	"bgm1_main36.adx",
-	"bgm1_main37.adx",
-	"bgm1_main38.adx",
-	"bgm1_sub_01.adx",
-	"bgm1_sub_02.adx",
-	"bgm1_sub_03.adx",
-	"bgm1_sub_04.adx",
-	"bgm1_sub_05.adx",
-	"bgm1_sub_06.adx",
-	"bgm1_sub_08.adx",
-	"bgm1_sub_09.adx",
-	"bgm1_sub_10.adx",
-	"bgm1_sub_11.adx",
-	"bgm1_sub_12.adx",
-	"bgm1_sub_13.adx",
-	"bgm1_sub_14.adx",
-	"bgm1_sub_15.adx",
-	"bgm1_sub_16.adx",
-	"bgm1_sub_17.adx",
-	"bgm1_sub_18.adx",
-	"bgm1_sub_19.adx",
-	"bgm1_sub_20.adx",
-	"bgm1_sub_21.adx",
-	"bgm1_sub_22.adx",
-	"bgm1_sub_23.adx",
-	"bgm1_sub_24.adx",
-	"bgm1_sub_25.adx",
-	"bgm1_sub_26.adx",
-	"bgm1_sub_27.adx",
-	"bgm1_sub_28.adx",
-	"bgm1_sub_29.adx",
-	"bgm1_sub_30.adx",
-	"bgm1_sub_31.adx",
-	"bgm1_sub_32.adx",
-	"bgm1_sub_33.adx",
-	"bgm1_sub_39.adx",
-	"bgm1_sub_46.adx",
-	"bgm1_sub_47.adx",
-	"bgm1_sub_58.adx",
-	"bgm1_sub_60.adx",
-	"bgm1_sub_63.adx",
-	"bgm1_sub_70.adx",
-	"bgm1_sub_73.adx",
-	"bgm1_sub_76.adx",
-	"bgm2_main12.adx",
-	"bgm2_main22.adx",
-	"bgm2_main25.adx",
-	"bgm2_main29.adx",
-	"bgm2_main30.adx",
-	"bgm2_main31.adx",
-	"bgm2_main32.adx",
-	"bgm2_main33.adx",
-	"bgm2_main35.adx",
-	"bgm2_sub_03.adx",
-	"bgm2_sub_09.adx",
-	"bgm2_sub_38.adx",
-	"bgm2_sub_40.adx",
-	"bgm2_sub_41.adx",
-	"bgm2_sub_42.adx",
-	"bgm2_sub_43.adx",
-	"bgm2_sub_44.adx",
-	"bgm2_sub_45.adx",
-	"bgm2_sub_48.adx",
-	"bgm2_sub_49.adx",
-	"bgm2_sub_50.adx",
-	"bgm2_sub_51.adx",
-	"bgm2_sub_52.adx",
-	"bgm2_sub_53.adx",
-	"bgm2_sub_54.adx",
-	"bgm2_sub_59.adx",
-	"bgm2_sub_61.adx",
-	"bgm2_sub_62.adx",
-	"bgm2_sub_64.adx",
-	"bgm2_sub_65.adx",
-	"bgm2_sub_66.adx",
-	"bgm2_sub_67.adx",
-	"bgm2_sub_68.adx",
-	"bgm2_sub_69.adx",
-	"bgm2_sub_71.adx",
-	"bgm2_sub_72.adx",
-	"bgm2_sub_74.adx",
-	"bgm2_sub_75.adx",
-	"bgm2_sub_77.adx",
-	"bgm2_sub_78.adx",
-	"bgm2_sub_79.adx",
-	"bgm2_sub_80.adx",
-	"bgm2_sub_81.adx",
+	"bgm1.afs/main00.adx",
+	"bgm1.afs/main01.adx",
+	"bgm1.afs/main02.adx",
+	"bgm1.afs/main03.adx",
+	"bgm1.afs/main04.adx",
+	"bgm1.afs/main05.adx",
+	"bgm1.afs/main06.adx",
+	"bgm1.afs/main08.adx",
+	"bgm1.afs/main10.adx",
+	"bgm1.afs/main11.adx",
+	"bgm1.afs/main12.adx",
+	"bgm1.afs/main17.adx",
+	"bgm1.afs/main22.adx",
+	"bgm1.afs/main23.adx",
+	"bgm1.afs/main24.adx",
+	"bgm1.afs/main26.adx",
+	"bgm1.afs/main27.adx",
+	"bgm1.afs/main28.adx",
+	"bgm1.afs/main32.adx",
+	"bgm1.afs/main33.adx",
+	"bgm1.afs/main34.adx",
+	"bgm1.afs/main36.adx",
+	"bgm1.afs/main37.adx",
+	"bgm1.afs/main38.adx",
+	"bgm1.afs/sub_01.adx",
+	"bgm1.afs/sub_02.adx",
+	"bgm1.afs/sub_03.adx",
+	"bgm1.afs/sub_04.adx",
+	"bgm1.afs/sub_05.adx",
+	"bgm1.afs/sub_06.adx",
+	"bgm1.afs/sub_08.adx",
+	"bgm1.afs/sub_09.adx",
+	"bgm1.afs/sub_10.adx",
+	"bgm1.afs/sub_11.adx",
+	"bgm1.afs/sub_12.adx",
+	"bgm1.afs/sub_13.adx",
+	"bgm1.afs/sub_14.adx",
+	"bgm1.afs/sub_15.adx",
+	"bgm1.afs/sub_16.adx",
+	"bgm1.afs/sub_17.adx",
+	"bgm1.afs/sub_18.adx",
+	"bgm1.afs/sub_19.adx",
+	"bgm1.afs/sub_20.adx",
+	"bgm1.afs/sub_21.adx",
+	"bgm1.afs/sub_22.adx",
+	"bgm1.afs/sub_23.adx",
+	"bgm1.afs/sub_24.adx",
+	"bgm1.afs/sub_25.adx",
+	"bgm1.afs/sub_26.adx",
+	"bgm1.afs/sub_27.adx",
+	"bgm1.afs/sub_28.adx",
+	"bgm1.afs/sub_29.adx",
+	"bgm1.afs/sub_30.adx",
+	"bgm1.afs/sub_31.adx",
+	"bgm1.afs/sub_32.adx",
+	"bgm1.afs/sub_33.adx",
+	"bgm1.afs/sub_39.adx",
+	"bgm1.afs/sub_46.adx",
+	"bgm1.afs/sub_47.adx",
+	"bgm1.afs/sub_58.adx",
+	"bgm1.afs/sub_60.adx",
+	"bgm1.afs/sub_63.adx",
+	"bgm1.afs/sub_70.adx",
+	"bgm1.afs/sub_73.adx",
+	"bgm1.afs/sub_76.adx",
+	"bgm2.afs/main12.adx",
+	"bgm2.afs/main22.adx",
+	"bgm2.afs/main25.adx",
+	"bgm2.afs/main29.adx",
+	"bgm2.afs/main30.adx",
+	"bgm2.afs/main31.adx",
+	"bgm2.afs/main32.adx",
+	"bgm2.afs/main33.adx",
+	"bgm2.afs/main35.adx",
+	"bgm2.afs/sub_03.adx",
+	"bgm2.afs/sub_09.adx",
+	"bgm2.afs/sub_38.adx",
+	"bgm2.afs/sub_40.adx",
+	"bgm2.afs/sub_41.adx",
+	"bgm2.afs/sub_42.adx",
+	"bgm2.afs/sub_43.adx",
+	"bgm2.afs/sub_44.adx",
+	"bgm2.afs/sub_45.adx",
+	"bgm2.afs/sub_48.adx",
+	"bgm2.afs/sub_49.adx",
+	"bgm2.afs/sub_50.adx",
+	"bgm2.afs/sub_51.adx",
+	"bgm2.afs/sub_52.adx",
+	"bgm2.afs/sub_53.adx",
+	"bgm2.afs/sub_54.adx",
+	"bgm2.afs/sub_59.adx",
+	"bgm2.afs/sub_61.adx",
+	"bgm2.afs/sub_62.adx",
+	"bgm2.afs/sub_64.adx",
+	"bgm2.afs/sub_65.adx",
+	"bgm2.afs/sub_66.adx",
+	"bgm2.afs/sub_67.adx",
+	"bgm2.afs/sub_68.adx",
+	"bgm2.afs/sub_69.adx",
+	"bgm2.afs/sub_71.adx",
+	"bgm2.afs/sub_72.adx",
+	"bgm2.afs/sub_74.adx",
+	"bgm2.afs/sub_75.adx",
+	"bgm2.afs/sub_77.adx",
+	"bgm2.afs/sub_78.adx",
+	"bgm2.afs/sub_79.adx",
+	"bgm2.afs/sub_80.adx",
+	"bgm2.afs/sub_81.adx",
 	"mv_002.sfd_adx_c0.adx",
 	"mv_015.sfd_adx_c0.adx",
 	"mv_016.sfd_adx_c0.adx",
@@ -18882,77 +17833,13 @@ const char *GHAP08_entries[61] = {
 
 // G4BD08: Resident Evil 4
 // from: Resident Evil 4 [BioHazard 4] (2005-01-11)(Capcom Production Studio 4)(Capcom)[GC].7z
-const char *G4BD08_entries[65] = {
+const char *G4BD08_entries[1] = {
 	"Preview Disc/BGM48ST.ADP",
-	"bio4str1_001.GENH",
-	"bio4str1_002.GENH",
-	"bio4str1_003.GENH",
-	"bio4str1_004.GENH",
-	"bio4str1_005.GENH",
-	"bio4str1_006.GENH",
-	"bio4str1_007.GENH",
-	"bio4str1_008.GENH",
-	"bio4str1_009.GENH",
-	"bio4str1_010.GENH",
-	"bio4str1_011.GENH",
-	"bio4str1_012.GENH",
-	"bio4str1_013.GENH",
-	"bio4str1_014.GENH",
-	"bio4str1_015.GENH",
-	"bio4str1_016.GENH",
-	"bio4str1_017.GENH",
-	"bio4str1_018.GENH",
-	"bio4str1_019.GENH",
-	"bio4str1_020.GENH",
-	"bio4str1_021.GENH",
-	"bio4str1_022.GENH",
-	"bio4str1_023.GENH",
-	"bio4str1_024.GENH",
-	"bio4str1_025.GENH",
-	"bio4str1_026.GENH",
-	"bio4str1_027.GENH",
-	"bio4str1_028.GENH",
-	"bio4str1_029.GENH",
-	"bio4str1_030.GENH",
-	"bio4str1_031.GENH",
-	"bio4str1_032.GENH",
-	"bio4str1_033.GENH",
-	"bio4str1_034.GENH",
-	"bio4str1_035.GENH",
-	"bio4str1_036.GENH",
-	"bio4str1_037.GENH",
-	"bio4str1_038.GENH",
-	"bio4str1_039.GENH",
-	"bio4str1_040.GENH",
-	"bio4str1_041.GENH",
-	"bio4str1_042.GENH",
-	"bio4str1_043.GENH",
-	"bio4str1_044.GENH",
-	"bio4str1_045.GENH",
-	"bio4str1_046.GENH",
-	"bio4str1_047.GENH",
-	"bio4str1_048.GENH",
-	"bio4str1_049.GENH",
-	"bio4str1_050.GENH",
-	"bio4str1_051.GENH",
-	"bio4str1_052.GENH",
-	"bio4str1_053.GENH",
-	"bio4str1_054.GENH",
-	"bio4str1_055.GENH",
-	"bio4str1_056.GENH",
-	"bio4str1_057.GENH",
-	"bio4str1_058.GENH",
-	"bio4str1_059.GENH",
-	"bio4str1_060.GENH",
-	"bio4str1_061.GENH",
-	"bio4str1_062.GENH",
-	"bio4str1_063.GENH",
-	"bio4str1_064.GENH",
 };
 
 // GOCE5D: RoadKill
 // from: RoadKill (2003-10-30)(Terminal Reality)(Midway)[GC].7z
-const char *GOCE5D_entries[116] = {
+const char *GOCE5D_entries[115] = {
 	"A_S_PUSSYCAT.GCA",
 	"COMPLETE-MISSION.GCA",
 	"H_TITLE-MUSIC.GCA",
@@ -19052,7 +17939,6 @@ const char *GOCE5D_entries[116] = {
 	"RADIO_S_PICK.GCA",
 	"RADIO_S_QQQQ.GCA",
 	"RADIO_S_WILD.GCA",
-	"SAMPLELIST.TXT",
 	"video/(mov) bgm.bik",
 	"video/(mov) credits.bik",
 	"video/(mov) endgame.bik",
@@ -19303,16 +18189,16 @@ const char *GRKE41_entries[150] = {
 // from: Rugrats - Royal Ransom (2002-11-27)(Avalanche)(THQ)[GC].7z
 const char *GRRF78_entries[42] = {
 	"Lose.adp",
-	"MOVIE/avlogo.DSP",
-	"MOVIE/credits.DSP",
-	"MOVIE/logo.DSP",
+	"data_gcn/fmv/avlogo.thp",
+	"data_gcn/fmv/credits.thp",
+	"data_gcn/fmv/logo.thp",
 	"MOVIE/lose.DSP",
-	"MOVIE/nick.DSP",
-	"MOVIE/pp3kntro.DSP",
-	"MOVIE/sb30_ps2.DSP",
-	"MOVIE/thq.DSP",
-	"MOVIE/tier2.DSP",
-	"MOVIE/tier3.DSP",
+	"data_gcn/fmv/nick.thp",
+	"data_gcn/fmv/pp3kntro.thp",
+	"data_gcn/fmv/sb30_ps2.thp",
+	"data_gcn/fmv/thq.thp",
+	"data_gcn/fmv/tier2.thp",
+	"data_gcn/fmv/tier3.thp",
 	"MOVIE/win.DSP",
 	"Playset.adp",
 	"Win.adp",
@@ -19348,8 +18234,7 @@ const char *GRRF78_entries[42] = {
 
 // GJCE8P: Samurai Jack: The Shadow of Aku
 // from: Samurai Jack - The Shadow of Aku (2004-03-23)(Adrenium Games)(SEGA)[GC].7z
-const char *GJCE8P_entries[48] = {
-	".vgmstream.txth",
+const char *GJCE8P_entries[47] = {
 	"a_adventure01.vgmstream",
 	"a_adventure02.vgmstream",
 	"a_adventure03.vgmstream",
@@ -19472,8 +18357,7 @@ const char *GSKP7D_entries[66] = {
 
 // GISP36: Second Sight
 // from: Second Sight (2004-09-03)(Free Radical Design)(Codemasters)[GC].7z
-const char *GISP36_entries[23] = {
-	"EMiL.nfo",
+const char *GISP36_entries[22] = {
 	"red_med_facility44_fx.mss",
 	"ss_alarm_tenescape_32_fx.mss",
 	"ss_asylum_escape32_fx.mss",
@@ -20869,9 +19753,9 @@ const char *GXSE8P_entries[128] = {
 // G2XE8P: Sonic Gems Collection
 // from: Sonic Gems Collection (2005-08-11)(Sonic Team, Traveller's Tales, Sega AM2)(H.I.C., Comolink)(Sega)[GC].7z
 const char *G2XE8P_entries[103] = {
-	"Sonic Gems Collection/history.adx",
-	"Sonic Gems Collection/manual.adx",
-	"Sonic Gems Collection/menu.adx",
+	"sound/history.adx",
+	"sound/manual.adx",
+	"sound/menu.adx",
 	"Sonic Gems Collection/museum01.adx",
 	"Sonic Gems Collection/museum02.adx",
 	"Sonic Gems Collection/museum03.adx",
@@ -20882,11 +19766,11 @@ const char *G2XE8P_entries[103] = {
 	"Sonic Gems Collection/museum08.adx",
 	"Sonic Gems Collection/museum09.adx",
 	"Sonic Gems Collection/museum10.adx",
-	"Sonic Gems Collection/museum11.adx",
-	"Sonic Gems Collection/museum12.adx",
-	"Sonic Gems Collection/se.acx",
-	"Sonic Gems Collection/sega.adx",
-	"Sonic Gems Collection/title.adx",
+	"museum/museum11.adx",
+	"museum/museum12.adx",
+	"sound/se.acx",
+	"sound/sega.adx",
+	"sound/title.adx",
 	"Sonic R/trk10.gcm",
 	"Sonic R/trk11.gcm",
 	"Sonic R/trk12.gcm",
@@ -21048,8 +19932,7 @@ const char *G9SP8P_entries[67] = {
 
 // GSOE8P: Sonic Mega Collection
 // from: Sonic Mega Collection (2002-11-10)(Sonic Team)(Sega)[GC].7z
-const char *GSOE8P_entries[10] = {
-	"S-S.nfo",
+const char *GSOE8P_entries[9] = {
 	"demosound.adx",
 	"ending_loop.adx",
 	"history.adx",
@@ -21373,13 +20256,9 @@ const char *GSME52_entries[15] = {
 
 // GK2F52: Spider-Man 2
 // from: Spider-Man 2 (2004-06-28)(Treyarch)(Activision)[GC].7z
-const char *GK2F52_entries[126] = {
-	"STREAMS_MISC_EN/!table.txt",
-	"STREAMS_MISC_EN/.vgmstream.txth",
+const char *GK2F52_entries[120] = {
 	"STREAMS_MISC_EN/AC64_MYSTERIOEXP.vgmstream",
 	"STREAMS_MISC_EN/FLYTHROUGH.vgmstream",
-	"STREAMS_MUSIC/!table.txt",
-	"STREAMS_MUSIC/.vgmstream.txth",
 	"STREAMS_MUSIC/MX_ARACHNOPHILIAC.vgmstream",
 	"STREAMS_MUSIC/MX_BCCHASE1B_INTRO.vgmstream",
 	"STREAMS_MUSIC/MX_BCCHASE1B_LOOP.vgmstream",
@@ -21429,8 +20308,6 @@ const char *GK2F52_entries[126] = {
 	"STREAMS_MUSIC/S10_MX_THUMPY_LOOP.vgmstream",
 	"STREAMS_MUSIC/S10_ORGANMUSIC_CHARGE_1.vgmstream",
 	"STREAMS_MUSIC/S10_ORGANMUSIC_CHARGE_2.vgmstream",
-	"STREAMS_SCENE_EN/!table.txt",
-	"STREAMS_SCENE_EN/.vgmstream.txth",
 	"STREAMS_SCENE_EN/AC60_POORQUENTIN.vgmstream",
 	"STREAMS_SCENE_EN/AC61_MYSTERIOEXP.vgmstream",
 	"STREAMS_SCENE_EN/AC62_LATECLASS.vgmstream",
@@ -21554,15 +20431,15 @@ const char *GQ4F78_entries[44] = {
 // GSQP78: SpongeBob SquarePants: Revenge of the Flying Dutchman
 // from: SpongeBob SquarePants - Revenge of the Flying Dutchman (2002-12-18)(BigSky)(THQ)[GC].7z
 const char *GSQP78_entries[9] = {
-	"CA.ape",
-	"DG.ape",
-	"SB.ape",
-	"SBJF.ape",
-	"SBKR.ape",
-	"SBMM.ape",
-	"SBRB.ape",
-	"SBTR.ape",
-	"Time.ape",
+	"Music/CA.WAV",
+	"Music/DG.WAV",
+	"Music/SB.WAV",
+	"Music/SBJF.WAV",
+	"Music/SBKR.WAV",
+	"Music/SBMM.WAV",
+	"Music/SBRB.WAV",
+	"Music/SBTR.WAV",
+	"Music/Time.wav",
 };
 
 // G5SE7D: Spyro: A Hero's Tail
@@ -22326,7 +21203,7 @@ const char *GBYE0A_entries[18] = {
 
 // G4QE01: Super Mario Strikers
 // from: Super Mario Strikers [Mario Smash Football] (2005-11-18)(Next Level)(Nintendo)[GC].7z
-const char *G4QE01_entries[329] = {
+const char *G4QE01_entries[327] = {
 	"ANNIE.song",
 	"AUTUMNAL.song",
 	"CANDY.song",
@@ -22528,7 +21405,6 @@ const char *G4QE01_entries[329] = {
 	"Streams/FE/Cup Mode/Dark_2_Cup_32k.idsp",
 	"Streams/FE/Options/Dark_2_Options_32k.idsp",
 	"Streams/FE/Title/Dark_2_Title_32k.idsp",
-	"Streams/FEStreams.txt",
 	"Streams/Gazette/Gazette Neg Mix 1_32k.idsp",
 	"Streams/Gazette/TempHeckle.dsp",
 	"Streams/Heckler DSP Files/HECKLER_Apes_Mono_16k_01.dsp",
@@ -22630,7 +21506,6 @@ const char *G4QE01_entries[329] = {
 	"Streams/Silence.idsp",
 	"Streams/Stingers/Dark_2_Stinger_2b_32k.idsp",
 	"Streams/Stingers/Title Hip mix 3_Short_Stinger32k.idsp",
-	"Streams/StreamNames.txt",
 	"Super Mario Brothers Stream test L.dsp",
 	"Super Mario Brothers Stream test R.dsp",
 	"Super Mario World Stream test L.dsp",
@@ -22666,100 +21541,62 @@ const char *GMSE01_entries[1] = {
 
 // GMBE8P: Super Monkey Ball
 // from: Super Monkey Ball (2001-09-14)(Amusement Vision)(Sega)[GC].7z
-const char *GMBE8P_entries[96] = {
-	"!notes.txt",
-	"adv.txtp",
+const char *GMBE8P_entries[58] = {
 	"adv_int.adp",
 	"adv_lp.adp",
-	"bili.txtp",
 	"bili_int.adp",
 	"bili_lp.adp",
-	"bwl.txtp",
 	"bwl_int.adp",
 	"bwl_lp.adp",
 	"cnt.adp",
-	"cnt.txtp",
-	"end.txtp",
 	"end_int.adp",
 	"end_lp.adp",
-	"ent.txtp",
 	"ent_int.adp",
 	"ent_lp.adp",
-	"fight.txtp",
 	"fight_int.adp",
 	"fight_lp.adp",
 	"glf.adp",
-	"glf.txtp",
-	"grep.txtp",
 	"grep_int.adp",
 	"grep_lp.adp",
 	"hyo.adp",
-	"hyo.txtp",
 	"omk.adp",
-	"omk.txtp",
 	"omk2.adp",
-	"omk2.txtp",
 	"opt.adp",
-	"opt.txtp",
 	"ovr.adp",
 	"race.adp",
-	"race.txtp",
 	"result.adp",
-	"result.txtp",
-	"roll.txtp",
 	"roll_int.adp",
 	"roll_lp.adp",
-	"sel.txtp",
-	"sel2.txtp",
 	"sel2_all.adp",
 	"sel2_lp.adp",
 	"sel_Fight.adp",
-	"sel_Fight.txtp",
 	"sel_billiard.adp",
-	"sel_billiard.txtp",
 	"sel_bowling.adp",
-	"sel_bowling.txtp",
 	"sel_golf.adp",
-	"sel_golf.txtp",
 	"sel_int.adp",
 	"sel_lp.adp",
 	"sel_race.adp",
-	"sel_race.txtp",
 	"sel_target.adp",
-	"sel_target.txtp",
 	"st1.adp",
-	"st1.txtp",
-	"st2.txtp",
 	"st2_all.adp",
 	"st2_lp.adp",
-	"st3.txtp",
 	"st3_int.adp",
 	"st3_lp.adp",
-	"st4.txtp",
 	"st4_int.adp",
 	"st4_lp.adp",
-	"st5.txtp",
 	"st5_int.adp",
 	"st5_lp.adp",
-	"st6.txtp",
 	"st6_int.adp",
 	"st6_lp.adp",
 	"st7.adp",
-	"st7.txtp",
-	"st8.txtp",
 	"st8_int.adp",
 	"st8_lp.adp",
-	"stb.txtp",
 	"stb_int.adp",
 	"stb_lp.adp",
-	"stm.txtp",
 	"stm_int.adp",
 	"stm_lp.adp",
 	"test/streamL.pcm",
-	"test/streamL.pcm.txth",
 	"test/streamR.pcm",
-	"test/streamR.pcm.txth",
-	"tget.txtp",
 	"tget_int.adp",
 	"tget_lp.adp",
 	"theme.adp",
@@ -22767,7 +21604,7 @@ const char *GMBE8P_entries[96] = {
 
 // GM2E8P: Super Monkey Ball 2
 // from: Super Monkey Ball 2 (2002-08-25)(Amusement Vision)(Sega)[GC].7z
-const char *GM2E8P_entries[319] = {
+const char *GM2E8P_entries[318] = {
 	"adp/bbl_looret.adp",
 	"adp/bbl_looret_int.adp",
 	"adp/bbl_main.adp",
@@ -22790,7 +21627,6 @@ const char *GM2E8P_entries[319] = {
 	"adx/voice48a.adx",
 	"adx/voice48b.adx",
 	"adx/voice48c.adx",
-	"info.txt",
 	"stream/10min1_L.dsp",
 	"stream/10min1_R.dsp",
 	"stream/10min2_L.dsp",
@@ -23170,9 +22006,7 @@ const char *G3LE8P_entries[74] = {
 
 // GRWJD9: スーパーロボット大戦 ＧＣ
 // from: Super Robot Taisen GC (2004-12-16)(AI)(Banpresto)[GC].7z
-const char *GRWJD9_entries[58] = {
-	"!extra.7z",
-	".vgmstream.txth",
+const char *GRWJD9_entries[56] = {
 	"wave__01.vgmstream",
 	"wave__02.vgmstream",
 	"wave__03.vgmstream",
@@ -23536,7 +22370,7 @@ const char *GWGE4F_entries[80] = {
 
 // GS3E51: SX Superstar
 // from: SX Superstar (2003-06-30)(Climax Group)(AKA)[GC].7z
-const char *GS3E51_entries[34] = {
+const char *GS3E51_entries[32] = {
 	"MENUL.dsp",
 	"MENUR.dsp",
 	"TRACK00L.dsp",
@@ -23555,11 +22389,9 @@ const char *GS3E51_entries[34] = {
 	"Track09r.dsp",
 	"fron22t1l.dsp",
 	"fron22t1r.dsp",
-	"front1.txt",
 	"front1l.dsp",
 	"front1r.dsp",
 	"stestl.dsp",
-	"stestl.txt",
 	"stestr.dsp",
 	"track06l.dsp",
 	"track06r.dsp",
@@ -23639,15 +22471,11 @@ const char *GJUP78_entries[19] = {
 
 // GTWE70: Taz Wanted
 // from: Taz Wanted (2002-10-04)(Blitz)(Infogrames)[GC].7z
-const char *GTWE70_entries[148] = {
-	"!readme.txt",
+const char *GTWE70_entries[116] = {
 	"aqua 2 hub.wav.sth",
 	"aqua 2 hub.wav.str",
 	"aqua outro cs.wav.sth",
 	"aqua outro cs.wav.str",
-	"bandit normal loop (normal).txtp",
-	"bandit normal loop (spin).txtp",
-	"bandit normal loop (tiptoe).txtp",
 	"bandit normal loop.wav.sth",
 	"bandit normal loop.wav.str",
 	"bomberman intro cs.wav.sth",
@@ -23680,9 +22508,6 @@ const char *GTWE70_entries[148] = {
 	"elephant pong outro cs.wav.str",
 	"elephant pong.wav.sth",
 	"elephant pong.wav.str",
-	"explorer normal loop (normal).txtp",
-	"explorer normal loop (spin).txtp",
-	"explorer normal loop (tiptoe).txtp",
 	"explorer normal loop.wav.sth",
 	"explorer normal loop.wav.str",
 	"gameintro.wav.sth",
@@ -23701,9 +22526,6 @@ const char *GTWE70_entries[148] = {
 	"goldmine 2 hub.wav.str",
 	"goldmine outro cs.wav.sth",
 	"goldmine outro cs.wav.str",
-	"hiphop normal loop (normal).txtp",
-	"hiphop normal loop (spin).txtp",
-	"hiphop normal loop (tiptoe).txtp",
 	"hiphop normal loop.wav.sth",
 	"hiphop normal loop.wav.str",
 	"ice 2 hub.wav.sth",
@@ -23718,9 +22540,6 @@ const char *GTWE70_entries[148] = {
 	"museum 2 hub.wav.str",
 	"museum outro cs.wav.sth",
 	"museum outro cs.wav.str",
-	"ninja normal loop (normal).txtp",
-	"ninja normal loop (spin).txtp",
-	"ninja normal loop (tiptoe).txtp",
 	"ninja normal loop.wav.sth",
 	"ninja normal loop.wav.str",
 	"safari 2 hub.wav.sth",
@@ -23729,30 +22548,14 @@ const char *GTWE70_entries[148] = {
 	"safari outro cs.wav.str",
 	"san fran hub loop.wav.sth",
 	"san fran hub loop.wav.str",
-	"skatepunk normal loop (normal).txtp",
-	"skatepunk normal loop (spin).txtp",
-	"skatepunk normal loop (tiptoe).txtp",
 	"skatepunk normal loop.wav.sth",
 	"skatepunk normal loop.wav.str",
-	"snowboard normal loop (normal).txtp",
-	"snowboard normal loop (spin).txtp",
-	"snowboard normal loop (tiptoe).txtp",
 	"snowboard normal loop.wav.sth",
 	"snowboard normal loop.wav.str",
-	"stakepunk normal loop (spin).txtp",
-	"surfer normal loop (normal).txtp",
-	"surfer normal loop (spin).txtp",
-	"surfer normal loop (tiptoe).txtp",
 	"surfer normal loop.wav.sth",
 	"surfer normal loop.wav.str",
-	"swat team normal loop (normal).txtp",
-	"swat team normal loop (spin).txtp",
-	"swat team normal loop (tiptoe).txtp",
 	"swat team normal loop.wav.sth",
 	"swat team normal loop.wav.str",
-	"tarzan normal loop (normal).txtp",
-	"tarzan normal loop (spin).txtp",
-	"tarzan normal loop (tiptoe).txtp",
 	"tarzan normal loop.wav.sth",
 	"tarzan normal loop.wav.str",
 	"tasmania intro cs.wav.sth",
@@ -23773,9 +22576,6 @@ const char *GTWE70_entries[148] = {
 	"tweety boss outro cs.wav.str",
 	"tweety boss outro2 cs.wav.sth",
 	"tweety boss outro2 cs.wav.str",
-	"weretaz normal loop (normal).txtp",
-	"weretaz normal loop (spin).txtp",
-	"weretaz normal loop (tiptoe).txtp",
 	"weretaz normal loop.wav.sth",
 	"weretaz normal loop.wav.str",
 	"west hub intro cs.wav.sth",
@@ -24312,47 +23112,13 @@ const char *GGRE41_entries[46] = {
 
 // G63P41: Tom Clancy's Rainbow Six 3
 // from: Tom Clancy's Rainbow Six 3 (2004-06-16)(Ubisoft Shanghai)(Ubisoft)[GC][unsorted].7z
-const char *G63P41_entries[115] = {
-	"Airport_a_nl_001.txtp",
-	"Airport_a_nl_003.txtp",
-	"Airport_a_nl_005.txtp",
-	"Airport_a_nl_013.txtp",
-	"Airport_a_nl_015.txtp",
-	"Airport_a_nl_017.txtp",
-	"Airport_a_nl_079.txtp",
-	"Airport_a_nl_145.txtp",
-	"Airport_a_nl_147.txtp",
-	"Alcatraz_a_nl_118.txtp",
-	"Alpines_a_nl_001.txtp",
-	"Alpines_a_nl_003.txtp",
-	"Alpines_a_nl_005.txtp",
-	"Alpines_a_nl_007.txtp",
-	"Alpines_a_nl_009.txtp",
-	"Alpines_a_nl_011.txtp",
-	"Alpines_a_nl_013.txtp",
-	"Alpines_a_nl_116.txtp",
-	"Garage_a_nl_084.txtp",
-	"Import_Export_a_nl_089.txtp",
-	"Island_a_nl_089.txtp",
+const char *G63P41_entries[73] = {
 	"LD1L.dsp",
 	"LD1R.dsp",
 	"LD3L.dsp",
 	"LD3R.dsp",
 	"LD4L.dsp",
 	"LD4R.dsp",
-	"MeatPacking_a_nl_068.txtp",
-	"Menu_nl_01.txtp",
-	"Mountain_Highway_a_nl_037.txtp",
-	"Mountain_Highway_a_nl_121.txtp",
-	"Office_Complex_a_nl_064.txtp",
-	"Oil_Refinery_a_nl_098.txtp",
-	"Oil_Refinery_a_nl_101.txtp",
-	"Oldcity_a_nl_099.txtp",
-	"Parade_a_nl_107.txtp",
-	"Presidio_mp_nl_141.txtp",
-	"Prison_mp_nl_141.txtp",
-	"SandStorm_mp_nl_128.txtp",
-	"Shipyard_a_nl_094.txtp",
 	"Sounds/Airport_a_nl.SB3",
 	"Sounds/Airport_b_nl.SB3",
 	"Sounds/Alcatraz_a_nl.SB3",
@@ -24398,16 +23164,8 @@ const char *G63P41_entries[115] = {
 	"Sounds/crossfire_mp_nl.SB3",
 	"Sounds/import_export_mp_nl.SB3",
 	"Sounds/penthouse_a_nl.SB3",
-	"Streets_mp_nl_142.txtp",
-	"Training_basics_nl_044.txtp",
-	"Training_basics_nl_117.txtp",
-	"Training_shooting_nl_098.txtp",
-	"Trieste_a_nl_001.txtp",
-	"Trieste_a_nl_111.txtp",
-	"crossfire_mp_nl_069.txtp",
 	"ld2l.dsp",
 	"ld2r.dsp",
-	"penthouse_a_nl_086.txtp",
 	"videos/RSLOgo_NTSC_audio_only.h4m",
 	"videos/airport_ntsc_audio_only.h4m",
 	"videos/alcatraz_ntsc_audio_only.h4m",
@@ -24432,66 +23190,7 @@ const char *G63P41_entries[115] = {
 
 // GCEE41: Tom Clancy's Splinter Cell
 // from: Tom Clancy's Splinter Cell (2003-04-08)(Ubisoft Shanghai)(Ubisoft)[GC][unsorted].7z
-const char *GCEE41_entries[109] = {
-	"MAPS_00001.txtp",
-	"MAPS_00003.txtp",
-	"MAPS_00020.txtp",
-	"MAPS_00022.txtp",
-	"MAPS_00024.txtp",
-	"MAPS_00026.txtp",
-	"MAPS_00028.txtp",
-	"MAPS_00030.txtp",
-	"MAPS_00032.txtp",
-	"MAPS_00208.txtp",
-	"MAPS_00212.txtp",
-	"MAPS_00227.txtp",
-	"MAPS_00229.txtp",
-	"MAPS_00231.txtp",
-	"MAPS_00235.txtp",
-	"MAPS_00250.txtp",
-	"MAPS_00252.txtp",
-	"MAPS_00254.txtp",
-	"MAPS_00589.txtp",
-	"MAPS_00980.txtp",
-	"MAPS_00984.txtp",
-	"MAPS_00999.txtp",
-	"MAPS_01001.txtp",
-	"MAPS_01003.txtp",
-	"MAPS_01007.txtp",
-	"MAPS_01020.txtp",
-	"MAPS_01022.txtp",
-	"MAPS_01024.txtp",
-	"MAPS_01029.txtp",
-	"MAPS_02366.txtp",
-	"MAPS_03160.txtp",
-	"MAPS_04082.txtp",
-	"MAPS_04541.txtp",
-	"MAPS_04933.txtp",
-	"MAPS_05713.txtp",
-	"MAPS_06572.txtp",
-	"MAPS_07402.txtp",
-	"MAPS_07839.txtp",
-	"MAPS_08284.txtp",
-	"MAPS_08674.txtp",
-	"MAPS_08678.txtp",
-	"MAPS_08693.txtp",
-	"MAPS_08695.txtp",
-	"MAPS_08697.txtp",
-	"MAPS_08701.txtp",
-	"MAPS_08712.txtp",
-	"MAPS_08714.txtp",
-	"MAPS_08716.txtp",
-	"MAPS_08721.txtp",
-	"MAPS_09223.txtp",
-	"MAPS_10183.txtp",
-	"MAPS_11487.txtp",
-	"MAPS_12363.txtp",
-	"MAPS_13318.txtp",
-	"MAPS_13778.txtp",
-	"MAPS_14235.txtp",
-	"MAPS_14683.txtp",
-	"MAPS_15140.txtp",
-	"MAPS_15576.txtp",
+const char *GCEE41_entries[50] = {
 	"Sounds/0_0_2Amb.SS3",
 	"Sounds/0_0_3Amb.SS3",
 	"Sounds/1_1_1Amb.SS3",
@@ -24546,72 +23245,7 @@ const char *GCEE41_entries[109] = {
 
 // GCJE41: Tom Clancy's Splinter Cell: Chaos Theory
 // from: Tom Clancy's Splinter Cell - Chaos Theory (2005-03-28)(Ubisoft Montreal)(Ubisoft)[GC][unsorted].7z
-const char *GCJE41_entries[70] = {
-	"MAPS_00001.txtp",
-	"MAPS_00003.txtp",
-	"MAPS_00005.txtp",
-	"MAPS_00007.txtp",
-	"MAPS_00009.txtp",
-	"MAPS_00027.txtp",
-	"MAPS_00048.txtp",
-	"MAPS_00063.txtp",
-	"MAPS_00092.txtp",
-	"MAPS_00121.txtp",
-	"MAPS_00148.txtp",
-	"MAPS_00166.txtp",
-	"MAPS_01032.txtp",
-	"MAPS_01069.txtp",
-	"MAPS_01079.txtp",
-	"MAPS_04536.txtp",
-	"MAPS_04557.txtp",
-	"MAPS_04578.txtp",
-	"MAPS_04580.txtp",
-	"MAPS_04582.txtp",
-	"MAPS_04613.txtp",
-	"MAPS_08479.txtp",
-	"MAPS_08494.txtp",
-	"MAPS_08532.txtp",
-	"MAPS_08541.txtp",
-	"MAPS_14432.txtp",
-	"MAPS_14463.txtp",
-	"MAPS_14484.txtp",
-	"MAPS_14486.txtp",
-	"MAPS_14488.txtp",
-	"MAPS_14527.txtp",
-	"MAPS_15597.txtp",
-	"MAPS_15618.txtp",
-	"MAPS_15639.txtp",
-	"MAPS_15641.txtp",
-	"MAPS_15643.txtp",
-	"MAPS_15682.txtp",
-	"MAPS_17329.txtp",
-	"MAPS_17331.txtp",
-	"MAPS_17368.txtp",
-	"MAPS_17393.txtp",
-	"MAPS_17418.txtp",
-	"MAPS_18966.txtp",
-	"MAPS_18968.txtp",
-	"MAPS_18970.txtp",
-	"MAPS_18998.txtp",
-	"MAPS_19011.txtp",
-	"MAPS_19024.txtp",
-	"MAPS_22944.txtp",
-	"MAPS_22957.txtp",
-	"MAPS_22978.txtp",
-	"MAPS_22998.txtp",
-	"MAPS_24055.txtp",
-	"MAPS_24057.txtp",
-	"MAPS_24102.txtp",
-	"MAPS_24104.txtp",
-	"MAPS_24575.txtp",
-	"MAPS_24592.txtp",
-	"MAPS_24609.txtp",
-	"MAPS_24611.txtp",
-	"MAPS_24613.txtp",
-	"MAPS_24615.txtp",
-	"MAPS_24646.txtp",
-	"MAPS_24655.txtp",
-	"MAPS_25741.txtp",
+const char *GCJE41_entries[5] = {
 	"sounds/CD1.SS3",
 	"sounds/CD2.SS3",
 	"sounds/Echelon.SP3",
@@ -24621,39 +23255,7 @@ const char *GCJE41_entries[70] = {
 
 // GWYX41: Tom Clancy's Splinter Cell: Double Agent
 // from: Tom Clancy's Splinter Cell - Double Agent (2006-10-26)(Ubisoft Montreal)(Ubisoft)[GC].7z
-const char *GWYX41_entries[84] = {
-	"MAPS_00001.txtp",
-	"MAPS_00003.txtp",
-	"MAPS_00005.txtp",
-	"MAPS_00007.txtp",
-	"MAPS_00411.txtp",
-	"MAPS_02189.txtp",
-	"MAPS_06113.txtp",
-	"MAPS_06116.txtp",
-	"MAPS_06118.txtp",
-	"MAPS_08906.txtp",
-	"MAPS_10964.txtp",
-	"MAPS_11286.txtp",
-	"MAPS_11288.txtp",
-	"MAPS_11571.txtp",
-	"MAPS_11572.txtp",
-	"MAPS_12117.txtp",
-	"MAPS_12267.txtp",
-	"MAPS_12270.txtp",
-	"MAPS_12272.txtp",
-	"MAPS_13270.txtp",
-	"MAPS_13407.txtp",
-	"MAPS_13865.txtp",
-	"MAPS_14804.txtp",
-	"MAPS_15947.txtp",
-	"MAPS_16255.txtp",
-	"MAPS_16534.txtp",
-	"MAPS_16647.txtp",
-	"MAPS_16650.txtp",
-	"MAPS_16652.txtp",
-	"MAPS_17275.txtp",
-	"MAPS_17278.txtp",
-	"MAPS_17280.txtp",
+const char *GWYX41_entries[52] = {
 	"opening.bnr",
 	"sounds/CD1.SS3",
 	"sounds/CD2.SS3",
@@ -24710,128 +23312,7 @@ const char *GWYX41_entries[84] = {
 
 // GT7P41: Tom Clancy's Splinter Cell: Pandora Tomorrow
 // from: Tom Clancy's Splinter Cell - Pandora Tomorrow (2004-07-20)(Ubisoft Shanghai, Ubisoft Milan)(Ubisoft)[GC][unsorted].7z
-const char *GT7P41_entries[168] = {
-	"MAPS_00001.txtp",
-	"MAPS_00153.txtp",
-	"MAPS_00156.txtp",
-	"MAPS_00186.txtp",
-	"MAPS_00188.txtp",
-	"MAPS_00190.txtp",
-	"MAPS_00193.txtp",
-	"MAPS_00217.txtp",
-	"MAPS_00219.txtp",
-	"MAPS_00221.txtp",
-	"MAPS_00223.txtp",
-	"MAPS_00225.txtp",
-	"MAPS_00227.txtp",
-	"MAPS_01050.txtp",
-	"MAPS_01850.txtp",
-	"MAPS_01853.txtp",
-	"MAPS_01882.txtp",
-	"MAPS_01884.txtp",
-	"MAPS_01886.txtp",
-	"MAPS_01889.txtp",
-	"MAPS_01918.txtp",
-	"MAPS_01920.txtp",
-	"MAPS_01922.txtp",
-	"MAPS_01924.txtp",
-	"MAPS_01926.txtp",
-	"MAPS_01928.txtp",
-	"MAPS_02817.txtp",
-	"MAPS_03563.txtp",
-	"MAPS_03566.txtp",
-	"MAPS_03587.txtp",
-	"MAPS_03589.txtp",
-	"MAPS_03591.txtp",
-	"MAPS_03594.txtp",
-	"MAPS_03615.txtp",
-	"MAPS_03617.txtp",
-	"MAPS_03619.txtp",
-	"MAPS_03621.txtp",
-	"MAPS_03623.txtp",
-	"MAPS_03628.txtp",
-	"MAPS_03630.txtp",
-	"MAPS_03993.txtp",
-	"MAPS_03996.txtp",
-	"MAPS_04022.txtp",
-	"MAPS_04024.txtp",
-	"MAPS_04026.txtp",
-	"MAPS_04030.txtp",
-	"MAPS_04071.txtp",
-	"MAPS_04075.txtp",
-	"MAPS_04077.txtp",
-	"MAPS_04079.txtp",
-	"MAPS_04081.txtp",
-	"MAPS_04937.txtp",
-	"MAPS_05391.txtp",
-	"MAPS_06250.txtp",
-	"MAPS_06253.txtp",
-	"MAPS_06287.txtp",
-	"MAPS_06289.txtp",
-	"MAPS_06291.txtp",
-	"MAPS_06292.txtp",
-	"MAPS_06294.txtp",
-	"MAPS_06328.txtp",
-	"MAPS_06330.txtp",
-	"MAPS_06332.txtp",
-	"MAPS_06334.txtp",
-	"MAPS_06336.txtp",
-	"MAPS_06338.txtp",
-	"MAPS_06340.txtp",
-	"MAPS_06802.txtp",
-	"MAPS_07310.txtp",
-	"MAPS_07812.txtp",
-	"MAPS_08306.txtp",
-	"MAPS_08312.txtp",
-	"MAPS_08709.txtp",
-	"MAPS_08712.txtp",
-	"MAPS_08742.txtp",
-	"MAPS_08744.txtp",
-	"MAPS_08746.txtp",
-	"MAPS_08750.txtp",
-	"MAPS_08783.txtp",
-	"MAPS_08785.txtp",
-	"MAPS_08787.txtp",
-	"MAPS_08789.txtp",
-	"MAPS_08791.txtp",
-	"MAPS_08793.txtp",
-	"MAPS_08795.txtp",
-	"MAPS_09276.txtp",
-	"MAPS_09487.txtp",
-	"MAPS_09739.txtp",
-	"MAPS_10195.txtp",
-	"MAPS_10537.txtp",
-	"MAPS_10540.txtp",
-	"MAPS_10566.txtp",
-	"MAPS_10568.txtp",
-	"MAPS_10570.txtp",
-	"MAPS_10573.txtp",
-	"MAPS_10607.txtp",
-	"MAPS_10609.txtp",
-	"MAPS_10611.txtp",
-	"MAPS_10613.txtp",
-	"MAPS_10615.txtp",
-	"MAPS_10617.txtp",
-	"MAPS_11081.txtp",
-	"MAPS_12033.txtp",
-	"MAPS_12039.txtp",
-	"MAPS_12845.txtp",
-	"MAPS_12848.txtp",
-	"MAPS_12873.txtp",
-	"MAPS_12875.txtp",
-	"MAPS_12877.txtp",
-	"MAPS_12880.txtp",
-	"MAPS_12904.txtp",
-	"MAPS_12905.txtp",
-	"MAPS_12907.txtp",
-	"MAPS_12909.txtp",
-	"MAPS_12911.txtp",
-	"MAPS_12913.txtp",
-	"MAPS_12915.txtp",
-	"MAPS_13759.txtp",
-	"MAPS_13761.txtp",
-	"MAPS_14179.txtp",
-	"MAPS_14181.txtp",
+const char *GT7P41_entries[47] = {
 	"Sounds/1_1_1Amb.SS3",
 	"Sounds/1_1_2Amb.SS3",
 	"Sounds/2_1_1Amb.SS3",
@@ -25473,52 +23954,6 @@ const char *G2CX52_entries[209] = {
 	"Mix_V.ogg",
 };
 
-// GTLX52: True Crime: Streets of LA
-// from: True Crime - Streets of LA (2003-11-03)(Luxoflux)(Exakt)(Activision)[GC].7z
-const char *GTLX52_entries[41] = {
-	"003.genh",
-	"004.genh",
-	"006.genh",
-	"009.genh",
-	"011.genh",
-	"012.genh",
-	"013.genh",
-	"015.genh",
-	"016.genh",
-	"020.genh",
-	"023.genh",
-	"024.genh",
-	"025.genh",
-	"026.genh",
-	"027.genh",
-	"028.genh",
-	"031.genh",
-	"033.genh",
-	"034.genh",
-	"036.genh",
-	"041.genh",
-	"042.genh",
-	"043.genh",
-	"045.genh",
-	"048.genh",
-	"053.genh",
-	"056.genh",
-	"060.genh",
-	"061.genh",
-	"063.genh",
-	"066.genh",
-	"068.genh",
-	"069.genh",
-	"070.genh",
-	"072.genh",
-	"074.genh",
-	"077.genh",
-	"078.genh",
-	"081.genh",
-	"083.genh",
-	"700.genh",
-};
-
 // GTUE8G: Tube Slider - The Championship of Future Formula
 // from: Tube Slider (2003-04-17)(NDcube)(NEC)[GC].7z
 const char *GTUE8G_entries[27] = {
@@ -26048,37 +24483,16 @@ const char *GUFP4Z_entries[42] = {
 
 // GUTI52: Ultimate Spider-Man
 // from: Ultimate Spider-Man (2005-09-22)(Treyarch)(Activision)[GC].7z
-const char *GUTI52_entries[127] = {
-	"ACTIVISION_EN/!table.txt",
-	"ACTIVISION_EN/.vgmstream.txth",
+const char *GUTI52_entries[95] = {
 	"ACTIVISION_EN/Activision.vgmstream",
-	"ATTRACT_EN/.vgmstream.txth",
-	"MARVEL_LOGO_EN/!table.txt",
-	"MARVEL_LOGO_EN/.vgmstream.txth",
 	"MARVEL_LOGO_EN/marvel_logo.vgmstream",
-	"S01_FAPR_IGC1_EN/!table.txt",
-	"S01_FAPR_IGC1_EN/.vgmstream.txth",
 	"S01_FAPR_IGC1_EN/S01_Fapr_IGC1.vgmstream",
-	"S05_SKCS_IGC1_EN/!table.txt",
-	"S05_SKCS_IGC1_EN/.vgmstream.txth",
 	"S05_SKCS_IGC1_EN/S05_SKCS_IGC1.vgmstream",
-	"S08_CLTR_IGC1_EN/!table.txt",
-	"S08_CLTR_IGC1_EN/.vgmstream.txth",
 	"S08_CLTR_IGC1_EN/S08_Cltr_IGC1.vgmstream",
-	"S08_CLTR_IGC2_EN/!table.txt",
-	"S08_CLTR_IGC2_EN/.vgmstream.txth",
 	"S08_CLTR_IGC2_EN/S08_Cltr_IGC2.vgmstream",
-	"S08_CLTR_IGC2_PART2_EN/!table.txt",
-	"S08_CLTR_IGC2_PART2_EN/.vgmstream.txth",
 	"S08_CLTR_IGC2_PART2_EN/unknown_f4abdc1b.vgmstream",
-	"S13_FNBT_IGC1_EN/!table.txt",
-	"S13_FNBT_IGC1_EN/.vgmstream.txth",
 	"S13_FNBT_IGC1_EN/S13_Fnbt_IGC1.vgmstream",
-	"S13_FNBT_IGC2_EN/!table.txt",
-	"S13_FNBT_IGC2_EN/.vgmstream.txth",
 	"S13_FNBT_IGC2_EN/S13_Fnbt_IGC2.vgmstream",
-	"STREAMS_MUSIC/!table.txt",
-	"STREAMS_MUSIC/.vgmstream.txth",
 	"STREAMS_MUSIC/ALIASED_SOUND_CIT_06GP01_MAN_CITY2.vgmstream",
 	"STREAMS_MUSIC/ALIASED_SOUND_CIT_07GP01_MAN_CITY3.vgmstream",
 	"STREAMS_MUSIC/ALIASED_SOUND_MX_RACE_1.vgmstream",
@@ -26105,8 +24519,6 @@ const char *GUTI52_entries[127] = {
 	"STREAMS_MUSIC/V08_01GP01_MUS_ElectroFin.vgmstream",
 	"STREAMS_MUSIC/V08_02GP01_MUS_ElectroFin.vgmstream",
 	"STREAMS_MUSIC/V10_01GP01_MUS_BeetleBatt.vgmstream",
-	"STREAMS_SCENE_EN/!table.txt",
-	"STREAMS_SCENE_EN/.vgmstream.txth",
 	"STREAMS_SCENE_EN/S01_Fapr_IGC2.vgmstream",
 	"STREAMS_SCENE_EN/S01_Fapr_IGC3.vgmstream",
 	"STREAMS_SCENE_EN/S02_Wk_IGC1.vgmstream",
@@ -26163,19 +24575,10 @@ const char *GUTI52_entries[127] = {
 	"STREAMS_SCENE_EN/V12_VnCr_IGC1.vgmstream",
 	"STREAMS_SCENE_EN/spideyfail.vgmstream",
 	"STREAMS_SCENE_EN/venomfail.vgmstream",
-	"TREYARCH_LOGO_EN/!table.txt",
-	"TREYARCH_LOGO_EN/.vgmstream.txth",
 	"TREYARCH_LOGO_EN/treyarch_logo.vgmstream",
-	"V08_ELFN_IGC1_EN/!table.txt",
-	"V08_ELFN_IGC1_EN/.vgmstream.txth",
 	"V08_ELFN_IGC1_EN/V08_ElFn_IGC1.vgmstream",
-	"V08_ELFN_IGC3_EN/!table.txt",
-	"V08_ELFN_IGC3_EN/.vgmstream.txth",
 	"V08_ELFN_IGC3_EN/V08_ElFn_IGC3.vgmstream",
-	"V09_IGC1_03AND4_EN/!table.txt",
-	"V09_IGC1_03AND4_EN/.vgmstream.txth",
 	"V09_IGC1_03AND4_EN/V09_IGC1_03and4.vgmstream",
-	"X_MEN_TRAILER_EN/.vgmstream.txth",
 };
 
 // GUSE7F: Universal Studios Theme Park Adventure
@@ -26273,103 +24676,6 @@ const char *GV3P70_entries[10] = {
 	"qrmenu.dsp",
 	"stand.dsp",
 	"tattack.dsp",
-};
-
-// GVJE08: Viewtiful Joe
-// from: Viewtiful Joe (2003-06-26)(Capcom Production Studio 4)(Capcom)[GC].7z
-const char *GVJE08_entries[92] = {
-	"stage00_001.GENH",
-	"stage00_002.GENH",
-	"stage00_003.GENH",
-	"stage00_004.GENH",
-	"stage00_005.GENH",
-	"stage00_006.GENH",
-	"stage00_007.GENH",
-	"stage00_008.GENH",
-	"stage00_009.GENH",
-	"stage00_010.GENH",
-	"stage00_011.GENH",
-	"stage01_001.GENH",
-	"stage01_002.GENH",
-	"stage01_003.GENH",
-	"stage01_004.GENH",
-	"stage01_005.GENH",
-	"stage01_006.GENH",
-	"stage01_007.GENH",
-	"stage01_008.GENH",
-	"stage01_009.GENH",
-	"stage01_010.GENH",
-	"stage01_011.GENH",
-	"stage01_012.GENH",
-	"stage01_013.GENH",
-	"stage02_001.GENH",
-	"stage02_002.GENH",
-	"stage02_003.GENH",
-	"stage02_004.GENH",
-	"stage02_005.GENH",
-	"stage02_006.GENH",
-	"stage02_007.GENH",
-	"stage02_008.GENH",
-	"stage02_009.GENH",
-	"stage02_010.GENH",
-	"stage03_001.GENH",
-	"stage03_002.GENH",
-	"stage03_003.GENH",
-	"stage03_004.GENH",
-	"stage03_005.GENH",
-	"stage03_006.GENH",
-	"stage03_007.GENH",
-	"stage03_008.GENH",
-	"stage03_009.GENH",
-	"stage03_010.GENH",
-	"stage03_011.GENH",
-	"stage04_001.GENH",
-	"stage04_002.GENH",
-	"stage04_003.GENH",
-	"stage04_004.GENH",
-	"stage04_005.GENH",
-	"stage04_006.GENH",
-	"stage04_007.GENH",
-	"stage04_008.GENH",
-	"stage04_009.GENH",
-	"stage04_010.GENH",
-	"stage04_011.GENH",
-	"stage04_012.GENH",
-	"stage04_013.GENH",
-	"stage04_014.GENH",
-	"stage04_015.GENH",
-	"stage05_001.GENH",
-	"stage05_002.GENH",
-	"stage05_003.GENH",
-	"stage05_004.GENH",
-	"stage05_005.GENH",
-	"stage05_006.GENH",
-	"stage05_007.GENH",
-	"stage05_008.GENH",
-	"stage05_009.GENH",
-	"stage05_010.GENH",
-	"stage05_011.GENH",
-	"stage05_012.GENH",
-	"stage05_013.GENH",
-	"stage05_014.GENH",
-	"stage05_015.GENH",
-	"stage06_001.GENH",
-	"stage06_002.GENH",
-	"stage06_003.GENH",
-	"stage06_004.GENH",
-	"stage06_005.GENH",
-	"stage06_006.GENH",
-	"stage06_007.GENH",
-	"stage06_008.GENH",
-	"stage06_009.GENH",
-	"stage06_010.GENH",
-	"stage06_011.GENH",
-	"stage06_012.GENH",
-	"stage06_013.GENH",
-	"stage06_014.GENH",
-	"stage06_015.GENH",
-	"stage06_016.GENH",
-	"stage08_001.GENH",
 };
 
 // GVCE08: Viewtiful Joe: Red Hot Rumble
@@ -26938,8 +25244,7 @@ const char *GWUE7D_entries[33] = {
 
 // GWHP41: Winnie the Pooh's Rumbly Tumbly Adventure
 // from: Winnie the Pooh's Rumbly Tumbly Adventure (2005-02-15)(Phoenix Studio)(Ubisoft)[GC].7z
-const char *GWHP41_entries[22] = {
-	".vgmstream.txth",
+const char *GWHP41_entries[21] = {
 	"MIG_000_601.vgmstream",
 	"MIG_000_601_00000001.vgmstream",
 	"MIG_000_603.vgmstream",
@@ -27107,8 +25412,7 @@ const char *GWME51_entries[80] = {
 
 // GWBE41: Worms Blast
 // from: Worms Blast (2002-09-13)(Team 17)(Ubisoft)[GC].7z
-const char *GWBE41_entries[25] = {
-	"EMiL.nfo",
+const char *GWBE41_entries[24] = {
 	"WinScreen.adp",
 	"credits.adp",
 	"femain.adp",
@@ -27521,10 +25825,9 @@ const char *GWVE52_entries[33] = {
 
 // G3EE51: XGIII: Extreme G Racing
 // from: XGIII - Extreme G Racing (2001-11-27)(Acclaim Cheltenham)(Acclaim)[GC].7z
-const char *G3EE51_entries[25] = {
+const char *G3EE51_entries[24] = {
 	"Atrad.adp",
 	"Cryst.adp",
-	"EMiL.nfo",
 	"FlyAtrad.adp",
 	"FlyCryst.adp",
 	"FlyMega.adp",
@@ -27579,11 +25882,7 @@ const char *GXAE51_entries[23] = {
 
 // GX3X41: XIII
 // from: XIII (2003-11-25)(Ubisoft Paris)(Ubisoft)[GC][unsorted].7z
-const char *GX3X41_entries[122] = {
-	"Amos01_158.txtp",
-	"Banque01_435.txtp",
-	"Base01_153.txtp",
-	"DM_Pal_294.txtp",
+const char *GX3X41_entries[74] = {
 	"GCN/Amos01.hxg",
 	"GCN/Banque01.hxg",
 	"GCN/Base01.hxg",
@@ -27640,24 +25939,6 @@ const char *GX3X41_entries[122] = {
 	"GCN/ssh102b.hxg",
 	"GCN/toits01.hxg",
 	"GCN/usa02.hxg",
-	"Hual01a_202.txtp",
-	"Hual04c_120.txtp",
-	"Kello01a_087.txtp",
-	"MapMenu_009.txtp",
-	"MapMenu_011.txtp",
-	"MapMenu_012.txtp",
-	"MapMenu_014.txtp",
-	"MapMenu_015.txtp",
-	"MapMenu_016.txtp",
-	"PRock01a_335.txtp",
-	"PRock03_210.txtp",
-	"PRock03_309.txtp",
-	"PRock04a_258.txtp",
-	"PRock04b_235.txtp",
-	"SM01_063.txtp",
-	"SM02_094.txtp",
-	"SSH101a_304.txtp",
-	"Sanc02b_328.txtp",
 	"System/cine00_audio_only.h4m",
 	"System/cine01_audio_only.h4m",
 	"System/cine02_audio_only.h4m",
@@ -27675,33 +25956,7 @@ const char *GX3X41_entries[122] = {
 	"System/cine14_audio_only.h4m",
 	"System/cine15_audio_only.h4m",
 	"System/music.adp",
-	"USA01_066.txtp",
-	"bateau01_233.txtp",
-	"bateau01_238.txtp",
-	"hual01b_163.txtp",
-	"hual02_149.txtp",
-	"hual04a_167.txtp",
-	"kello01b_158.txtp",
-	"kello01b_201.txtp",
-	"kello01b_408.txtp",
-	"mapcredits_018.txtp",
-	"mapcredits_019.txtp",
 	"opening.bnr",
-	"palace01_377.txtp",
-	"plage00_081.txtp",
-	"plage01_130.txtp",
-	"sanc01_149.txtp",
-	"sanc02a_313.txtp",
-	"sanc03_018.txtp",
-	"sanc03_323.txtp",
-	"spads01_108.txtp",
-	"spads02a_052.txtp",
-	"spads02b_246.txtp",
-	"ssh101b_241.txtp",
-	"ssh101c_209.txtp",
-	"ssh102b_115.txtp",
-	"toits01_243.txtp",
-	"usa02_108.txtp",
 };
 
 // GYFEA4: Yu-Gi-Oh! The Falsebound Kingdom
@@ -27962,7 +26217,7 @@ const char *GZHJDA_entries[38] = {
 const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == '7' && gameId[4] == '6' && gameId[5] == '9') { *count = 208; return GW7F69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'N' && gameId[4] == '6' && gameId[5] == '9') { *count = 43; return GENE69_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'Z' && gameId[4] == '6' && gameId[5] == '9') { *count = 55; return GLZE69_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'Z' && gameId[4] == '6' && gameId[5] == '9') { *count = 54; return GLZE69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == '7' && gameId[4] == '6' && gameId[5] == '9') { *count = 17; return GO7E69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'E' && gameId[4] == '0' && gameId[5] == '1') { *count = 76; return GTEE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'E' && gameId[4] == '5' && gameId[5] == '1') { *count = 33; return GWEE51_entries; }
@@ -27979,7 +26234,7 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'A' && gameId[2] == 'T' && gameId[4] == '5' && gameId[5] == '1') { *count = 34; return GATP51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'A' && gameId[2] == 'U' && gameId[4] == '0' && gameId[5] == '8') { *count = 57; return GAUE08_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'A' && gameId[2] == 'V' && gameId[4] == '7' && gameId[5] == '8') { *count = 15; return GAVE78_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'K' && gameId[4] == '7' && gameId[5] == '0') { *count = 21; return GBKE70_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'K' && gameId[4] == '7' && gameId[5] == '0') { *count = 20; return GBKE70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == 'B' && gameId[4] == '4' && gameId[5] == 'Z') { *count = 100; return GOBE4Z_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'E' && gameId[4] == '7' && gameId[5] == '1') { *count = 55; return GDEF71_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'N' && gameId[4] == 'C' && gameId[5] == '0') { *count = 13; return GBNJC0_entries; }
@@ -27987,17 +26242,17 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'P' && gameId[4] == 'C' && gameId[5] == 'M') { *count = 28; return GBPJCM_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'B' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 60; return GKBPAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '4' && gameId[4] == '0' && gameId[5] == '1') { *count = 61; return GK4E01_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'M' && gameId[4] == '7' && gameId[5] == 'F') { *count = 121; return GBME7F_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 111; return GUZP41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'V' && gameId[4] == '4' && gameId[5] == '1') { *count = 240; return GBVP41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'M' && gameId[4] == '7' && gameId[5] == 'F') { *count = 80; return GBME7F_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 28; return GUZP41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'V' && gameId[4] == '4' && gameId[5] == '1') { *count = 19; return GBVP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'N' && gameId[4] == '6' && gameId[5] == '9') { *count = 133; return GINX69_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '8' && gameId[2] == 'W' && gameId[4] == '0' && gameId[5] == '1') { *count = 81; return G8WP01_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '8' && gameId[2] == 'W' && gameId[4] == '0' && gameId[5] == '1') { *count = 80; return G8WP01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '8' && gameId[2] == 'S' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 29; return G8SJAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'S' && gameId[4] == '8' && gameId[5] == 'P') { *count = 55; return GBSE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'T' && gameId[4] == '7' && gameId[5] == '0') { *count = 3; return GBTE70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'G' && gameId[2] == 'E' && gameId[4] == '4' && gameId[5] == '1') { *count = 83; return GGEE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'R' && gameId[4] == '7' && gameId[5] == '0') { *count = 27; return GMRE70_entries; }
-	if(gameId[0] == 'D' && gameId[1] == 'E' && gameId[2] == 'Z' && gameId[4] == '8' && gameId[5] == 'P') { *count = 8; return DEZP8P_entries; }
+	if(gameId[0] == 'D' && gameId[1] == 'E' && gameId[2] == 'Z' && gameId[4] == '8' && gameId[5] == 'P') { *count = 7; return DEZP8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'Z' && gameId[4] == '8' && gameId[5] == 'P') { *count = 30; return GEZE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'V' && gameId[2] == 'H' && gameId[4] == '4' && gameId[5] == 'F') { *count = 31; return GVHE4F_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'G' && gameId[4] == '8' && gameId[5] == 'P') { *count = 27; return GIGJ8P_entries; }
@@ -28011,10 +26266,9 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'O' && gameId[4] == '5' && gameId[5] == '1') { *count = 32; return GBOP51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == '4' && gameId[4] == '5' && gameId[5] == '1') { *count = 64; return GB4P51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'S' && gameId[4] == '4' && gameId[5] == '1') { *count = 36; return G3SE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'Z' && gameId[2] == 'M' && gameId[4] == '7' && gameId[5] == 'D') { *count = 12; return GZMP7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'G' && gameId[2] == '5' && gameId[4] == '5' && gameId[5] == '2') { *count = 8; return GG5E52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'O' && gameId[4] == '0' && gameId[5] == '8') { *count = 50; return GEOE08_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'T' && gameId[4] == 'A' && gameId[5] == '4') { *count = 72; return GKTJA4_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'T' && gameId[4] == 'A' && gameId[5] == '4') { *count = 70; return GKTJA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'J' && gameId[4] == '7' && gameId[5] == '8') { *count = 28; return GKJH78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'P' && gameId[4] == '6' && gameId[5] == 'S') { *count = 35; return GCPE6S_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'L' && gameId[4] == '6' && gameId[5] == '9') { *count = 18; return GCLP69_entries; }
@@ -28027,15 +26281,14 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == 'U' && gameId[4] == 'N' && gameId[5] == 'K') { *count = 56; return GOUPNK_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == '5' && gameId[4] == 'N' && gameId[5] == 'K') { *count = 19; return GC5PNK_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == '9' && gameId[4] == '6' && gameId[5] == 'S') { *count = 49; return GC9P6S_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == '2' && gameId[4] == '9' && gameId[5] == 'G') { *count = 74; return GC2E9G_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'F' && gameId[4] == '9' && gameId[5] == 'G') { *count = 33; return GCFE9G_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == '2' && gameId[4] == '9' && gameId[5] == 'G') { *count = 40; return GC2E9G_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'F' && gameId[4] == '9' && gameId[5] == 'G') { *count = 8; return GCFE9G_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'B' && gameId[4] == '7' && gameId[5] == 'D') { *count = 43; return GCBP7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'N' && gameId[4] == '7' && gameId[5] == 'D') { *count = 76; return GCNE7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'T' && gameId[4] == '5' && gameId[5] == '1') { *count = 9; return GCTE51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '6' && gameId[4] == 'A' && gameId[5] == '4') { *count = 37; return GK6JA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'V' && gameId[4] == 'E' && gameId[5] == 'B') { *count = 25; return GCVEEB_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'A' && gameId[4] == '5' && gameId[5] == 'H') { *count = 42; return GCAE5H_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'J' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 30; return G3JEAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'C' && gameId[4] == '0' && gameId[5] == '1') { *count = 67; return GXCE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'Z' && gameId[4] == '0' && gameId[5] == '1') { *count = 137; return GWZE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'S' && gameId[4] == '7' && gameId[5] == '8') { *count = 24; return GDSE78_entries; }
@@ -28049,8 +26302,8 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'W' && gameId[4] == 'A' && gameId[5] == '4') { *count = 18; return GDWEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'X' && gameId[4] == 'A' && gameId[5] == '4') { *count = 11; return GDXEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'K' && gameId[4] == '4' && gameId[5] == '1') { *count = 41; return GPKE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 106; return GTZE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'D' && gameId[4] == '4' && gameId[5] == '1') { *count = 60; return GDDE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 24; return GTZE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'D' && gameId[4] == '4' && gameId[5] == '1') { *count = 7; return GDDE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'G' && gameId[4] == '0' && gameId[5] == '1') { *count = 41; return GKGP01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Y' && gameId[2] == '2' && gameId[4] == '0' && gameId[5] == '1') { *count = 54; return GY2P01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Y' && gameId[2] == '3' && gameId[4] == '0' && gameId[5] == '1') { *count = 456; return GY3J01_entries; }
@@ -28063,8 +26316,7 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'M' && gameId[4] == '7' && gameId[5] == 'F') { *count = 34; return GEME7F_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == '6' && gameId[4] == 'A' && gameId[5] == '4') { *count = 16; return GE6JA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'S' && gameId[4] == 'A' && gameId[5] == '4') { *count = 54; return GWSEA4_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'L' && gameId[4] == 'A' && gameId[5] == '4') { *count = 14; return GMLEA4_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'D' && gameId[4] == '0' && gameId[5] == '1') { *count = 54; return GEDE01_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'D' && gameId[4] == '0' && gameId[5] == '1') { *count = 53; return GEDE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'S' && gameId[4] == 'A' && gameId[5] == '4') { *count = 24; return GESEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'W' && gameId[4] == '4' && gameId[5] == '1') { *count = 112; return GEWE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'X' && gameId[4] == '5' && gameId[5] == '2') { *count = 27; return GEXY52_entries; }
@@ -28080,7 +26332,7 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == '6' && gameId[2] == 'F' && gameId[4] == '6' && gameId[5] == '9') { *count = 73; return G6FD69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'E' && gameId[2] == 'Y' && gameId[4] == '6' && gameId[5] == '9') { *count = 9; return GEYE69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'N' && gameId[2] == 'E' && gameId[4] == '7' && gameId[5] == '8') { *count = 23; return GNEF78_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'F' && gameId[2] == 'E' && gameId[4] == '0' && gameId[5] == '1') { *count = 82; return GFEE01_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'F' && gameId[2] == 'E' && gameId[4] == '0' && gameId[5] == '1') { *count = 81; return GFEE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'F' && gameId[2] == 'F' && gameId[4] == '5' && gameId[5] == 'D') { *count = 65; return GFFE5D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'F' && gameId[2] == 'K' && gameId[4] == '6' && gameId[5] == '9') { *count = 14; return GFKE69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'F' && gameId[2] == 'P' && gameId[4] == 'A' && gameId[5] == '4') { *count = 8; return GFPEA4_entries; }
@@ -28096,11 +26348,11 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'V' && gameId[2] == 'R' && gameId[4] == '7' && gameId[5] == 'H') { *count = 12; return GVRE7H_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'C' && gameId[4] == 'B' && gameId[5] == 'L') { *count = 14; return GTCJBL_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'M' && gameId[4] == '5' && gameId[5] == '2') { *count = 120; return GUME52_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'L' && gameId[4] == '6' && gameId[5] == '9') { *count = 178; return GHLZ69_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'L' && gameId[4] == '6' && gameId[5] == '9') { *count = 177; return GHLZ69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'A' && gameId[2] == 'Z' && gameId[4] == '6' && gameId[5] == '9') { *count = 27; return GAZE69_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'G' && gameId[4] == 'E' && gameId[5] == '9') { *count = 21; return G4GEE9_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'G' && gameId[4] == 'E' && gameId[5] == '9') { *count = 20; return G4GEE9_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'Y' && gameId[4] == '6' && gameId[5] == 'S') { *count = 138; return GHYE6S_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == '6' && gameId[4] == '7' && gameId[5] == 'N') { *count = 622; return GH6P7N_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == '6' && gameId[4] == '7' && gameId[5] == 'N') { *count = 616; return GH6P7N_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'T' && gameId[4] == 'A' && gameId[5] == '4') { *count = 76; return GHTJA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'B' && gameId[4] == '8' && gameId[5] == 'P') { *count = 65; return GLBE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'E' && gameId[4] == '9' && gameId[5] == '1') { *count = 256; return GHEJ91_entries; }
@@ -28111,7 +26363,7 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'N' && gameId[4] == '7' && gameId[5] == '1') { *count = 296; return GHNX71_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'A' && gameId[4] == '7' && gameId[5] == 'D') { *count = 134; return GIAE7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'K' && gameId[4] == '7' && gameId[5] == '0') { *count = 12; return GIKE70_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'U' && gameId[4] == '7' && gameId[5] == 'D') { *count = 143; return GHUF7D_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'U' && gameId[4] == '7' && gameId[5] == 'D') { *count = 115; return GHUF7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'Q' && gameId[4] == '7' && gameId[5] == '8') { *count = 21; return GIQY78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'C' && gameId[4] == '7' && gameId[5] == '8') { *count = 48; return GICP78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'J' && gameId[2] == '2' && gameId[4] == 'A' && gameId[5] == '4') { *count = 42; return GJ2PA4_entries; }
@@ -28126,24 +26378,24 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '9' && gameId[4] == 'A' && gameId[5] == '4') { *count = 98; return GK9EA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'G' && gameId[4] == 'B' && gameId[5] == '2') { *count = 78; return G2GJB2_entries; }
 	if(gameId[0] == 'D' && gameId[1] == 'G' && gameId[2] == 'A' && gameId[4] == 'B' && gameId[5] == '2') { *count = 37; return DGAJB2_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '7' && gameId[4] == '0' && gameId[5] == '8') { *count = 150; return GK7E08_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '7' && gameId[4] == '0' && gameId[5] == '8') { *count = 149; return GK7E08_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'H' && gameId[4] == 'A' && gameId[5] == '4') { *count = 103; return GKHEA4_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'Y' && gameId[4] == '0' && gameId[5] == '1') { *count = 65; return GKYE01_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'Y' && gameId[4] == '0' && gameId[5] == '1') { *count = 64; return GKYE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'G' && gameId[2] == 'K' && gameId[4] == 'B' && gameId[5] == '2') { *count = 48; return GGKJB2_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'Q' && gameId[4] == '0' && gameId[5] == '1') { *count = 27; return GKQJ01_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'Q' && gameId[4] == '0' && gameId[5] == '1') { *count = 26; return GKQJ01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '6' && gameId[2] == 'S' && gameId[4] == '7' && gameId[5] == 'D') { *count = 46; return G6SP7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'S' && gameId[4] == '0' && gameId[5] == '1') { *count = 87; return G4SE01_entries; }
 	if(gameId[0] == 'D' && gameId[1] == '4' && gameId[2] == '3' && gameId[4] == '0' && gameId[5] == '1') { *count = 2; return D43P01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Z' && gameId[2] == 'L' && gameId[4] == '0' && gameId[5] == '1') { *count = 146; return GZLE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Z' && gameId[2] == '2' && gameId[4] == '0' && gameId[5] == '1') { *count = 122; return GZ2E01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'W' && gameId[4] == '5' && gameId[5] == '1') { *count = 49; return GLWE51_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == '5' && gameId[4] == '4' && gameId[5] == 'F') { *count = 681; return GL5X4F_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == '5' && gameId[4] == '4' && gameId[5] == 'F') { *count = 680; return GL5X4F_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == '7' && gameId[4] == '6' && gameId[5] == '4') { *count = 81; return GL7E64_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'N' && gameId[4] == '6' && gameId[5] == '9') { *count = 33; return GLNP69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == '2' && gameId[4] == '5' && gameId[5] == '2') { *count = 127; return GR2E52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'N' && gameId[4] == '5' && gameId[5] == '2') { *count = 45; return GRNE52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'M' && gameId[4] == '0' && gameId[5] == '1') { *count = 2; return GLME01_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'G' && gameId[2] == 'Z' && gameId[4] == '5' && gameId[5] == '2') { *count = 23; return GGZP52_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'G' && gameId[2] == 'Z' && gameId[4] == '5' && gameId[5] == '2') { *count = 22; return GGZP52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '6' && gameId[2] == 'M' && gameId[4] == '6' && gameId[5] == '9') { *count = 40; return G6MP69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '7' && gameId[2] == 'M' && gameId[4] == '6' && gameId[5] == '9') { *count = 36; return G7ME69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Q' && gameId[2] == '8' && gameId[4] == '6' && gameId[5] == '9') { *count = 50; return GQ8E69_entries; }
@@ -28176,13 +26428,13 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'O' && gameId[4] == '7' && gameId[5] == '0') { *count = 28; return GMOP70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'I' && gameId[4] == '1' && gameId[5] == '8') { *count = 70; return GIIJ18_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == '2' && gameId[4] == '1' && gameId[5] == '8') { *count = 88; return GI2J18_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'Q' && gameId[4] == '7' && gameId[5] == '0') { *count = 12; return GMQP70_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'Q' && gameId[4] == '7' && gameId[5] == '0') { *count = 10; return GMQP70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'J' && gameId[4] == '4' && gameId[5] == '1') { *count = 20; return GMJP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'N' && gameId[4] == '7' && gameId[5] == '8') { *count = 16; return GMNE78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'D' && gameId[2] == 'P' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 37; return GDPJAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'V' && gameId[4] == '7' && gameId[5] == '8') { *count = 19; return GSVP78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'N' && gameId[2] == 'M' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 166; return GNMEAF_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '5' && gameId[2] == 'N' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 6; return G5NEAF_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '5' && gameId[2] == 'N' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 5; return G5NEAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'N' && gameId[4] == 'D' && gameId[5] == 'A') { *count = 58; return G4NJDA_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'N' && gameId[2] == '4' && gameId[4] == '6' && gameId[5] == '9') { *count = 28; return GN4E69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'N' && gameId[2] == 'B' && gameId[4] == '0' && gameId[5] == '1') { *count = 32; return GNBP01_entries; }
@@ -28197,7 +26449,7 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == 'P' && gameId[4] == 'B' && gameId[5] == '2') { *count = 57; return GOPJB2_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'P' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 44; return GIPEAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == 'T' && gameId[4] == 'B' && gameId[5] == '2') { *count = 40; return GOTJB2_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == '5' && gameId[4] == '5' && gameId[5] == '2') { *count = 121; return GH5P52_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == '5' && gameId[4] == '5' && gameId[5] == '2') { *count = 66; return GH5P52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'N' && gameId[4] == '0' && gameId[5] == '8') { *count = 50; return GPNJ08_entries; }
 	if(gameId[0] == 'P' && gameId[1] == 'R' && gameId[2] == 'J' && gameId[4] == '0' && gameId[5] == '1') { *count = 12; return PRJP01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == '2' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 129; return GP2EAF_entries; }
@@ -28205,37 +26457,37 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == '8' && gameId[2] == '9' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 19; return G89EAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '8' && gameId[2] == 'M' && gameId[4] == '0' && gameId[5] == '1') { *count = 147; return G8MP01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'O' && gameId[4] == '8' && gameId[5] == 'P') { *count = 109; return GPOE8P_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'S' && gameId[4] == '8' && gameId[5] == 'P') { *count = 83; return GPSE8P_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'S' && gameId[4] == '8' && gameId[5] == 'P') { *count = 82; return GPSE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'I' && gameId[4] == '0' && gameId[5] == '1') { *count = 13; return GPIE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'V' && gameId[4] == '0' && gameId[5] == '1') { *count = 83; return GPVP01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'X' && gameId[4] == '0' && gameId[5] == '1') { *count = 182; return GXXE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'R' && gameId[4] == '7' && gameId[5] == 'U') { *count = 17; return GPRE7U_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'U' && gameId[4] == '7' && gameId[5] == '8') { *count = 23; return GRUP78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'Q' && gameId[4] == '6' && gameId[5] == 'L') { *count = 57; return GPQP6L_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'T' && gameId[4] == '4' && gameId[5] == '1') { *count = 24; return GPTE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'T' && gameId[4] == '4' && gameId[5] == '1') { *count = 10; return GPTE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == 'M' && gameId[4] == '4' && gameId[5] == '1') { *count = 20; return GKMP41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'O' && gameId[4] == '4' && gameId[5] == '1') { *count = 44; return G2OE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'O' && gameId[4] == '4' && gameId[5] == '1') { *count = 5; return G2OE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'L' && gameId[4] == '4' && gameId[5] == '1') { *count = 11; return GRLE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'U' && gameId[4] == '8' && gameId[5] == 'P') { *count = 25; return GPUE8P_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'P' && gameId[2] == 'U' && gameId[4] == '8' && gameId[5] == 'P') { *count = 24; return GPUE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'J' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 18; return GRJEAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'J' && gameId[4] == 'M' && gameId[5] == 'S') { *count = 23; return GLJJMS_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'N' && gameId[4] == '5' && gameId[5] == 'D') { *count = 15; return GXNE5D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == 'L' && gameId[4] == '7' && gameId[5] == '8') { *count = 19; return GLLF78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'V' && gameId[4] == 'A' && gameId[5] == '4') { *count = 84; return GRVEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'H' && gameId[4] == '4' && gameId[5] == '1') { *count = 155; return GRHE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'Y' && gameId[4] == '4' && gameId[5] == '1') { *count = 458; return GRYE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'Y' && gameId[4] == '4' && gameId[5] == '1') { *count = 190; return GRYE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'F' && gameId[4] == '7' && gameId[5] == '8') { *count = 63; return GRFF78_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == '3' && gameId[4] == '5' && gameId[5] == 'D') { *count = 39; return GR3E5D_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == '3' && gameId[4] == '5' && gameId[5] == 'D') { *count = 30; return GR3E5D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'D' && gameId[4] == '0' && gameId[5] == '8') { *count = 111; return GCDE08_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'H' && gameId[2] == 'A' && gameId[4] == '0' && gameId[5] == '8') { *count = 61; return GHAP08_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'B' && gameId[4] == '0' && gameId[5] == '8') { *count = 65; return G4BD08_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == 'C' && gameId[4] == '5' && gameId[5] == 'D') { *count = 116; return GOCE5D_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'B' && gameId[4] == '0' && gameId[5] == '8') { *count = 1; return G4BD08_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'O' && gameId[2] == 'C' && gameId[4] == '5' && gameId[5] == 'D') { *count = 115; return GOCE5D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Z' && gameId[2] == 'Q' && gameId[4] == '7' && gameId[5] == 'D') { *count = 68; return GZQE7D_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'K' && gameId[4] == '4' && gameId[5] == '1') { *count = 150; return GRKE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'R' && gameId[4] == '7' && gameId[5] == '8') { *count = 42; return GRRF78_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'J' && gameId[2] == 'C' && gameId[4] == '8' && gameId[5] == 'P') { *count = 48; return GJCE8P_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'J' && gameId[2] == 'C' && gameId[4] == '8' && gameId[5] == 'P') { *count = 47; return GJCE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'K' && gameId[4] == '7' && gameId[5] == 'D') { *count = 66; return GSKP7D_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'S' && gameId[4] == '3' && gameId[5] == '6') { *count = 23; return GISP36_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'S' && gameId[4] == '3' && gameId[5] == '6') { *count = 22; return GISP36_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'S' && gameId[4] == '8' && gameId[5] == 'P') { *count = 55; return GSSE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'P' && gameId[4] == '8' && gameId[5] == 'P') { *count = 65; return GUPP8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'S' && gameId[4] == 'G' && gameId[5] == 'E') { *count = 54; return G2SJGE_entries; }
@@ -28252,13 +26504,13 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'S' && gameId[4] == '8' && gameId[5] == 'P') { *count = 128; return GXSE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'X' && gameId[4] == '8' && gameId[5] == 'P') { *count = 103; return G2XE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '9' && gameId[2] == 'S' && gameId[4] == '8' && gameId[5] == 'P') { *count = 67; return G9SP8P_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'O' && gameId[4] == '8' && gameId[5] == 'P') { *count = 10; return GSOE8P_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'O' && gameId[4] == '8' && gameId[5] == 'P') { *count = 9; return GSOE8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'E' && gameId[4] == '8' && gameId[5] == 'P') { *count = 62; return GXEP8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'S' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 79; return GRSEAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'A' && gameId[4] == '8' && gameId[5] == 'P') { *count = 117; return GWAF8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 12; return GSZP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'M' && gameId[4] == '5' && gameId[5] == '2') { *count = 15; return GSME52_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '2' && gameId[4] == '5' && gameId[5] == '2') { *count = 126; return GK2F52_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '2' && gameId[4] == '5' && gameId[5] == '2') { *count = 120; return GK2F52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Q' && gameId[2] == '4' && gameId[4] == '7' && gameId[5] == '8') { *count = 44; return GQ4F78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'Q' && gameId[4] == '7' && gameId[5] == '8') { *count = 9; return GSQP78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '5' && gameId[2] == 'S' && gameId[4] == '7' && gameId[5] == 'D') { *count = 60; return G5SE7D_entries; }
@@ -28272,18 +26524,18 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'M' && gameId[4] == '4' && gameId[5] == '1') { *count = 49; return G3MP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == '2' && gameId[4] == '7' && gameId[5] == '8') { *count = 60; return GS2E78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'B' && gameId[2] == 'Y' && gameId[4] == '0' && gameId[5] == 'A') { *count = 18; return GBYE0A_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'Q' && gameId[4] == '0' && gameId[5] == '1') { *count = 329; return G4QE01_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '4' && gameId[2] == 'Q' && gameId[4] == '0' && gameId[5] == '1') { *count = 327; return G4QE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'S' && gameId[4] == '0' && gameId[5] == '1') { *count = 1; return GMSE01_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'B' && gameId[4] == '8' && gameId[5] == 'P') { *count = 96; return GMBE8P_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == '2' && gameId[4] == '8' && gameId[5] == 'P') { *count = 319; return GM2E8P_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == 'B' && gameId[4] == '8' && gameId[5] == 'P') { *count = 58; return GMBE8P_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'M' && gameId[2] == '2' && gameId[4] == '8' && gameId[5] == 'P') { *count = 318; return GM2E8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'L' && gameId[4] == '8' && gameId[5] == 'P') { *count = 74; return G3LE8P_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'W' && gameId[4] == 'D' && gameId[5] == '9') { *count = 58; return GRWJD9_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'W' && gameId[4] == 'D' && gameId[5] == '9') { *count = 56; return GRWJD9_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'A' && gameId[2] == 'L' && gameId[4] == '0' && gameId[5] == '1') { *count = 213; return GALE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'G' && gameId[4] == '4' && gameId[5] == 'F') { *count = 80; return GWGE4F_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == '3' && gameId[4] == '5' && gameId[5] == '1') { *count = 34; return GS3E51_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == '3' && gameId[4] == '5' && gameId[5] == '1') { *count = 32; return GS3E51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'F' && gameId[4] == '7' && gameId[5] == '8') { *count = 35; return G2FP78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'J' && gameId[2] == 'U' && gameId[4] == '7' && gameId[5] == '8') { *count = 19; return GJUP78_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'W' && gameId[4] == '7' && gameId[5] == '0') { *count = 148; return GTWE70_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'W' && gameId[4] == '7' && gameId[5] == '0') { *count = 116; return GTWE70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'F' && gameId[4] == 'A' && gameId[5] == '4') { *count = 43; return GTFEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'N' && gameId[2] == 'I' && gameId[4] == 'A' && gameId[5] == '4') { *count = 49; return GNIEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'Q' && gameId[4] == 'A' && gameId[5] == '4') { *count = 68; return G3QEA4_entries; }
@@ -28293,11 +26545,11 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'S' && gameId[4] == '4' && gameId[5] == 'F') { *count = 67; return GTSP4F_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Y' && gameId[2] == 'R' && gameId[4] == '4' && gameId[5] == '1') { *count = 49; return GYRP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'G' && gameId[2] == 'R' && gameId[4] == '4' && gameId[5] == '1') { *count = 46; return GGRE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '6' && gameId[2] == '3' && gameId[4] == '4' && gameId[5] == '1') { *count = 115; return G63P41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'E' && gameId[4] == '4' && gameId[5] == '1') { *count = 109; return GCEE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'J' && gameId[4] == '4' && gameId[5] == '1') { *count = 70; return GCJE41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'Y' && gameId[4] == '4' && gameId[5] == '1') { *count = 84; return GWYX41_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == '7' && gameId[4] == '4' && gameId[5] == '1') { *count = 168; return GT7P41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '6' && gameId[2] == '3' && gameId[4] == '4' && gameId[5] == '1') { *count = 73; return G63P41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'E' && gameId[4] == '4' && gameId[5] == '1') { *count = 50; return GCEE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'C' && gameId[2] == 'J' && gameId[4] == '4' && gameId[5] == '1') { *count = 5; return GCJE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'Y' && gameId[4] == '4' && gameId[5] == '1') { *count = 52; return GWYX41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == '7' && gameId[4] == '4' && gameId[5] == '1') { *count = 47; return GT7P41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'L' && gameId[2] == '8' && gameId[4] == '4' && gameId[5] == 'F') { *count = 74; return GL8E4F_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'Q' && gameId[4] == '6' && gameId[5] == 'S') { *count = 7; return GTQE6S_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'J' && gameId[4] == '5' && gameId[5] == '2') { *count = 108; return GWJE52_entries; }
@@ -28306,7 +26558,6 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'G' && gameId[4] == '6' && gameId[5] == '0') { *count = 9; return GTGE60_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'V' && gameId[4] == '7' && gameId[5] == '0') { *count = 88; return GTVE70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'C' && gameId[4] == '5' && gameId[5] == '2') { *count = 209; return G2CX52_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'L' && gameId[4] == '5' && gameId[5] == '2') { *count = 41; return GTLX52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'U' && gameId[4] == '8' && gameId[5] == 'G') { *count = 27; return GTUE8G_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'K' && gameId[4] == '5' && gameId[5] == '1') { *count = 45; return GTKD51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'T' && gameId[2] == 'Y' && gameId[4] == '6' && gameId[5] == '9') { *count = 43; return GTYP69_entries; }
@@ -28314,11 +26565,10 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'I' && gameId[2] == 'Z' && gameId[4] == '5' && gameId[5] == '2') { *count = 192; return GIZE52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'C' && gameId[4] == '6' && gameId[5] == '9') { *count = 15; return GUCF69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'F' && gameId[4] == '4' && gameId[5] == 'Z') { *count = 42; return GUFP4Z_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'T' && gameId[4] == '5' && gameId[5] == '2') { *count = 127; return GUTI52_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'T' && gameId[4] == '5' && gameId[5] == '2') { *count = 95; return GUTI52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'S' && gameId[4] == '7' && gameId[5] == 'F') { *count = 29; return GUSE7F_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'U' && gameId[2] == 'B' && gameId[4] == '6' && gameId[5] == '9') { *count = 43; return GUBE69_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'V' && gameId[2] == '3' && gameId[4] == '7' && gameId[5] == '0') { *count = 10; return GV3P70_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'V' && gameId[2] == 'J' && gameId[4] == '0' && gameId[5] == '8') { *count = 92; return GVJE08_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'V' && gameId[2] == 'C' && gameId[4] == '0' && gameId[5] == '8') { *count = 29; return GVCE08_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '2' && gameId[2] == 'V' && gameId[4] == '0' && gameId[5] == '8') { *count = 69; return G2VP08_entries; }
 	if(gameId[0] == 'G' && gameId[1] == '8' && gameId[2] == 'F' && gameId[4] == '8' && gameId[5] == 'P') { *count = 62; return G8FE8P_entries; }
@@ -28326,11 +26576,11 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'W' && gameId[4] == '0' && gameId[5] == '1') { *count = 114; return GWWE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'R' && gameId[4] == '0' && gameId[5] == '1') { *count = 157; return GWRE01_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'U' && gameId[4] == '7' && gameId[5] == 'D') { *count = 33; return GWUE7D_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'H' && gameId[4] == '4' && gameId[5] == '1') { *count = 22; return GWHP41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'H' && gameId[4] == '4' && gameId[5] == '1') { *count = 21; return GWHP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'D' && gameId[4] == '6' && gameId[5] == 'S') { *count = 40; return GWDP6S_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == '8' && gameId[4] == '5' && gameId[5] == '2') { *count = 7; return GW8E52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'M' && gameId[4] == '5' && gameId[5] == '1') { *count = 80; return GWME51_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'B' && gameId[4] == '4' && gameId[5] == '1') { *count = 25; return GWBE41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'B' && gameId[4] == '4' && gameId[5] == '1') { *count = 24; return GWBE41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'T' && gameId[4] == 'A' && gameId[5] == '4') { *count = 25; return GWTEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'P' && gameId[4] == '7' && gameId[5] == '8') { *count = 51; return GWPE78_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == '2' && gameId[4] == '7' && gameId[5] == '8') { *count = 62; return GW2P78_entries; }
@@ -28339,9 +26589,9 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'M' && gameId[4] == '5' && gameId[5] == '2') { *count = 8; return GXME52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == '2' && gameId[4] == '5' && gameId[5] == '2') { *count = 57; return GX2E52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'V' && gameId[4] == '5' && gameId[5] == '2') { *count = 33; return GWVE52_entries; }
-	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'E' && gameId[4] == '5' && gameId[5] == '1') { *count = 25; return G3EE51_entries; }
+	if(gameId[0] == 'G' && gameId[1] == '3' && gameId[2] == 'E' && gameId[4] == '5' && gameId[5] == '1') { *count = 24; return G3EE51_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'A' && gameId[4] == '5' && gameId[5] == '1') { *count = 23; return GXAE51_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == '3' && gameId[4] == '4' && gameId[5] == '1') { *count = 122; return GX3X41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == '3' && gameId[4] == '4' && gameId[5] == '1') { *count = 74; return GX3X41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Y' && gameId[2] == 'F' && gameId[4] == 'A' && gameId[5] == '4') { *count = 80; return GYFEA4_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Z' && gameId[2] == 'P' && gameId[4] == '7' && gameId[5] == '0') { *count = 68; return GZPE70_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'A' && gameId[2] == 'B' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 46; return GABEAF_entries; }

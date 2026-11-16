@@ -666,7 +666,10 @@ static void disc_loading_frame(void) {
 	case -1:
 		dvd_motor_off();
 		go(ST_MAIN);
-		show_error("Couldn't read the disc. Is an original GameCube disc in the drive?");
+		if (!dvd_available())
+			show_error("The disc drive isn't responding. Try restarting the console.");
+		else
+			show_error("Couldn't read the disc. Is an original GameCube disc in the drive?");
 		break;
 	case -2:
 		dvd_motor_off();
@@ -1643,15 +1646,23 @@ static void player_frame(void) {
 
 enum {
 	SET_MUSIC_VOL, SET_MENU_VOL, SET_LOOPS, SET_FADE, SET_LOOP_FOREVER, SET_TRACK_END,
-	SET_RESOLUTION, SET_WIDESCREEN, SET_WIDTH, SET_OVERSCAN, SET_INTRO, SET_LAUNCHER, SET_COUNT
+	SET_RESOLUTION, SET_WIDESCREEN, SET_WIDTH, SET_OVERSCAN, SET_INTRO,
+#ifdef HW_DOL
+	SET_LAUNCHER,
+#endif
+	SET_COUNT
 };
 static const char *const set_labels[SET_COUNT] = {
 	"Music volume", "Menu sounds", "Loops before the fade", "Fade out", "Loop forever", "When a track ends",
-	"Resolution", "Widescreen TV (16:9)", "Picture width", "Overscan", "Intro", "Exit starts",
+	"Resolution", "Widescreen TV (16:9)", "Picture width", "Overscan", "Intro",
+#ifdef HW_DOL
+	"Exit starts",
+#endif
 };
 #define SET_ROWS 5
 #define SET_ROW_H 33
 
+#ifdef HW_DOL
 static char launchers[32][64];
 static int launcher_count;
 
@@ -1690,6 +1701,7 @@ static const char *launcher_current(void) {
 			return launchers[i];
 	return "";
 }
+#endif
 
 static void setting_value(int i, char *out, size_t size, float *bar) {
 	static const char *const ends[END_COUNT] = { "Stop", "Play the next", "Play it again", "Next, then next game" };
@@ -1717,6 +1729,7 @@ static void setting_value(int i, char *out, size_t size, float *bar) {
 	case SET_WIDTH: snprintf(out, size, "%s", settings.full_width ? "Full (704)" : "Standard (640)"); break;
 	case SET_OVERSCAN: snprintf(out, size, "%d%%", settings.overscan); break;
 	case SET_INTRO: snprintf(out, size, "%s", settings.intro ? "On" : "Off"); break;
+#ifdef HW_DOL
 	case SET_LAUNCHER: {
 		const char *cur = launcher_current();
 		if (settings.launcher[0] && !strcasecmp(cur, settings.launcher))
@@ -1727,6 +1740,7 @@ static void setting_value(int i, char *out, size_t size, float *bar) {
 			snprintf(out, size, "Restart");
 		break;
 	}
+#endif
 	}
 }
 
@@ -1751,6 +1765,7 @@ static void setting_change(int i, int step) {
 	case SET_WIDTH: settings.full_width = !settings.full_width; video_settings_changed(); break;
 	case SET_OVERSCAN: settings.overscan = clampi(settings.overscan + step, 0, OVERSCAN_MAX); break;
 	case SET_INTRO: settings.intro = !settings.intro; break;
+#ifdef HW_DOL
 	case SET_LAUNCHER: {
 		/* Auto, then each .dol */
 		int cur = -1;
@@ -1761,6 +1776,7 @@ static void setting_change(int i, int step) {
 		snprintf(settings.launcher, sizeof(settings.launcher), "%s", cur < 0 ? "" : launchers[cur]);
 		break;
 	}
+#endif
 	}
 	settings_apply_audio();
 }
@@ -1782,7 +1798,9 @@ static void stats_column(float x, const char *title, const Stats *st) {
 }
 
 static void settings_open(void) {
+#ifdef HW_DOL
 	list_launchers();
+#endif
 	settings_sel = settings_scroll = 0;
 	sound_play(SFX_SELECT);
 	go(ST_SETTINGS);
@@ -1875,9 +1893,11 @@ static void credits_frame(void) {
 
 /* ------------------------------------------------------------------ exit */
 
+#ifdef HW_DOL
 static bool loader_stub(void) {
 	return *(volatile u32 *)0x80001804 == 0x53545542 && *(volatile u32 *)0x80001808 == 0x48415858;   /* "STUBHAXX" */
 }
+#endif
 
 /* dolload.c: just before it jumps to the new program */
 void dol_before_jump(void) {
@@ -1890,9 +1910,13 @@ void dol_before_jump(void) {
 static void exit_chosen(int choice) {
 	if (choice != 0)
 		return;
-	const char *name = launcher_current();
 	stop_music();
 	settings_save();
+#ifdef HW_RVL
+	dol_before_jump();
+	exit(0);
+#else
+	const char *name = launcher_current();
 	if (name[0]) {
 		char path[80], err[200];
 		snprintf(path, sizeof(path), "/%s", name);
@@ -1906,16 +1930,21 @@ static void exit_chosen(int choice) {
 		reload();
 	}
 	SYS_ResetSystem(SYS_HOTRESET, 0, 0);
+#endif
 }
 
 static void exit_open(void) {
+	char row[96];
+#ifdef HW_RVL
+	snprintf(row, sizeof(row), "%s", "Exit to loader");
+#else
 	list_launchers();
 	const char *name = launcher_current();
-	char row[96];
 	if (name[0])
 		snprintf(row, sizeof(row), "Start %s", name);
 	else
 		snprintf(row, sizeof(row), "%s", loader_stub() ? "Go back to the loader" : "Restart the GameCube");
+#endif
 	popup_open(exit_chosen, "Exit CubeMusic?", NULL, 2, row, "Cancel");
 }
 
@@ -1962,7 +1991,19 @@ static void main_frame(void) {
 	move_in_list(&main_sel, &top, MAIN_COUNT, MAIN_COUNT);
 	if (down & PAD_BUTTON_A) {
 		switch (main_sel) {
-		case MAIN_DISC: sound_play(SFX_SELECT); disc_load_start(); break;
+		case MAIN_DISC:
+			if (!dvd_available()) {   /* no drive access / an unresponsive drive (see dvd.c) */
+				sound_play(SFX_ERROR);
+#ifdef HW_RVL
+				show_error("To read discs, start CubeMusic from the Homebrew Channel.");
+#else
+				show_error("The disc drive isn't responding. Try restarting the console.");
+#endif
+			} else {
+				sound_play(SFX_SELECT);
+				disc_load_start();
+			}
+			break;
 		case MAIN_SAVED: saved_open(); break;
 		case MAIN_SETTINGS: settings_open(); break;
 		case MAIN_CREDITS: sound_play(SFX_SELECT); go(ST_CREDITS); break;

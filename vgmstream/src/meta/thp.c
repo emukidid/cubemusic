@@ -16,7 +16,7 @@ VGMSTREAM* init_vgmstream_thp(STREAMFILE* sf) {
      * .dsp: fake extension?
      * .mov: Dora the Explorer: JttPP (GC)
      * (extensionless): Fragile (Wii) */
-    if (!check_extensions(sf, "thp,dsp,mov,"))
+    if (!check_extensions(sf, "thp,dsp,mov,,thp_pal"))
         return NULL;
 
     bool big_endian = guess_endian32(0x08,sf); // Pikmin 2 (Switch) uses LE
