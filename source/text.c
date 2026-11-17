@@ -68,8 +68,7 @@ static uint32_t sjis_pair(uint8_t lead, uint8_t trail) {
 }
 
 /* Shift-JIS if every high byte decodes and at least one lead byte is in
- * 0x81-0x9F (kana, punctuation, common kanji). Latin-1 never uses that
- * range (it's control codes there), so accented titles stay Latin-1. */
+ * 0x81-0x9F (kana, punctuation, common kanji). */
 static bool looks_sjis(const uint8_t *in, size_t n) {
 	bool lead_seen = false;
 	for (size_t i = 0; i < n && in[i]; i++) {
@@ -85,6 +84,14 @@ static bool looks_sjis(const uint8_t *in, size_t n) {
 	return lead_seen;
 }
 
+/* 0x80-0x9F in Windows-1252 (0: unused there) */
+static const uint16_t cp1252[32] = {
+	0x20AC, 0,      0x201A, 0x0192, 0x201E, 0x2026, 0x2020, 0x2021,
+	0x02C6, 0x2030, 0x0160, 0x2039, 0x0152, 0,      0x017D, 0,
+	0,      0x2018, 0x2019, 0x201C, 0x201D, 0x2022, 0x2013, 0x2014,
+	0x02DC, 0x2122, 0x0161, 0x203A, 0x0153, 0,      0x017E, 0x0178,
+};
+
 void game_text_to_utf8(char *out, size_t size, const uint8_t *in, size_t n) {
 	if (!size)
 		return;
@@ -99,6 +106,10 @@ void game_text_to_utf8(char *out, size_t size, const uint8_t *in, size_t n) {
 			i++;
 			if (cp == 0x3000)
 				cp = ' ';   /* full-width space */
+		} else if (cp >= 0x80 && cp <= 0x9F) {
+			cp = cp1252[cp - 0x80];
+			if (!cp)
+				continue;
 		}
 		if (cp == '\n' || cp == '\r')
 			cp = ' ';

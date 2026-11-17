@@ -20219,7 +20219,7 @@ const char *GWAF8P_entries[117] = {
 
 // GSZP41: Speed Challenge: Jacques Villeneuve Racing Vision
 // from: Speed Challenge - Jacques Villeneuve's Racing Vision (2003-10-18)(Ubisoft Romania)(Ubisoft)[GC].7z
-const char *GSZP41_entries[12] = {
+const char *GSZP41_entries[13] = {
 	"01.dsp",
 	"02.dsp",
 	"03.dsp",
@@ -20232,6 +20232,7 @@ const char *GSZP41_entries[12] = {
 	"10.dsp",
 	"11.dsp",
 	"12.dsp",
+	"Data/Sound/vilP.hst",
 };
 
 // GSME52: Spider-Man: The Movie
@@ -26508,7 +26509,7 @@ const char** getEntries(char *gameId, int *count) {
 	if(gameId[0] == 'G' && gameId[1] == 'X' && gameId[2] == 'E' && gameId[4] == '8' && gameId[5] == 'P') { *count = 62; return GXEP8P_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'R' && gameId[2] == 'S' && gameId[4] == 'A' && gameId[5] == 'F') { *count = 79; return GRSEAF_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'W' && gameId[2] == 'A' && gameId[4] == '8' && gameId[5] == 'P') { *count = 117; return GWAF8P_entries; }
-	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 12; return GSZP41_entries; }
+	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'Z' && gameId[4] == '4' && gameId[5] == '1') { *count = 13; return GSZP41_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'S' && gameId[2] == 'M' && gameId[4] == '5' && gameId[5] == '2') { *count = 15; return GSME52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'K' && gameId[2] == '2' && gameId[4] == '5' && gameId[5] == '2') { *count = 120; return GK2F52_entries; }
 	if(gameId[0] == 'G' && gameId[1] == 'Q' && gameId[2] == '4' && gameId[4] == '7' && gameId[5] == '8') { *count = 44; return GQ4F78_entries; }

@@ -33,7 +33,7 @@ INCLUDES	:=	source $(VGMSTREAM)
 #---------------------------------------------------------------------------------
 
 CFLAGS		= -g -O2 -Wall -Wno-format-truncation -ffunction-sections -fdata-sections $(MACHDEP) $(INCLUDE) \
-				-D'GITREVISION="$(shell git rev-parse --short HEAD)"' -D'GITVERSION="$(shell git rev-list HEAD | wc -l)"'
+				-D'GITREVISION="$(shell git rev-parse --short HEAD)"' -D'GITVERSION="$(shell git rev-list HEAD | wc -l)"' -D'RELEASE="$(shell git describe --tags --abbrev=0 2>/dev/null || echo v1.0)"'
 CXXFLAGS	= $(CFLAGS)
 
 LDFLAGS		= -g $(MACHDEP) -Wl,--gc-sections -Wl,-Map,$(notdir $@).map

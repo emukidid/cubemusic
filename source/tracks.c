@@ -58,8 +58,24 @@ static const char **meta_entries(const char *game_id, int *count) {
 static const char *const companion_exts[] = {
 	"spd", "isd", "mid", "txt", "nfo", "7z", "bat", "log", "cfg", "bnr", "def",
 	"tbl", "sdir", "pool", "proj", "fpk", "arc", "samp", "sys",
-	"aw", "aaf", "baa", "bms", "bnk", "bst", "bstn", "ws", NULL
+	"aw", "aaf", "baa", "bms", "bnk", "bst", "bstn", "ws",
+	"bnh",   /* Ubisoft HX: the names of a .hxg bank's sounds */
+	"hst",   /* Ubisoft HX: the streamed sounds of every bank in its folder */
+	NULL
 };
+
+/* companions every track in the same folder needs, whatever its name */
+static const char *const shared_exts[] = { "hst", NULL };
+
+bool tracks_is_shared_companion(const char *path) {
+	const char *dot = strrchr(path, '.');
+	if (!dot)
+		return false;
+	for (int i = 0; shared_exts[i]; i++)
+		if (!strcasecmp(dot + 1, shared_exts[i]))
+			return true;
+	return false;
+}
 
 bool tracks_is_companion(const char *path) {
 	const char *dot = strrchr(path, '.');
@@ -517,15 +533,16 @@ int tracks_scan_disc(TrackList *list, ScanProgress *p) {
 	/* the files vgmstream might play, by extension (vgmstream's list, and
 	 * whatever this game's meta.c entries use: the rip may have renamed the
 	 * files, but not changed what they are). Files already listed whole are
-	 * skipped; banks are looked at again for streams not listed yet. */
+	 * opened again too: if one is a bank, its streams are listed instead of
+	 * it (as one track it only plays its first stream). */
 	int meta_count = 0;
 	const char **entries = meta_entries(list->game_id, &meta_count);
 	libvgmstream_valid_t valid = { .reject_extensionless = true, .accept_common = true };
 	for (int i = 0; i < n; i++) {
 		const DiscFile *f = fst_file(i);
-		if (f->size < SCAN_MIN_SIZE || tracks_is_companion(f->path) || listed(list, f, 0))
+		if (f->size < SCAN_MIN_SIZE || tracks_is_companion(f->path))
 			continue;
-		bool known = libvgmstream_is_valid(f->path, &valid) || extensionless_thp(f);
+		bool known = listed(list, f, 0) || libvgmstream_is_valid(f->path, &valid) || extensionless_thp(f);
 		const char *ext = strrchr(f->path, '.');
 		for (int j = 0; !known && ext && entries && j < meta_count; j++) {
 			const char *e = strrchr(entries[j], '.');
@@ -561,6 +578,23 @@ int tracks_scan_disc(TrackList *list, ScanProgress *p) {
 				init_track(&list->tracks[list->count++], path);
 				list->found++;
 				added++;
+			}
+			/* a bank listed whole whose streams are now listed: hide the whole
+			 * file (kept in the names file, so it stays hidden) */
+			for (int i = 0; i < nf; i++) {
+				if (!found[i].subsong)
+					continue;
+				for (int j = 0; j < list->count; j++) {
+					Track *w = &list->tracks[j];
+					if (w->file != found[i].file || w->subsong || w->hidden)
+						continue;
+					const NameEntry *e = names_find(&list->names, tracks_key(w));
+					char name[256] = "";
+					if (e && e->name)
+						snprintf(name, sizeof(name), "%s", e->name);
+					names_set(&list->names, tracks_key(w), name[0] ? name : NULL, true);
+					w->hidden = true;
+				}
 			}
 			nf = added;
 			/* pairs again, from scratch (the array moved, and new halves may have turned up) */

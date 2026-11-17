@@ -1875,7 +1875,7 @@ static void credits_frame(void) {
 	};
 	ui_wordmark(LIST_X + 24, CONTENT_T + 32, 26);
 	char ver[64];
-	snprintf(ver, sizeof(ver), "Version %s (%s)", GITVERSION, GITREVISION);
+	snprintf(ver, sizeof(ver), "%s  (build %s, %s)", RELEASE, GITVERSION, GITREVISION);
 	font_mid(LIST_X + LIST_W - 24, CONTENT_T + 32, 12, C_DIM, ALIGN_RIGHT, 0, ver);
 	for (unsigned i = 0; i < sizeof(lines) / sizeof(lines[0]); i++) {
 		float y = CONTENT_T + 76 + i * 36;

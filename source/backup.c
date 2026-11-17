@@ -55,6 +55,12 @@ static bool same_stem(const char *a, const char *b) {
 	return la == lb && !strncasecmp(a, b, la);
 }
 
+static bool same_folder(const char *a, const char *b) {
+	const char *sa = strrchr(a, '/'), *sb = strrchr(b, '/');
+	size_t la = sa ? (size_t)(sa - a) : 0, lb = sb ? (size_t)(sb - b) : 0;
+	return la == lb && !strncasecmp(a, b, la);
+}
+
 static void add_job(const DiscFile *f) {
 	for (int i = 0; i < job_count; i++)
 		if (jobs[i] == f)
@@ -184,7 +190,8 @@ bool backup_start(TrackList *list) {
 		/* the files that go with it: Foo.spt -> Foo.spd, FooL.dsp -> FooR.dsp, ... */
 		for (int j = 0; j < list->count; j++) {
 			Track *c = &list->tracks[j];
-			if (c->companion && c->file && (c->pair_left == t || same_stem(c->path, t->path)))
+			if (c->companion && c->file && (c->pair_left == t || same_stem(c->file->path, t->file->path) ||
+			    (tracks_is_shared_companion(c->file->path) && same_folder(c->file->path, t->file->path))))
 				add_job(c->file);
 		}
 	}

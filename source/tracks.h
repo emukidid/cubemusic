@@ -80,6 +80,9 @@ void tracks_apply_names(TrackList *list);
 
 /* True for files that belong to another track or aren't audio (by extension). */
 bool tracks_is_companion(const char *path);
+/* a companion that goes with every track in its folder (one stream file
+ * for a folder of banks) */
+bool tracks_is_shared_companion(const char *path);
 
 /* The name shown before track names are loaded: file name without extension
  * (and for a subsong key, "_00012" after it, as rips name them). */
